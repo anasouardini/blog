@@ -11,17 +11,44 @@ const {title, description} = Astro.props;
         <title>{title ?? 'Blog'}</title>
         <meta name="description" content={description}/>
         <link rel="sitemap" href="/sitemap-index.xml" />
-        <link rel="stylesheet" href="/index.css" />
     </head>
-    <style></style>
     <body class=`min-h-[100vh] flex flex-col justify-between
                 bg-dark-1 text-white`>
+        <style>
+            /* scroll bar */
+            body::scrollbar,
+            .scrollbar::scrollbar {
+                width: 6px;
+                background-color: #4C99EB;
+            }
+
+            body::scrollbar:horizontal,
+            .scrollbar::scrollbar:horizontal {
+                width: 6px;
+                background-color: #4C99EB;
+            }
+
+            body::-webkit-scrollbar,
+            .scrollbar::-webkit-scrollbar {
+                width: 6px;
+            }
+
+            body::-webkit-scrollbar:horizontal,
+            .scrollbar::-webkit-scrollbar:horizontal {
+                width: 6px;
+            }
+
+            body::-webkit-scrollbar-thumb,
+            .scrollbar::-webkit-scrollbar-thumb {
+                border-radius: 5px;
+                background-color: #4C99EB;
+            }
+        </style>
         <header>
-            <nav class="flex justify-between py-4 w-[95%] mx-auto max-w-[1400px]">
-                <a href="/">Logo</a>
-                <p class="capitalize bg-orange-500 px-5 py-1 rounded-lg text-black font-bold text-xl">Site Is Under reconstruction...</p>
+            <nav class="flex justify-center py-4 w-[95%] mx-auto max-w-[1400px]">
+                <!-- <p class="capitalize bg-orange-500 px-5 py-1 rounded-lg text-black font-bold text-xl">Site Is Under reconstruction...</p> -->
                 <ul class="flex gap-4">
-                    <li><a href="/">posts</a></li>
+                    <li style="list-style: none;"><a style="color: white; text-decoration: none;" href="/">posts</a></li>
                     <!-- <li><a href="/">privacy policy</a></li>
                     <li><a href="/">author</a></li> -->
                 </ul>
