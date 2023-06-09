@@ -28,7 +28,7 @@ so that you can answer this question whenever you encountered one in your interv
 
 </div>
 
-**the easiest and the quickest way to get rid of duplicates from an array and leave only the unique values is by using the ES6 `<a aria-label=" (opens in a new tab)" href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a" target="_blank" rel="noreferrer noopener nofollow" class="rank-math-link">Set</a> `object, you simply give it any type and let it extract only the unique entries automatically.**
+**the easiest and the quickest way to get rid of duplicates from an array and leave only the unique values is by using the ES6 <a aria-label=" (opens in a new tab)" href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a" target="_blank" rel="noreferrer noopener nofollow" class="rank-math-link">Set</a> object, you simply give it any type and let it extract only the unique entries automatically.**
 
 there you go, the simple and to-the-point answer you're looking for. unless you want to know all of those other methods.
 
@@ -171,7 +171,7 @@ we have this chart that shows each element (variable, object, array) of our scri
 
 ### 4.removing duplicates implementing forEach and include
 
-the array `<a aria-label=" (opens in a new tab)" href="https://www.w3schools.com/jsref/jsref_includes_array.asp" target="_blank" rel="noreferrer noopener nofollow" class="rank-math-link">includes()</a>` method can be used on strings and arrays, in our case, it checks if the given element or value exists in the array or not, if yes it returns true and if not it returns false.
+the array <a aria-label=" (opens in a new tab)" href="https://www.w3schools.com/jsref/jsref_includes_array.asp" target="_blank" rel="noreferrer noopener nofollow" class="rank-math-link">includes()</a> method can be used on strings and arrays, in our case, it checks if the given element or value exists in the array or not, if yes it returns true and if not it returns false.
 
 and the `for-each` loop doesn't need to be explained.
 
@@ -214,7 +214,7 @@ we're using the same example which is  ['1', '1', '3', '4', '😁', '😁', '0']
 
 in my opinion, this is the most simple and quick, and efficient one of all of them, and I'm also going to talk about which one to use in terms of performance later in the article.
 
-for people who don't know what `<a href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Set</a>` is and what does it do, first of all, it's an ES6 feature, if you haven't learned ES6 yet, Set is a new data object that only stores unique values, so when providing this object with a set of values, if  those values contain some duplicates `Set` is not going to store all of them but it's going to store each value one time only.
+for people who don't know what <a href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Set</a> is and what does it do, first of all, it's an ES6 feature, if you haven't learned ES6 yet, Set is a new data object that only stores unique values, so when providing this object with a set of values, if  those values contain some duplicates `Set` is not going to store all of them but it's going to store each value one time only.
 
 and that's why when you provide it with an array of values that some of them are duplicated `new Set(arrayWithDuplicates)`, it will give you a unique version of the original array.
 
@@ -320,29 +320,25 @@ but as we said the generator function **can be stopped midway** and continue fro
 
 when a generator stops it returns an object on which you can call `next()`. in JavaScript each call of `next()` will result in an object like so:
 
-<pre class="wp-block-code"><code lang="json" class="language-json line-numbers">{ 
-
-  value: can be anything,
-
+```ts
+{ 
+  value: "can be anything",
   done: true | false
-
-} `</pre>
+}
+```
 
 the object contains a value that obviously contains the value and the done property which contains a **boolean **which indicates whether the generator **has done or not.** in the case `done : true`, the generator function has done and it will not generate more values.
 
 it's defined using the `function*`, the syntax goes like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function* funcName(){ 
-
+```js
+function* funcName(){ 
   //function *funcName() also works
-
   yield "i am";
-
   yield "a stoppable";
-
   yield "generator";
-
-}`</pre>
+}
+```
 
 and here is a video for visual learners:
 
@@ -359,44 +355,31 @@ now after you got the important thing about Generators understood, let's get int
 let's take a look at this other version of the previous function, this "lazy" one is generator-based, it's a generator basically. it using the same steps as the previous one:
 
 - take the values one by one.
-
 - skip to the next one, if it's already been seen.
-
 - yield it and add it to the list of unique values `uniqueValues[]`, if not been seen.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function* makeItUnique(notUnique) {
-
-    `for (let x of notUnique) {     `
-
-      `  if (!uniqueValues.includes(x)) {         `
-
-            `yield x;     `
-
-    `   } `
-
-  `  }`
-
-` `
-
-      `return 'done';`
-
- }`</pre>
+```js
+function* makeItUnique(notUnique) {
+  for (let x of notUnique) {
+      if (!uniqueValues.includes(x)) {
+      yield x;
+    }
+  }
+  return 'done';
+}
+```
 
 here is the code to run this function:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> let uniqueValues = [];
-
+```js
+let uniqueValues = [];
  let notUnique = ['🗻', 1, 2, '🗻', '🗻', 3];
-
  let generator = makeItUnique(notUnique);
-
  for(let uniqueVal of generator){
-
      uniqueValues.push(uniqueVal);
-
  }
-
- console.log(uniqueValues);`</pre>
+ console.log(uniqueValues);
+```
 
 it might be very confusing to understand at first but keep in consideration that this is noway near efficient when it comes to removing duplicates.
 
@@ -412,47 +395,37 @@ https://www.youtube.com/watch?v=G3BS3sh3D8Q
 
 JavaScript `map` accepts an array and "map" it into something else. here is a simple example of what `map` can do:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const numbersArray = [1, 2, 4, 4, 6, 7];
-
+```js
+const numbersArray = [1, 2, 4, 4, 6, 7];
 const mappedArray = numbersArray.map(n => "-" + n + "-");
-
 console.log(mappedArray);
-
 //the result
-
-//[-1-, -2-, -4-, -4-, -6-, -7-]`</pre>
+//[-1-, -2-, -4-, -4-, -6-, -7-]
+```
 
 as simple as you see it doesn't filter any of the array values, it just returns each value as it is beside the "-" that we've added before and after each value.
 
 `map `in this case, is used like `forEach` loop, so it's basically looping through the array and returning each of them, but the main thing that we're using in our `removeDuplicates` function is the way it loops through each element of the array.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function removeDuplicates(array) {
-
+```js
+function removeDuplicates(array) {
   let uniqueValues = []
-
   array.map(value => 
-
-    if(!uniqueValues.includes(value) {
-
+    if(!uniqueValues.includes(value)) {
       uniqueValues.push(value)
-
     }
-
   )
-
   return uniqueValues;
-
 };
+```
 
-`</pre>
+here is an example of using this fucntion:
 
-her is an example of using this fucntion:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const duplicatesArray= [1, 2, 4, 4, 6, '🗻', '🗻'];
-
+```js
+const duplicatesArray= [1, 2, 4, 4, 6, '🗻', '🗻'];
 removeDuplicates(duplicatesArray);
-
 // [1, 2, 4, 6, '🗻']`</pre>
+```
 
 so basically this function uses JS `map` to map through the array with duplicates and adds only unique elements to a new array.
 
@@ -469,34 +442,29 @@ https://www.youtube.com/watch?v=g1C40tDP0Bk
 this method is a little bit like `map` and `filter` except that it returns only one value, JS `reduce` method is looping through the array values one by one, it accepts two arguments:
 
 - **the first one:** the callback function like in the `map` and `filter`, this function accepts two arguments.<li>one of them is the **accumulator** which is like a variable that holds a certain value and keeps changing it according to what you do with it inside the **callback function**. this argument is what contains the **final value** that this method returns.
-
 - and the second one is the current value which is the value from the given array, and each time you return a value, that value is assigned to the accumulator. the arguments can be named whatever you like **BTW**.
-
-</li>- **the second one:** the **Initial** value of the accumulator, the default value of this argument is the **first value** in the array, so you don't have to set its value if that's what you trying to do.
+- **the second one:** the **Initial** value of the accumulator, the default value of this argument is the **first value** in the array, so you don't have to set its value if that's what you trying to do.
 
 > matter of fact this method takes in 4 arguments, but only the two of them are commonly used. these four arguments are:1. **Accumulator** 2. **Current Value** 3.**Current Index** 4.**Source Array**
 
 here is how the syntax works:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const array = ['carrot', 'potato', 'turnip', 'cabbage'];
-
+```js
+const array = ['carrot', 'potato', 'turnip', 'cabbage'];
 const finalValue = array.reduce(
-
   function(acc, currentVal) { return acc + ' ' + currentVal },
-
   'vegetables:'
-
 );
-
 //function short code
-
-(acc, currentVal) => acc+' '+currentVal;`</pre>
+(acc, currentVal) => acc+' '+currentVal;
+```
 
 so it's basically reducing the number of elements you provide it with into one single value:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">console.log(finalValue);
-
-// "vegetables: carrot potato turnip cabbage"`</pre>
+```js
+console.log(finalValue);
+// "vegetables: carrot potato turnip cabbage"
+```
 
 **that was a basic example of how this method works, now let's use this method to uniquify our array.**
 
@@ -512,33 +480,20 @@ we check if the accumulator array contains each value of our array, if yes then 
 
 > it's very difficult to understand how it works without actually looking into the code:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const array = ['🗻', 1, 2, '🗻', '🗻', 3];
-
+```js
+const array = ['🗻', 1, 2, '🗻', '🗻', 3];
 const uniqueArray = array.reduce((acc, currentVal) => {
-
   return acc.includes(currentVal) ? acc: [...acc, currentVal];
-
   // a short code for
-
   // if(acc.includes(currentVal)){
-
   // return acc
-
   // }else{ 
-
   // return [...acc, currentVal] 
-
   // }
-
 }, []); // set the inital value to an empty array
 
-console.log(uniqueArray);
-
-// RESULT:
-
-// ['🗻', 1, 2, 3];
-
-`</pre>
+console.log(uniqueArray); //['🗻', 1, 2, 3];
+```
 
 here are the variables values on the fly:
 
@@ -560,31 +515,25 @@ we can enhance the previous solution, instead of using for loop we're going to i
 
 so with this JS method, we're going to get a loop that loops through the original array and only returns unique values.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function uniqueWithFilter(notUnique) {
-
-     const unique = [];
-
-     return notUnique.filter(element => {
-
- `    if (unique.includes(element)) {   `
-
-             `return false `
-
-        `} else {   `
-
-            `return unique.push(element);`
-
-        `}`
-
-     });
-
- }`</pre>
+```js
+function uniqueWithFilter(notUnique) {
+    const unique = [];
+    return notUnique.filter(element => {
+    if (unique.includes(element)) {
+            return false
+      } else {
+          return unique.push(element);
+      }
+    });
+}
+```
 
 let's run it:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> const notUniqueArr = [1,1,2,😁,😁,4];
-
- uniqueWithFilter(notUniqueArr);`</pre>
+```js
+const notUniqueArr = [1,1,2,😁,😁,4];
+uniqueWithFilter(notUniqueArr);
+```
 
 here are the variables values on the fly:
 
@@ -602,21 +551,20 @@ https://www.youtube.com/watch?v=RsFBsBep-hA
 
 </div></figure>
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(notUnique) {
-
-    return notUnique.sort().filter(function(value, pos, array) {
-
-        return !pos || value != array[pos - 1];
-
-    });
-
-}`</pre>
+```js
+function makeItUnique(notUnique) {
+  return notUnique.sort().filter(function(value, pos, array) {
+      return !pos || value != array[pos - 1];
+  });
+}
+```
 
 let's run it:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const notUnique = [1, 1, 2, 😁, 😁, 4];
-
-makeItUnique(notUnique);`</pre>
+```js
+const notUnique = [1, 1, 2, 😁, 😁, 4];
+makeItUnique(notUnique); //[1, 1, 2, 😁, 4]
+```
 
 remember that this method doesn't work with objects, since `sort` sees them all the same, however, the original array is going to be changed as a side effect.
 
@@ -628,85 +576,73 @@ by now you already know what is `filter` and how it works. if you don't know wha
 
 we utilize indexOf in a way that helps us spot the duplicate values just by their indexes, indexOf gives us the index of the first occurrence all the time even if we have different instances of a particular value, so each occurrence of a value should point you to its first instance using `indexOf`.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">`let notUnique= [1, 1, 2, 😁, 😁, 4];
+```js
+let notUnique= [1, 1, 2, 😁, 😁, 4];
+notUnique.indexOf(😁);
+```
 
-notUnique.indexOf(😁);``</pre>
-
-the output is always the the index of  the first instance:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">3`</pre>
+the output is always the the index of  the first instance: `3`
 
 and by comparing each value's indexOf with the exact index of the same element we get to know if that element is duplicate or not.  if those two values match then it's not duplicate, but if they point to different indexes then this value is a duplicate value.
 
 the `indexOf()` method gives you the index if the value exists but if not it gives you -1, just to help you debug in case there is a problem with your version of code.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">`let notUnique= [1, 1, 2, 😁, 😁, 4];
-
+```js
+let notUnique= [1, 1, 2, 😁, 😁, 4];
 notUnique.forEach((value, index) => {
-
-    console.log(`${value} - ${index} `
-
-        `- ${notUnique.indexOf(value)}`);
-
-});``</pre>
+    console.log(`${value} - ${index}
+        - ${notUnique.indexOf(value)}`);
+});
+```
 
 here is the output on the fly:
 
 <figure class="wp-block-table"><table><tbody><tr><td>Value</td><td>**Index**</td><td>**notUnique.indexOf(value)**</td><td>**Output**</td></tr><tr><td>1</td><td>0</td><td>0</td><td>1</td></tr><tr><td>1</td><td>1</td><td>0</td><td></td></tr><tr><td>2</td><td>2</td><td>2</td><td>2</td></tr><tr><td>😁</td><td>3</td><td>3</td><td>😁</td></tr><tr><td>😁</td><td>4</td><td>3</td><td></td></tr><tr><td>4</td><td>5</td><td>5</td><td>4</td></tr></tbody></table></figure>
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">1
-
+```js
+1
 2
-
 😁
-
-4`</pre>
+4
+```
 
 now let me show you how we should implement `filter` to remove duplicate values, we're doing that by only including values whose indexes match their `indexOf` values.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">`let notUnique= [1, 1, 2, 😁, 😁, 4];
-
+```js
+let notUnique= [1, 1, 2, 😁, 😁, 4];
 let unique = `notUnique`.filter((item, index) => {
-
     return `notUnique`.indexOf(item) === index;
-
-});`
-
-`
+});
 
 console.log(`unique`);``</pre>
+```
 
 here is the output on the fly:
 
 <figure class="wp-block-table"><table><tbody><tr><td>Value</td><td>**Index**</td><td>**notUnique.indexOf(value)**</td><td>**Condition**</td><td>**Unique**</td></tr><tr><td>1</td><td>0</td><td>0</td><td>**True**</td><td>[ 1 ]</td></tr><tr><td>1</td><td>1</td><td>0</td><td>**False**</td><td>[ 1 ]</td></tr><tr><td>2</td><td>2</td><td>2</td><td>**True**</td><td>[ 1, 2 ]</td></tr><tr><td>😁</td><td>3</td><td>3</td><td>**True**</td><td>[ 1, 2, 😁 ]</td></tr><tr><td>😁</td><td>4</td><td>3</td><td>**False**</td><td>[ 1, 2, 😁 ]</td></tr><tr><td>4</td><td>5</td><td>5</td><td>**True**</td><td>[ 1, 2, 😁, 4 ]</td></tr></tbody></table></figure>
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">`[ 1, 2, 😁, 4 ]``</pre>
+`[ 1, 2, 😁, 4 ]`
 
 however if you want only the duplicate values you only need to reverse the condition.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">`let notUnique= [1, 1, 2, 😁, 😁, 4];
-
+```js
+let notUnique= [1, 1, 2, 😁, 😁, 4];
 let duplicateValues = `notUnique`.filter((c, index) => {
-
     return `notUnique`.indexOf(c) != index;
-
 });
-
 console.log(`unique`);``</pre>
+```
 
-Output:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">[ 1, 😁 ]`</pre>
+Output: `[ 1, 😁 ]`
 
 **here is a shorter syntax of the same code above:**
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">let notUnique= [1, 1, 2, 😁, 😁, 4];
-
+```js
+let notUnique= [1, 1, 2, 😁, 😁, 4];
 let unique = notUnique.filter(
-
      (values, index) => notUnique.indexOf(values) === index
-
-);`</pre>
+);
+```
 
 you'd think that this a good solution but only in some cases, it is a concise solution but when it comes to large arrays it's not going to be efficient at all.
 
@@ -718,26 +654,21 @@ except for in this method we're implementing the `filter` method which you shoul
 
 here is the code that implements these methods:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(doubled) {
-
+```js
+function makeItUnique(doubled) {
     var unique = {};
-
     return doubled.filter(function(item) {
-
         return unique.hasOwnProperty(item) ? false : (unique[item] = true);
-
     });
-
 }
 
 // unique{} has only unique items as the keys
-
 // of the object, and true is assigned to the values of them keys`</pre>
+```
 
 this gives you a linear time as it checks for the presence of an element instantly, but it has some drawbacks, which are these two:
 
 - **because hash keys only accept strings and symbols:** there will be no difference between the number 1 and the string "1", since they're all considered as a string.
-
 - **because hash keys only accept strings and symbols:** other objects are also going to be considered equal to each other. `{1:true}` is going to be equal to `{2:true}`.
 
 > so if you don't care about types then this solution can be considered as an optimal solution.
@@ -746,27 +677,19 @@ this gives you a linear time as it checks for the presence of an element instant
 
 after you saw those two solutions, here is a solution that combines the two together for a better universal solution. instead of only the primitives or the linear search, we're supporting both of the approaches.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(notUnique) {
-
+```js
+function makeItUnique(notUnique) {
     var valueType = {"boolean":{}, "number":{}, "string":{}},
-
           objs = [];
-
     return notUnique.filter(function(value) {
-
         var type = typeof value;
-
         if(type in valueType)
-
             return valueType[type].hasOwnProperty(value) ? false : (valueType[type][value] = true);
-
         else
-
             return objs.indexOf(value) >= 0 ? false : objs.push(value);
-
     });
-
-}`</pre>
+}
+```
 
 I know how this solution sounds to you, but it's just for understanding more about sorting elements from an array.
 
@@ -782,81 +705,59 @@ let's call it the "key" callback, this callback is going to be applied to every 
 
 as you saw earlier with the hash tables method, **hash keys only accept strings and symbols**, but since we're using a hash table in this example everything is going to work fine since the key is going to return a primitive.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function advancedUniq(notUnique, key) {
-
-    var unique = {};
-
-    return notUnique.filter(function(value) {
-
-        var itemKey = key(value);
-
-        return unique.hasOwnProperty(itemKey) ? false : (unique[itemKey] = true);
-
-    })
-
-}`</pre>
+```js
+function advancedUniq(notUnique, key) {
+  var unique = {};
+  return notUnique.filter(function(value) {
+      var itemKey = key(value);
+      return unique.hasOwnProperty(itemKey) ? false : (unique[itemKey] = true);
+  })
+}
+```
 
 a useful key for example is `JSON.stringify`, this key will eliminate objects that look the same although they're physically different.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">notUnique = [[1,🗻,3], [4,5,6], [1,🗻,3]]
-
+```js
+notUnique = [[1,🗻,3], [4,5,6], [1,🗻,3]]
 result = advancedUniq(notUnique, JSON.stringify)
-
 console.log(result) // [[1,🗻,3], [4,5,6]]`</pre>
+```
 
 resorting to the linear search is the solution in case the key is not primitive:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function advancedUniq(notUnique, key) {
-
+```js
+function advancedUniq(notUnique, key) {
     var index = [];
-
     return notUnique.filter(function (value) {
-
         var itemKey = key(value);
-
         return index.indexOf(itemKey) >= 0 ? false : index.push(itemKey);
-
     });
-
 }
-
-`</pre>
+```
 
 in case you want to implement **ES6**, you can use **`set`**:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function advancedUniq(notUnique, key) {
-
+```js
+function advancedUniq(notUnique, key) {
     let unique = new Set();
-
     return notUnique.filter(value => {
-
         let itemKey = key(value);
-
         return unique.has(itemKey) ? false : unique.add(itemKey);
-
     });
-
 }
-
-`</pre>
+```
 
 or **`map`**, which going to make things look cleaner:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function advancedUniq(notUnique, key) {
-
-    return [
-
-        ...new Map(
-
-            notUnique.map(x => [key(x), x])
-
-        ).values()
-
-    ]
-
+```js
+function advancedUniq(notUnique, key) {
+  return [
+    ...new Map(
+        notUnique.map(x => [key(x), x])
+    ).values()
+  ]
 }
-
-`</pre>
+```
 
 > **both `Set `and `Map` work with key that are not primitive.**
 
@@ -866,31 +767,26 @@ other than jQuery, there two famous libraries which are <a aria-label="Lo-Dash (
 
 the methods that are included in these libraries are very similar to examples I've explained here in this article, **especially the "indexOf and Filter" method**, matter of fact it's just a variation of it. here is what their `makeItUnique()` method looks like:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var unique = [];
-
+```js
+var unique = [];
 notUnique.forEach(function(item) {
-
-     if(unique.indexOf(item) < 0) {
-
-         unique.push(item);
-
-     }
-
-});`</pre>
+  if(unique.indexOf(item) < 0) {
+      unique.push(item);
+  }
+});
+```
 
 when it comes to jQuery, you do this in the following way:
 
 > as you know Jquery can't stand using anything without a dollar sign before it.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">  $.unique = function(notUnique) {
-
-        return $.grep(notUnique, function(item, pos) {
-
-            return $.inArray(item, notUnique) === pos;
-
-        });
-
-  }`</pre>
+```js
+$.unique = function(notUnique) {
+  return $.grep(notUnique, function(item, pos) {
+      return $.inArray(item, notUnique) === pos;
+  });
+}
+```
 
 > and as i said they're just a variation of the **"indexOf and Filter" method**.
 
@@ -906,19 +802,17 @@ if you're just coding this simple script where you could have **10 functions at 
 
 I know I've mentioned it above but just to justify things, modern JavaScript(ES6) gives us this cool method Set that really simplifies things for us and for our CPUs:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(notUnique) {
-
-   return Array.from(new Set(notUnique));
-
+```js
+function makeItUnique(notUnique) {
+  return Array.from(new Set(notUnique));
 }
-
-`</pre>
+```
 
 or in a shorter way:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">let unique = notUnique => [...new Set(notUnique)];
-
-`</pre>
+```js
+let unique = notUnique => [...new Set(notUnique)];
+```
 
 ### Generators
 
@@ -927,26 +821,19 @@ I've mentioned generators above in detail, but in general, it's a lazy way of do
 as I mentioned earlier it's based on the same steps as the other methods:
 
 - reads the next value from the passed, not unique array
-
 - if it's already been seen, already stored in the unique array, then skip it
-
 - otherwise, yield it insert it next to the other unique values
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function* makeItUnique(notUnique) {
-
-    `for (let x of notUnique) {     `
-
-      `  if (!uniqueValues.includes(x)) {         `
-
-            `yield x;     `
-
-    `   } `
-
-  `  }`
-
-      `return 'done';`
-
- }`</pre>
+```js
+function* makeItUnique(notUnique) {
+  for (let x of notUnique) {
+      if (!uniqueValues.includes(x)) {
+       yield x;
+    }
+  }
+  return 'done';
+ }
+```
 
 ## another way using jQuery:
 
