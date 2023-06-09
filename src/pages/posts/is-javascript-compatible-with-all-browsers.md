@@ -42,19 +42,14 @@ here are user-agent strings of some of the common used browsers:
 
 so how web developers implement this in code, simply by using this property, **navigator.userAgent.indexOf(user-agent)**, user-agent is the user-agent string that we pass here as a parameter. I know it's not clear yet but let me show you an example of the code that implements this property.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">/* Firefox */
-
-if(navigator.userAgent.indexOf("Firefox") !== -1)
-
-{
-
+```js
+/* Firefox */
+if(navigator.userAgent.indexOf("Firefox") !== -1){
         /*-----------------------------------------------------*/
-
-      /* The alternative code that works in this browser */
-
-    /*----------------------------------------------------*/
-
-}</code></pre>
+       /*   The alternative code that works in this browser   */
+      /*-----------------------------------------------------*/
+}
+```
 
 ## ways to solve Javascript compatibility problems
 
@@ -138,7 +133,7 @@ so don't put too much pressure on your self and just keep learning and keep your
 
 and if you are an advanced developer and you want to fix issues that hearts your website compatibility in browsers i highly advise you to get into testing which is a huge topic that you'll find courses on youtube just about testing. and to make this article very short here is a list of those things that i mentioned above:
 
-**tips that solve Javascript cross-browser compatibility issues:**
+**tips that helps solving Javascript cross-browser compatibility issues:**
 
 - **Validate your code**
 

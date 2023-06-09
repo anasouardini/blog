@@ -52,91 +52,67 @@ so whenever we copy an entry from the original array to the result array it's go
 
 > I'm only using the ES5 syntax in almost all of the snippets you're going to go through since not everybody knows ES6, but of course, you can use const and let instead of var, etc. 
 
-<div class="wp-block-columns">
-
-<div class="wp-block-column" style="flex-basis:100%">
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(array) {
-
+```js
+function makeItUnique(array) {
   var result = [];
-
   for (var i = 0; i < array.length; i++) {
-
     var exists = false;
 
     for (var j = 0; j < result.length; j++) {
-
       if (array[i] === result[j]) {
-
         exists = true;
-
         break;
-
       }
-
     }
 
     if (!exists) {
-
       result.push(array[i]);
-
     }
-
   }
-
   return result;
+}
+```
 
-}</code></pre>
+here is what it will look like when you run the `makeItUnique()` function:
 
-</div>
+```js
+  var notUniqueArray = ['1', '1', '3', '4', '5', '5', '🗿'];
+  makeItUnique(notUniqueArray); 
 
-</div>
+  // it will return this array ["🗿", "1", "3", "4", "5"]
+```
 
-here is what it will look like when you run the <code>makeItUnique()</code> function:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var notUniqueArray = ['1', '1', '3', '4', '5', '5', '🗿'];
-
-makeItUnique(notUniqueArray); 
-
-// it will return this array ["🗿", "1", "3", "4", "5"]</code></pre>
-
-this algorithm is using the O(n²) time complexity, and that's because we're looping through two arrays, if you're interested in making it less complex which means using only O(n) (linear time), well you have to implement a method called <code>hash-map</code>, which I'm going to explain in the 3d method.
+this algorithm is using the O(n²) time complexity, and that's because we're looping through two arrays, if you're interested in making it less complex which means using only O(n) (linear time), well you have to implement a method called `hash-map`, which I'm going to explain in the 3d method.
 
 ### 2. removing duplicates using for-each loop
 
-this method is a lot like the previous one but instead, it uses a result object instead of an array and <code>forEach </code>instead of <code>for</code> loop.
+this method is a lot like the previous one but instead, it uses a result object instead of an array and `forEach` instead of `for` loop.
 
 and since the object has keys and values instead of just values like in arrays, you only need one function.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(array) {
-
+```js
+function makeItUnique(array) {
   var uniqueValues = {};
-
   array.forEach(function(originalElement) {
-
     if(!uniqueValues[originalElement]) {
-
       uniqueValues[originalElement] = true
-
     }
-
   })
 
   return Object.keys(uniqueValues)
-
 };
+```
 
-</code></pre>
+the same as the one above, it looks for the non-existence of elements of the notUniqueArray[] array in the uniqueValues[], using if(!uniqueValues [originalElement]) if it's `true` (doesn't exist) then it'll add it the `uniqueValues[]` array.
 
-the same as the one above, it looks for the non-existence of elements of the notUniqueArray[] array in the uniqueValues[], using if(!uniqueValues [originalElement]) if it's <code>true </code>(doesn't exist) then it'll add it the <code>uniqueValues[]</code> array.
+it checks if the element from the `notUniqueArray` array exists in the object, if not it assigns it to the key of the object and assigns `true` to the value just because it can't be empty, and then returns keys of that object which are the unique values of the `notUniqueArray` array, the cool thing about this method if your original array contains only numbers they will be ranged from the smallest to the biggest number.
 
-it checks if the element from the <code>notUniqueArray </code>array exists in the object, if not it assigns it to the key of the object and assigns <code>true </code>to the value just because it can't be empty, and then returns keys of that object which are the unique values of the <code>notUniqueArray</code> array, the cool thing about this method if your original array contains only numbers they will be ranged from the smallest to the biggest number.
+```js
+  var notUniqueArray = ['1', '1', '3', '4', '🗿', '🗿', '0'];
+  makeItUnique(notUniqueArray); 
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var notUniqueArray = ['1', '1', '3', '4', '🗿', '🗿', '0'];
-
-makeItUnique(notUniqueArray); 
-
-// it will return this array ["0", "1", "3", "4", "🗿"]</code></pre>
+  // it will return this array ["0", "1", "3", "4", "🗿"]
+```
 
 ### 3.implementing hash-map to eliminate duplicates from arrays
 
@@ -156,45 +132,36 @@ and the <code>map{}</code> object is what we call the map which maps the values 
 
 and that's how we can keep track of whether we have added a value from the original array in the object's key or not. and then if it returns <code>true</code> 
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(array) {
-
+```js
+function makeItUnique(array) {
   var uniqueArray = [];
-
   var map = {};
 
   for (var i = 0; i < array.length; i++) {
-
     if (!map[array[i]]) {
-
       result.push(array[i]);
-
       map[array[i]] = true;
-
     }
-
   }
 
   return uniqueArray ;
-
 }
-
-</code></pre>
+```
 
 as you're going to see this method only uses one <code>forEach</code> loop, this is of course a better solution than the first brute force method but it's not the most efficient one, since we're going to go through a better solution in the ES5 solutions section after this one.
 
 let's run this script to see the result.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var arrayWithDuplicates = [🗻,🗻,2,3,3,4,4,5,5];
-
+```js
+var arrayWithDuplicates = [🗻,🗻,2,3,3,4,4,5,5];
 removeDuplicates(arrayWithDuplicates); //[🗻,2,3,4,5]
 
 var arrayWithDuplicates = [2,3,3,🗽,2,7,5,5,4,9,4,14];
-
 removeDuplicates(arrayWithDuplicates); //[2,3,🗽,7,5,4,9,14]
 
 var arrayWithDuplicates = [5,2,3,2,5,5,1,🗿,2,1,🗿,5,8];
-
-removeDuplicates(arrayWithDuplicates); //[5,2,3,1,🗿,8]</code></pre>
+removeDuplicates(arrayWithDuplicates); //[5,2,3,1,🗿,8]
+```
 
 I'm pretty sure that you have understood the idea of mapping the values inside of an object but, here is a brief explanation for a better understanding:
 
@@ -212,31 +179,26 @@ this solution is the easiest one to understand and also the most efficient one a
 
 here is the code example of what i just said:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"><code>var uniqueChars = [];</code>
-
-<code>function makeItUnique(array) {
-
-   <code>array.forEach((c) => { </code></code>
-
-          <code><code>if (!uniqueChars.includes(c)) {    </code></code>
-
-             <code><code>uniqueChars.push(c);</code></code>
-
-       <code><code> } </code></code>
-
-     <code><code>});</code></code>
-
-     <code><code>return uniqueChars;</code>
-
- }</code></code></pre>
+```js
+  var uniqueChars = [];
+  function makeItUnique(array) {
+    array.forEach((c) => {
+      if (!uniqueChars.includes(c)) {
+          uniqueChars.push(c);
+      }
+    });
+    return uniqueChars;
+  }
+```
 
 here is the output of this function.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"><code>var notUniqueArray = ['1', '1', '3', '4', '😁', '😁', '0'];
+```js
+  var notUniqueArray = ['1', '1', '3', '4', '😁', '😁', '0'];
+  makeItUnique(notUniqueArray);
 
-makeItUnique(notUniqueArray); </code>
-
-<code>// it will return this array ["1", "3", "4", "😁", "0"]</code></code></pre>
+  // it will return this array ["1", "3", "4", "😁", "0"]
+```
 
 here is a table of the sates of each variable in this script while running:
 
@@ -265,9 +227,7 @@ now after you know what <code>Set</code> object is really doing, let me explain 
 I KNOW, the second step is a bit confusing, since you probably don't know how to convert <code>Set</code> object into an array.
 
 well, there are two simple and easy ways of doing that.
-
 - the first one is by using the <code>Array.from(SetResult)</code> method to store the unique result into an array like so <code>const uniqueArr = Array.from(new Set(hasDuplicatesArray))</code>.
-
 - the second way of doing it is by implementing what's called the Array Destructuring method which as simple as adding 3 dots before an array, object, or a set of values to make those values spread basically which is used like so <code>[...arr, 1, 3]</code>, and those 3 dots are called a spread operator, this means that inside of those brackets we have the arr array values followed by 1 and 3. and we can use it on Set In the same way, <code>const uniqueArr = [...new Set(notUniqueArr)]</code>.
 
 here is a video if you're a visual learner:
@@ -280,55 +240,49 @@ https://www.youtube.com/watch?v=NIq3qLaHCIs
 
 now enough talking and let's wrap up the whole thing, so we can get this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function makeItUnique(){
-
+```js
+  function makeItUnique(){
     // Step 1
-
-        const uniqueSet = new Set(array);
-
-        // Set { '🗻', 1, 2, 3 }                                             
+    const uniqueSet = new Set(array);// Set { '🗻', 1, 2, 3 }                                             
 
     // Step 2
+    // method one
+    const uniqueArr = array.from(uniqueSet);
 
-        //method one
-
-        const uniqueArr = array.from(uniqueSet);
-
-        //method two
-
-        const uniqueArr = [...new Set(uniqueSet)];
+    // method two
+    const uniqueArr = [...new Set(uniqueSet)];
 
     return uniqueArr;
-
-}</code></pre>
+  }
+```
 
 here is the result of the execution of <code>makeItUnique()</code> function:
+```js
+  const array = ['🗻', 1, 2, '🗻', '🗻', 3];
+  makeItUnique(array);
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const array = ['🗻', 1, 2, '🗻', '🗻', 3];
-
-makeItUnique(array);
-
-// ['🗻', 1, 2, 3 ]</code></pre>
+  // ['🗻', 1, 2, 3 ]</code></pre>
+```
 
 there is no table for this since it's really obvious and there is only one input and output.
 
 but here is the shortest line of code you can use to write this code:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">let unique = a => [...new Set(a)]; 😁
-
-</code></pre>
+```js
+  let unique = a => [...new Set(a)]; 😁
+```
 
 the only thing you might not understand is the arrow function which is use like so:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">let arr = function(par){ //do something; };
+```js
+  let arr = function(par){ //do something; };
 
-//OR an arrow function
+  //OR an arrow function
+  let arr = (par) => { //do something; };
 
-let arr = (par) => { //do something; };
-
-//OR a short arrow function
-
-let arr = par => //do something;</code></pre>
+  //OR a short arrow function
+  let arr = par => //do something;</code></pre>
+```
 
 if you ever used <code>Set</code> in Python you'll notice that they don't work the same, JavaScript's version keeps the insertion order, unlike Python's version which arranges values from the smaller to the bigger value.
 

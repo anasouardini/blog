@@ -54,19 +54,19 @@ The truth is that JavaScript has undergone significant evolution. This evolution
 
 A look at a practical example will help make logical decisions. Suppose you have the following program.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">Console.log ("cool coolness") ;</code></pre>
+```js
+    Console.log ("cool coolness") ;
+```
 
 okay okay
 
 Theoretically, the JavaScript interpreter will read the first line first, which is 'cool coolness' followed by a syntax error. However, this is no longer the case with modern JavaScript. Here is yet another example.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">max (8, 9);
+```js
+max (8, 9); // ==> 9
 
-//9
-
-function max (num8, num9)
-
-    return num8 > num9 ? num8: num9</code></pre>
+function max (num8, num9) num8 > num9 ? num8: num9
+```
 
 Here, JavaScript knows that 9 is the max, even before concluding. It shows that the code has to first compile before getting executed.
 

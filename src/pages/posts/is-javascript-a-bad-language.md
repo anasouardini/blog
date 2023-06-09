@@ -46,21 +46,25 @@ One of the first things JavaScript coders learn is <code>cosole.log()</code>. Wh
 
 It is not uncommon to see JavaScript log every little detail, from unnecessary debug information left over from the development process, indicating that a particular loop has… well… looped.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> for (let i = 0; i &lt; 1024; i++) {
+```js
+  for (let i = 0; i &lt; 1024; i++) {
 
-   console.log("Don't do this!");
+    console.log("Don't do this!");
 
- }  </code></pre>
+  }
+```
 
 On top of being unnecessary—and, given that just about anyone can view the JavaScript console, potentially a security concern—logging things to the console does hit performance a little. It is a tiny hit, granted, but excessive use of <code>cosole.log()</code> will still make a noticeable impact on the performance of your script.
 
 One small addition on this theme, there are context-appropriate console functions, such as console warn, and console error. <code>cosole.log()</code> is used too often in situations where a warning or error would be more appropriate.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> console.log("User has entered name.");
+```js
+  console.log("User has entered name.");
 
- console.warn("User has entered first name only, full name is preferable.");
+  console.warn("User has entered first name only, full name is preferable.");
 
- console.error("Name field cannot be left blank. Please enter name to continue"); </code></pre>
+  console.error("Name field cannot be left blank. Please enter name to continue");
+```
 
 ### Not Using Var
 
@@ -68,21 +72,17 @@ Declaring new variables with var gives them scope. If you declare a variable in 
 
 This is a really badly designed system when a variable does not need to be global because it is not technically a fault, so you won’t get any errors, but you will get weird things happening if you use the same variable name elsewhere in your code. On top of that, global variables have a small impact on performance, since the further away a piece of code has to go to find the variable it needs, the longer it takes.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function foo() {  
+```js
+  function foo() {  
+    var i = 1;
+    p = 1;
+  }
 
-  var i = 1;
-
-  p = 1;
-
- }
-
- function foo() {
-
-  var i = 10;
-
-  p = 10;
-
- } </code></pre>
+  function foo() {
+    var i = 10;
+    p = 10;
+  }
+```
 
 In the above example, i is kept in a local scope for both functions, but p is global, meaning any changes to that variable in one function will hold for all other functions that access the variable.
 
@@ -92,25 +92,19 @@ While some languages are incredibly strict about things like what you name your 
 
 The purpose of conventions regarding formatting and naming is almost entirely for the benefit of human eyes. After all, the computer doesn’t care what a variable is called. But it is precisely those human eyes that look at barely legible code and decide that JavaScript is a hot mess. Things like inconsistent naming and a lack of proper indentation are generally good practice items that any coder should develop, and JavaScript is no different. Here is some sample code, first done in a way that is just terrible, and then done correctly.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> function foo() {
+```js
+  function foo() {
+    FIRST_NAME = "John";
+    lastName = "Doe";
+    console.log(FIRST_NAME + lastName);
+  }
 
-   FIRST_NAME = "John";
-
-   lastName = "Doe";
-
-   console.log(FIRST_NAME + lastName);
-
- }
-
- function foo() {
-
-    var firstName = "John";
-
-   var lastName = "Doe";
-
-   console.log(firstName + lastName);
-
- } </code></pre>
+  function foo() {
+    var firstName = "John";
+    var lastName = "Doe";
+    console.log(firstName + lastName);
+  }
+```
 
 ## Reasons Why JavaScript Is a Bad Language
 
@@ -126,12 +120,11 @@ While the typing system of JavaScript can seem warm and friendly to beginners at
 
 JavaScript will always endeavor to make an apparent typing conflict work, but it is very bad practice to write sloppy code and hope that the interpreter will run it the way you intended. One example of things going wrong is the accidental mistyping of a number to a string.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> var firstNumber = "1";
-
- var secondNumber = 2;
-
- var result = firstNumber + secondNumber; </code></pre>
-
+```js
+  var firstNumber = "1";
+  var secondNumber = 2;
+  var result = firstNumber + secondNumber; </code></pre>
+```
 In this case, the contents of result would read as a string that says “12”, rather than the number 12. A stricter language would require you to make it clear what you are trying to do, either by converting the string to a number or the number to a string before adding them together, and this helps prevent strange and unexpected errors farther down the line.
 
 ### Automatic Insertion of Semi-Colon

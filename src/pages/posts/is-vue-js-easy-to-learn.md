@@ -40,25 +40,20 @@ with other frameworks, you can't just copy-paste the tag and get started on your
 
 here is a little demonstration that might help you get a clear picture of what I'm trying to say:
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><HTML>
-
-  <head>
-
-    <!-- this is a development version, it includes some helpful console warnings -->
-
-    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-
-  </head>
-
-  <body>
-
-    <div id="vueApp">  {{ message }} </div>
-
-    <script> var vueApp = new Vue({  el: '#vueApp',  data: {  message: 'Hi There i'm Using  Vue!'  } }) </script>
-
-  </body>
-
-</HTML> </code></pre>
+```html
+    <HTML>
+    <head>
+        <!-- this is a development version, it includes some helpful console warnings -->
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="vueApp">  {{ message }} </div>
+        <script>
+            var vueApp = new Vue({  el: '#vueApp',  data: {  message: "Hi There i'm Using  Vue!"  } });
+        </script>
+    </body>
+    </HTML>
+```
 
 as you can see it's a single HTML page with copy-pasted code and there you go, you're using Vue js framework, I don't think anybody would find this to be hard.
 
@@ -126,31 +121,22 @@ and as always coding can't be understood just by describing but you need some de
 
 **Implementing with jQuery**:
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><div id="result"></div>
-
-<button id="add">add</button>
-
-<script>
-
-    var counter = 0;
-
-    $(document).ready(function() {
-
-        var $result= $('#result');
-
-        $('#add').click(function() {
-
-            counter++;
-
+```html
+    <div id="result"></div>
+    <button id="add">add</button>
+    <script>
+        var counter = 0;
+        $(document).ready(function() {
+            var $result= $('#result');
+            $('#add').click(function() {
+                counter++;
+                $result.html(counter);
+            });
             $result.html(counter);
-
         });
 
-        $result.html(counter);
-
-    });
-
-</script></code></pre>
+    </script>
+```
 
 if it looks very simple to you then you're not a beginner that's why, but if you were to read this code back when you were just a beginner I bet you'll find it very tough to understand.
 
@@ -164,39 +150,25 @@ here are some of the things to take into consideration:
 
 **Implementing with Vue.js**:
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><div id="app">
-
-    <div>{{ counter }}</div>
-
-    <button v-on:click="increment">Increment</button>
-
-</div>
-
-<script>
-
-    new Vue({
-
-        el: '#app',
-
-        data: {
-
-            counter: 0
-
-        },
-
-        methods: {
-
-            increment() {
-
-                this.counter++;
-
+```html
+    <div id="app">
+        <div>{{ counter }}</div>
+        <button v-on:click="increment">Increment</button>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                counter: 0
+            },
+            methods: {
+                increment() {
+                    this.counter++;
+                }
             }
-
-        }
-
-    });
-
-</script></code></pre>
+        });
+    </script>
+```
 
 in contrary to jQuery's version of code the pain points are taken care of, if you haven't noticed yet then read the next:
 
@@ -220,7 +192,9 @@ I really enjoy building Vue.js apps because of its simplicity to use, and here i
 
 this is the philosophy of Vue.js, it's built to get it up and running easily. and you don't need to implement some building tool to start using it like some of the other frameworks, as I said earlier it's as simple as adding a script tag and start using the Vue runtime.
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script></code></pre>
+```html
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js"></script>
+```
 
 so as you can see, the barrier to entry is very low, and this is what makes it a worthy consideration framework to learn.
 
@@ -228,9 +202,10 @@ so as you can see, the barrier to entry is very low, and this is what makes it a
 
 when it comes to the advanced features such as TypeScript transpiration, tree-shaking, and hot module replacement that got covered by build tools, Vue.js is also covering all of that.
 
-<pre class="wp-block-code"><code lang="bash" class="language-bash line-numbers">npm install -g @vue/cli
-
-vue create my-project</code></pre>
+```bash
+    npm install -g @vue/cli \
+    vue create my-project
+```
 
 CLI 3 was a huge update in Vue.js command line, CLI stands for Command Line Interface, the team behind Vue js re-wrote the CLI from the ground up which resulted in CLI 3, which was created in a way to support best practices and an easy to extend default Webpack configuration.
 

@@ -14,7 +14,10 @@ so you just started learning Javascript and you heard in some Javascript course 
 
 if you don't even know anything about this topic and you didn't ever wonder about this then I like that you're interested in knowing more about Javascript because it's going to help you so much in the long run. here is an example of what I'm talking about: 
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">**For example: **26.4 - 25 = 1.3999999999999986</code></pre>
+```js
+26.4 - 25
+// 1.3999999999999986
+```
 
 **Javascript is not accurate at math, suck at math, terrible at math, call it whatever you want to call it.** but let me first tell what I found when I did my research.
 
@@ -38,35 +41,26 @@ here is an example of that: fraction(1,5) === '3/2'
 
 one way of solving this problem would be multiplying the decimal and its starting denominator which is by ten until the numerator is whole. and then we can calculate the greatest common denominator of both, and then return the result, let me show you the coding that's responding to the first part:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var fraction =  function(num){  
-
+```js
+var fraction =  function(num){  
     var denominator=1;
-
     //while num is not a whole number
-
     while(num%1!==0){
-
         denominator*=10;
-
         num*=10;
-
     }
-
     console.log(num,denominator);
-
 }
 
-fraction(0.253);  </code></pre>
+fraction(0.253);
+```
 
-then you execute this code expecting to see 253 and 100 to appear in the console, but javascript instead return this instead:
+then you execute this code expecting to see 253 and 100 to appear in the console, but javascript instead return this instead: **25300000000000004 and 100000000000000000** and this is not the only case when Javascript give this weird output to a very simple math problem, here are some additional examples to verify that for you:
 
-**25300000000000004 and 100000000000000000**
-
-and this is not the only case when Javascript give this weird output to a very simple math problem, here are some additional examples to verify that for you:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">console.log(0.253 + 1); //1.2530000000000001  
-
-console.log(0.2 * 0.1); //0.020000000000000004  </code></pre>
+```js
+console.log(0.253 + 1); //1.2530000000000001  
+console.log(0.2 * 0.1); //0.020000000000000004
+```
 
 ## not only javascript is bad at math
 
@@ -74,57 +68,53 @@ keep in mind that this is a very normal thing as long as computers still using b
 
 Example in python 2\3
 
-<pre title="Python Example" class="wp-block-code"><code lang="python" class="language-python line-numbers">python> .4 + .2
-
-0.6000000000000001
+```python
+python> .4 + .2
+// 0.6000000000000001
 
 python> .4 + .1 + .1
-
-0.6</code></pre>
+// 0.6
+```
 
 The same happens in Julia
 
-<pre title="Julia  Example" class="wp-block-code"><code lang="python" class="language-python line-numbers">julia> .4 + .2
-
-0.6000000000000001
+```julia
+julia> .4 + .2
+// 0.6000000000000001
 
 julia> .4 + .1 + .1
-
-0.6</code></pre>
+// 0.6
+```
 
 and also Scala gives the same result:
 
-<pre title="Scala Example" class="wp-block-code"><code lang="python" class="language-python line-numbers">scala> 0.4 + 0.2
-
-0.6000000000000001
+```scala
+0.4 + 0.2
+//0.6000000000000001
 
 scala> 0.4 + 0.1 + 0.1
-
-0.6
-
-</code></pre>
+//0.6
+```
 
 and this is in Haskell:
 
-<pre title="Haskell Example" class="wp-block-code"><code lang="python" class="language-python line-numbers">Prelude> 0.4 + 0.2
-
-0.6000000000000001    
+```haskell
+Prelude> 0.4 + 0.2
+//0.6000000000000001    
 
 Prelude> 0.4 + 0.1 + 0.1
-
-0.6
-
-</code></pre>
+//0.6
+```
 
 but only R v3 gets it right because the way it modifies that after the binary calculations:
 
-<pre title="R v3 Example" class="wp-block-code"><code lang="python" class="language-python line-numbers">> .4 + .2
-
-[1] 0.6
+```haskell
+> .4 + .2
+// 0.6
 
 > .4 + .1 + .1
-
-[1] 0.6</code></pre>
+// 0.6
+```
 
 ## here is a deep explanation of why programming languages are bad at math
 
@@ -186,59 +176,46 @@ if you're interested and you want to know more about this library, go to <a rel=
 
 ### how to use math.js library
 
-in case you want to use Math.js ni the browser, you can copy the following code:
+in case you want to use Math.js in the browser, you can copy the following code:
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><code><!DOCTYPE HTML> </code>
-
-<code><html></code>
-
-  <code><head></code>
-
-    <code><script src="<code><a href="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js" target="_blank" rel="noreferrer noopener">https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js</a></code>" type="text/javascript"></script></code>
-
-  <code></head></code>
-
-  <code><body></code>
-
-    <code><script type="text/javascript"></code>
-
-      <code>// the implementation of math.js</code>
-
-      <code>math.sqrt(-4); // 2i</code>
-
-    <code></script></code>
-
-  <code></body></code>
-
-<code></html></code></code></pre>
+```html
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.3.0/math.min.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // the implementation of math.js
+      math.sqrt(-4); // 2i
+    </script>
+  </body>
+</html>
+```
 
 if you're using a task runner such as Gulp.js, you need to install it using:
 
-<pre class="wp-block-code"><code lang="bash" class="language-bash line-numbers"><code>npm install mathjs</code></code></pre>
+```bash
+npm install mathjs
+```
 
 and then you have to include it in your gulpfile.js:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">import {   atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt } from 'mathjs'
-
-// functions and constants
+```js
+import {   atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt } from 'mathjs'
 
 round(e, 3)                    // 2.718
-
 atan2(3, -3) / pi              // 0.75
-
 log(10000, 10)                 // 4
-
 sqrt(-4)                       // 2i
-
 pow([[-1, 2], [3, 1]], 2)      // [[7, 0], [0, 7]]
-
-derivative('x^2 + x', 'x')     // 2 * x + 1</code></pre>
+derivative('x^2 + x', 'x')     // 2 * x + 1
+```
 
 ## takeaway
 
 it might cause you some considerable hair loss if you put too much energy into understanding the basics of this. in C# we have the Decimal class and java has a BigDecimal class. but they always going to have errors due to what we talked about above.
 
-there are two methods that Javascript provides in order to help rounding <code>Number.toFixed()</code> and <code>Number.toPrecision</code>.
+there are two methods that Javascript provides in order to help rounding `Number.toFixed()` and `Number.toPrecision`.
 
 just remember that it's not because Javascript sucks at doing math but all languages are facing this kind of problem. and also it's possible to avoid this error using some methods in the language.
 

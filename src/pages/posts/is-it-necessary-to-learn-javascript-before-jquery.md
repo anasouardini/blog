@@ -40,18 +40,20 @@ you might come across the fancy word “Vanilla JavaScript” which is what deve
 
 if you don't know what DOM means yet it's what adds dynamic content and interaction to your webpage and it contains the HTML elements. for example, we have an element like this:
 
-<pre class="wp-block-code"><code lang="markup" class="language-markup line-numbers"><button id="Btn">Click Here</button></code></pre>
+```html
+    <button id="Btn">Click Here</button>
+```
 
 the DOM can help us here so that you can write a function to manipulate the button element and change its properties so that it can do something when you click on it.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function welcome () {
+```js
+    function welcome () {
+        alert('you clicked me!');
+    } // javascript core
 
-    alert('you clicked me!');
-
-} // javascript core
-
-document.getElementById('Btn').addEventListener('click', welcome); // javascript DOM functions now, for DOM manipulation</code></pre>
-
+    // javascript DOM functions now, for DOM manipulation
+    document.getElementById('Btn').addEventListener('click', welcome);
+```
 now the difference between Javascript and jQuery is that the library is only built for manipulating the DOM, (keep that in mind). and that is for a reason which is to let experienced developers write code without worrying about cross-browser compatibility issues. a lot of changes happened to jQuery lately but it's definitely still doesn't cover vanilla JS entirely.
 
 so in order to use jQuery properly, you still have to learn at least the basics of Javascript or it'll be a very hard time for you at least from a web development perspective.
@@ -90,15 +92,15 @@ but as I mentioned earlier, libraries come and go, so if you're fine with learni
 
 you might get discouraged from learning Javascript at the syntax for the first time especially when you know about the cross-browser compatibility issues which what jQuery came to fixed, but as more and more sites are dropping support for those old browsers like IE6/7, javascript syntax is more cleaner and really easy to learn, as you can see in this example: 
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">// this code checks if elm is has class "myClass" or not.
+```js
+    // this code checks if elm is has class "myClass" or not.
 
-// jquery code
+    // jquery code
+    $(elm).hasClass('Class');
 
-$(elm).hasClass('Class');
-
-// vanilla js version for the above, works in IE10+
-
-elm.classList.contains('Class');</code></pre>
+    // vanilla js version for the above, works in IE10+
+    elm.classList.contains('Class');
+```
 
 so you'll that the difference is not huge as you might think, it can take pretty much the same time to write both of the lines. of course, there are some cases that it'll be more lines of Javascript for one line of jQuery, I'm not trying to convince you to go for Javascript, but the difference still not huge, and the browser support is fairly good unless you want to support Opera Mini or IE 6-9.
 
@@ -110,25 +112,25 @@ Note: if you're worried or interested in cross-browser compatibility issues you 
 
 you might have the idea of jQuery code is more readable but it's not always true, sometimes it's the opposite. in certain cases, you'll find that jQuery code can be rather unreadable while vanilla Javascript code is more coherent. and here is an example that shows just that. it's not a rare case but it's used very often when you need to get the *outherHTML* of some element in the DOM.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">// jQuery
+```js
+    // jQuery
+    $('div').append($(el).clone()).html();
 
-$('div').append($(el).clone()).html();
-
-// Vanilla JS
-
-el.outerHTML;</code></pre>
+    // Vanilla JS
+    el.outerHTML;
+```
 
 you might not believe but that's the equivalent Javascript code which way shorter go ahead and google it if you want. it's more readable and faster I think you already have it stuck in your brain.
 
 and here is another example, let's say you want to check if two elements of the DOM are the same, and here are the two lines of code, which one would you pick?
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">//jQuery
-
+```js
+//jQuery
 $(elm).is($(someElem));
 
 //Vanilla Javascriupt
-
-elm===someElem;</code></pre>
+elm===someElem;
+```
 
 and both the lines do the same job which is returning a boolean (*true or false*) depending on whether the data in *elm* and *someElem* are the same, to see if they refer to the same DOM element or not. you can see that Javascript code is smaller and easier to remember.
 

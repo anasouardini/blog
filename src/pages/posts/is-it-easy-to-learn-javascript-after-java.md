@@ -44,11 +44,15 @@ to make it easier for you to estimate how long it's going to take you to learn J
 
 You can barely overlook the popularity of JavaScript. It accounts for up to 55.4% of users or applications, thanks to its changes to websites. Its role in making interactive and live websites makes it a go-to language. Here are a few reasons you should consider learning this scripting language.
 
-- **Necessary for the job market:**<br>JavaScript is an excellent addition to your portfolio. Most platforms and websites want to build their applications around this language. From Walmart and Netflix to Paypal, you cannot overlook this scripting language's significance in the market. Ideally, for every JavaScript job in the market, there are 0.6 Java jobs.<br>Various projects require skills in JavaScript, making it a necessary skill. Typically, this language will function well wherever there is a browser. Since most applications will want interactivity, you will barely miss out on the job market.
+- **Necessary for the job market:** JavaScript is an excellent addition to your portfolio. Most platforms and websites want to build their applications around this language. From Walmart and Netflix to Paypal, you cannot overlook this scripting language's significance in the market. Ideally, for every JavaScript job in the market, there are 0.6 Java jobs.
 
-- **It is straightforward to learn:**<br>While it is a high-level scripting language, JavaScript is relatively more straightforward to learn. You could spend a little more time learning this language, but it will be worth your time. As long as you have the basics at your fingertips, you will have no reason to worry. Frequent updates can only make things much better for you.
+Various projects require skills in JavaScript, making it a necessary skill. Typically, this language will function well wherever there is a browser. Since most applications will want interactivity, you will barely miss out on the job market.
 
-- **Multiple applications:**<br>As mentioned, you can use JavaScript across any application. This language will seamlessly work wherever there is a browser. It will also assure you of applications that can be used across different operating systems. What is more, these apps will be live and interactive, assuring the end-user of better interfaces.<br>In conclusion, JavaScript is one of the most popular scripting languages to learn. Learning it after Java is one of the best decisions you could ever make. It can only make things more straightforward and seamless. If you intend to learn any language today, let it be JavaScript.
+- **It is straightforward to learn:** While it is a high-level scripting language, JavaScript is relatively more straightforward to learn. You could spend a little more time learning this language, but it will be worth your time. As long as you have the basics at your fingertips, you will have no reason to worry. Frequent updates can only make things much better for you.
+
+- **Multiple applications:** As mentioned, you can use JavaScript across any application. This language will seamlessly work wherever there is a browser. It will also assure you of applications that can be used across different operating systems. What is more, these apps will be live and interactive, assuring the end-user of better interfaces.
+
+In conclusion, JavaScript is one of the most popular scripting languages to learn. Learning it after Java is one of the best decisions you could ever make. It can only make things more straightforward and seamless. If you intend to learn any language today, let it be JavaScript.
 
 **References**:
 
