@@ -17,7 +17,7 @@ const posts = await Astro.glob('./posts/*.md');
             >
               <h2 class="text-xl mb-2 capitalize">{post.frontmatter.title}</h2>
               <p class="text-md">
-               <span class="text-gray-500">Published on</span> {post.frontmatter.date.split(' ').slice(0, 3).join(' ')}
+               <span class="text-gray-500">Published on</span> {post.frontmatter.date.split(' ').slice(0, 4).join(' ')}
                 <span class="text-gray-500">by</span> {post.frontmatter.author}
               </p>
             </div>
