@@ -2,7 +2,7 @@
 
 const defaultTheme = require('tailwindcss/defaultTheme');
 module.exports = {
-    content: ['index.astro', './src/**/*.{js,ts,jsx,tsx,html,astro}'],
+    content: ['./src/**/*.{js,ts,jsx,tsx,html,astro,md}'],
     theme: {
         extend: {
             container: {center: true},
