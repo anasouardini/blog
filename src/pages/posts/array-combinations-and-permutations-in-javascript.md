@@ -23,7 +23,6 @@ To accomplish that you can possibility list out all the arrays that you have and
 It is often required to generate all possible combinations of one item and two different Javascript arrays. Array Combinations in Javascript can be done in two ways:
 
 - Recursive Way
-
 - Iterative Way
 
 We will talk about how both these methods can be used to get all possible array combinations in Javascript.
@@ -34,83 +33,59 @@ Let us understand each of these approaches with the help of examples.
 
 Recursion is a way in which a certain thing is defined in its own terms or itself or in its own type. The recursive way of problem solving can be used to obtain array combinations using a number of approaches.
 
-Here are some approaches on how you can obtain all array combinations recursively -
+Here are some approaches on how you can obtain all array combinations recursively:
 
 #### Approach 1
 
 - You will first have to get all the arrays in one array.
-
 - This is achieved recursively. Here a base condition is used - that is when the array length becomes zero, then the string that has been built up until that moment is returned as the result. Else
-
 - The first array element can be reduced by using the .reduce() method and the result that is returned from recursion. Every time the first array item is left, recursion is being called. Plus the previous value of the array is concatenated with each array element.
-
 - The final array that is returned contains the combination of all possible arrays.
 
 Here's how this approach is used:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">  *function getArcobmn(arr, pre) {*
+```js
+function getArcobmn(arr, pre) {
+  pre = pre || '';
 
- *      pre = pre || '';*
+  if (!arr.length) {
+     return pre;
+  }
 
- *      if (!arr.length) {*
+  var ans = arr[0].reduce(function(ans, value) {
+     return ans.concat(getArcobmn(arr.slice(1), pre + value));
+  }, []);
 
- *        return pre;*
-
- *      }*
-
- *      var ans = arr[0].reduce(function(ans, value) {*
-
- *        return ans.concat(getArcobmn(arr.slice(1), pre + value));*
-
- *      }, []);*
-
- *      return ans;*
-
- * }* </code></pre>
+  return ans;
+}
+```
 
 #### Approach 2
 
 - First, get all the arrays in one single array.
-
 - We will be using recursion in this approach as well but here the base condition changes. The base condition in this array is that when the array length becomes one then the given element of the array is to be returned. Else
-
 - Recursion is called after the first array element is left and the result is stored in the variable using otherCases.
-
 - Then using a loop, loop through all elements of the Array using otherCases and inside each element and also loop through the first array element (Array(arr)).
-
 - Then concatenate every array element and then push the results in the resultset or answer array.
-
 Here's how this approach is used:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> * function getArcombn(arr) {*
-
- *      if (arr.length == 1) {*
-
- *        return arr[0];*
-
- *      } else {*
-
- *        var ans = [];*
-
- *        // recur with the rest of the array.*
-
- *        var otherCases = getArcobmn(arr.slice(1));*
-
- *        for (var i = 0; i &lt; otherCases.length; i++) {*
-
- *          for (var j = 0; j &lt; arr[0].length; j++) {*
-
- *            ans.push(arr[0][j] + otherCases[i]);*
-
- *          }*
-
- *        }*
-
- *        return ans;*
-
- *      }*
-
- * }*</code></pre>
+```js
+function getArcombn(arr) {
+    if (arr.length == 1) {
+       return arr[0];
+    } else {
+       var ans = [];
+       // recur with the rest of the array.
+       var otherCases = getArcobmn(arr.slice(1));
+       for (var i = 0; i &lt; otherCases.length; i++) {
+         for (var j = 0; j &lt; arr[0].length; j++) {
+           ans.push(arr[0][j] + otherCases[i]);
+         }
+       }
+       return ans;
+    }
+}
+```
 
 Let us now look at the iterative way of combining arrays:
 
@@ -122,23 +97,17 @@ You can achieve array combinations in JavaScript through the Iterative way. Most
 
 A simple way of doing it would be to do a double for loop on the array where you are skipping j number of elements in the second loop that you are using.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> *let array = ["banana", "apple" , "lemon", "mango"];*
+```js
+let array = ["banana", "apple" , "lemon", "mango"];
+let results = [];
+for (let j = 0; j < array.length - 1; j++) {
+ // This is where you'll capture that last value
+ for (let k = j + 1; j &lt; array.length; k++) {
+  results.push(`${array[j]} ${array[k]}`);
+}
 
- *let results = [];*
-
- *for (let j = 0; j &lt; array.length - 1; j++) {*
-
- * // This is where you'll capture that last value*
-
- * for (let k = j + 1; j &lt; array.length; k++) {*
-
- *  results.push(`${array[j]} ${array[k]}`);*
-
- * }*
-
- *}*
-
- *console.log(results);* </code></pre>
+console.log(results);
+```
 
 before we move on to the array permutations, I want you to check out this article which is also about arrays in JavaScript but this one talks about <a href="/posts/remove-duplicates-from-a-javascript-array/" class="rank-math-link">removing duplicate data from an array</a>, I listed out all the possible methods from basic to advanced ways of doing it.
 
@@ -155,34 +124,25 @@ Think this to be <a href="/posts/convert-string-to-number-in-javascript/" class=
 In Javascript different array permutations can be achieved by Iterations. This can be done as per the below steps:
 
 - Create an array that has no values or is empty. This array will be used to store values and elements in case more than one value is returned.
-
 - Loops need to be used to have iterations through all characters in the string.
 
 The code for finding permutations can look something like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> *let findPermutations = (string) =&gt; {*
+```js
+let findPermutations = (string) => {
+    if (!string || typeof string !== "string"){
+        return "Please enter a string"
+    } else if (string.length &lt; 2 ){
+        return string
+    }
 
- *  if (!string || typeof string !== "string"){*
-
- *  return "Please enter a string"*
-
- * } else if (string.length &lt; 2 ){*
-
- *  return string*
-
- * }*
-
- * let permutationsArray = []*
-
- * for (let i = 0; i &lt; string.length; i++){*
-
- *  // do something*
-
- * }*
-
- * return permutationsArray*
-
- *}* </code></pre>
+    let permutationsArray = []
+    for (let i = 0; i &lt; string.length; i++){
+        // do something
+    }
+    return permutationsArray
+}
+```
 
 **Takeaways**
 
