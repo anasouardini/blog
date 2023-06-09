@@ -1,12 +1,14 @@
 ---
-import Main from "./main.astro";
-const {frontmatter: {title, description}} = Astro.props;
+import Main from './main.astro';
+const {
+    frontmatter: {title, description},
+} = Astro.props;
 ---
 
 <Main {title} {description}>
-    <main class="flex flex-col justify-between">
+    <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] mt-10">
         <article class="p-3">
-            <h1>{title}</h1>    
+            <h1 class="capitalize text-2xl mb-5">{title}</h1>
             <slot>blog post not found</slot>
         </article>
         <aside>
