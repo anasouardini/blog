@@ -8,7 +8,15 @@ const {
 <Main {title} {description}>
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] mt-10">
         <article class="p-3">
-            <h1 class="capitalize text-2xl mb-5">{title}</h1>
+            <h1 class="capitalize text-3xl mb-10">{title}</h1>
+            <style is:inline>
+                p{margin-bottom: 1rem}
+                pre{
+                    margin-bottom: 1rem;
+                    padding: 1rem;
+                    border-radius: 6px;
+                }
+            </style>
             <slot>blog post not found</slot>
         </article>
         <aside>
