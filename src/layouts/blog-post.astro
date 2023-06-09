@@ -1,0 +1,17 @@
+---
+import Main from "./main.astro";
+const {frontmatter: {title, description}} = Astro.props;
+---
+
+<Main {title} {description}>
+    <main class="flex flex-col justify-between">
+        <article class="p-3">
+            <h1>{title}</h1>    
+            <slot>blog post not found</slot>
+        </article>
+        <aside>
+            <div aria-label="recent posts"></div>
+            <div aria-label="featured work"></div>
+        </aside>
+    </main>
+</Main>

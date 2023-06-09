@@ -1,0 +1,16 @@
+---
+import Main from './../layouts/main.astro';
+const posts = await Astro.glob('./posts/*.md');
+---
+
+<Main title="Blog Posts">
+    <h1>Articles List</h1>
+    {posts
+      .filter((post)=>(!post.frontmatter.draft))
+      .map((post)=>(
+        <h2>
+          <a href={`/posts/${post.frontmatter.slug}`}>{post.frontmatter.title} - {post.frontmatter.date}</a>
+        </h2>
+      ))
+    }
+</Main>

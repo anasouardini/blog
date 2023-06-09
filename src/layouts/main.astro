@@ -1,0 +1,24 @@
+---
+const {title, description} = Astro.props;
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title ?? 'Blog'}</title>
+        <meta name="description" content={description}/>
+    </head>
+    <body>
+        <slot>No content is available</slot>
+        <script>
+            const startDate = 2023;
+            const endDate = new Date().getFullYear();
+            const footerDate = `${startDate}${endDate !== startDate ? '-'+endDate : ''}`
+            document.querySelector('#footerDate').textContent = footerDate;
+        </script>
+        <footer>Copyright &copy; — <span id="footerDate"></span></footer>
+    </body>
+</html>
