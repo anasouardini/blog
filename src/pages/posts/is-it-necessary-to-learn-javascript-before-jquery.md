@@ -4,7 +4,7 @@ title: Is It Necessary To Learn JavaScript In Order to Learn jQuery?
 slug: is-it-necessary-to-learn-javascript-before-jquery
 description: 
 date: Mon, 09 Nov 2020 23:45:07 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

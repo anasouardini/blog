@@ -4,7 +4,7 @@ title: Why Javascript is considered a weird language?
 slug: why-javascript-is-weird
 description: 
 date: Wed, 16 Dec 2020 12:42:31 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

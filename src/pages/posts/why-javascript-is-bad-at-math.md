@@ -4,7 +4,7 @@ title: Why Javascript Is Noob at Math?
 slug: why-javascript-is-bad-at-math
 description: 
 date: Tue, 24 Nov 2020 15:18:21 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

@@ -4,7 +4,7 @@ title: What Language is JavaScript Written In
 slug: what-language-is-javascript-written-in
 description: 
 date: Fri, 25 Dec 2020 18:55:57 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

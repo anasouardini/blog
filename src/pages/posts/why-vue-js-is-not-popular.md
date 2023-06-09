@@ -4,7 +4,7 @@ title: why Vue js is not popular?
 slug: why-vue-js-is-not-popular
 description: 
 date: Sun, 13 Dec 2020 12:44:49 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

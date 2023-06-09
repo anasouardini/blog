@@ -4,7 +4,7 @@ title: Top 10 Bad Things You Should Know About Javascript
 slug: top-bad-things-about-javascript
 description: 
 date: Thu, 25 Feb 2021 20:46:19 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

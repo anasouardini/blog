@@ -4,7 +4,7 @@ title: Should I Start Learning JavaScript ES6 Or ES5 As a Beginner?
 slug: should-you-start-with-es6-or-es5
 description: 
 date: Mon, 09 Nov 2020 23:42:58 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

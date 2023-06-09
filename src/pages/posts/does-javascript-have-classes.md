@@ -4,7 +4,7 @@ title: Does JavaScript Have Classes
 slug: does-javascript-have-classes
 description: 
 date: Thu, 31 Dec 2020 22:29:18 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

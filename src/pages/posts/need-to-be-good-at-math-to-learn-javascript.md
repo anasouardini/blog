@@ -4,7 +4,7 @@ title: Do You Need to be Good at Math to Learn JavaScript
 slug: need-to-be-good-at-math-to-learn-javascript
 description: 
 date: Wed, 30 Dec 2020 15:55:12 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

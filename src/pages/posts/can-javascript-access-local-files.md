@@ -4,7 +4,7 @@ title: Can JavaScript access local files
 slug: can-javascript-access-local-files
 description: 
 date: Thu, 07 Jan 2021 20:02:06 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

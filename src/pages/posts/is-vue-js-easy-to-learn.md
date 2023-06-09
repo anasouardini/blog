@@ -4,7 +4,7 @@ title: Is Vue JS Easy To Learn
 slug: is-vue-js-easy-to-learn
 description: 
 date: Wed, 09 Dec 2020 13:40:12 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

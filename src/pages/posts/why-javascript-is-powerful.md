@@ -4,7 +4,7 @@ title: why javascript language is so powerful?
 slug: why-javascript-is-powerful
 description: 
 date: Mon, 23 Nov 2020 20:37:10 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

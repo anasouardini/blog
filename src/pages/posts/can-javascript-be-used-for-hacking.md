@@ -4,7 +4,7 @@ title: Can JavaScript be Used for Hacking
 slug: can-javascript-be-used-for-hacking
 description: 
 date: Wed, 06 Jan 2021 14:35:21 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

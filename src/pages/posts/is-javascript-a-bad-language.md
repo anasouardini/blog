@@ -4,7 +4,7 @@ title: Is JavaScript a Bad Language?
 slug: is-javascript-a-bad-language
 description: 
 date: Thu, 04 Mar 2021 15:59:23 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

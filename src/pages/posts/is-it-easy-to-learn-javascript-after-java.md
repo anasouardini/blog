@@ -4,7 +4,7 @@ title: Is It Easy to Learn JavaScript After Java
 slug: is-it-easy-to-learn-javascript-after-java
 description: 
 date: Sat, 26 Dec 2020 13:36:26 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

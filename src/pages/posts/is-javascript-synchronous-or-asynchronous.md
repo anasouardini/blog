@@ -4,7 +4,7 @@ title: Is JavaScript Synchronous or Asynchronous
 slug: is-javascript-synchronous-or-asynchronous
 description: 
 date: Wed, 30 Dec 2020 15:55:32 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

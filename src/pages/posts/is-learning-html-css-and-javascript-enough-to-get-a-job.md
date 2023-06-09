@@ -4,7 +4,7 @@ title: Is Learning HTML, CSS, and Javascript Enough to Get a Job?
 slug: is-learning-html-css-and-javascript-enough-to-get-a-job
 description: 
 date: Wed, 16 Dec 2020 13:49:28 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

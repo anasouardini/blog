@@ -4,7 +4,7 @@ title: what should I learn after javascript?
 slug: what-should-i-learn-after-javascript
 description: 
 date: Mon, 16 Nov 2020 04:23:59 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

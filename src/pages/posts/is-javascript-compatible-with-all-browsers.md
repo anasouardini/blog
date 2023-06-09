@@ -4,7 +4,7 @@ title: is javascript compatible with all browsers? JS cross-browser
 slug: is-javascript-compatible-with-all-browsers
 description: 
 date: Thu, 12 Nov 2020 23:09:53 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

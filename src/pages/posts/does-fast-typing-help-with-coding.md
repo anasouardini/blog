@@ -4,7 +4,7 @@ title: does fast typing help with coding
 slug: does-fast-typing-help-with-coding
 description: 
 date: Tue, 01 Dec 2020 11:58:01 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

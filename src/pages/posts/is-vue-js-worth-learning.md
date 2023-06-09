@@ -4,7 +4,7 @@ title: Is Vue JS Worth Learning?
 slug: is-vue-js-worth-learning
 description: 
 date: Fri, 04 Dec 2020 19:07:51 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

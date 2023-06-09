@@ -4,7 +4,7 @@ title: Why JavaScript Is a Lightweight Language
 slug: why-javascript-is-a-lightweight-language
 description: 
 date: Thu, 31 Dec 2020 13:35:50 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

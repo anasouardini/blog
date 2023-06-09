@@ -4,7 +4,7 @@ title: Is JavaScript Compiled or Interpreted
 slug: is-javascript-compiled-or-interpreted
 description: 
 date: Mon, 28 Dec 2020 20:15:56 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

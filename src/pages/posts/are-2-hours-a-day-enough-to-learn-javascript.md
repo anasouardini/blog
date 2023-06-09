@@ -4,7 +4,7 @@ title: How Long It Takes To Learn JavaScript
 slug: are-2-hours-a-day-enough-to-learn-javascript
 description: 
 date: Mon, 09 Nov 2020 23:38:05 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

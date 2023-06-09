@@ -4,7 +4,7 @@ title: What is Function Overloading in Javascript
 slug: function-overloading-in-javascript
 description: 
 date: Tue, 02 Mar 2021 20:48:40 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

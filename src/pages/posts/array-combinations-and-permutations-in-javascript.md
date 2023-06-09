@@ -4,7 +4,7 @@ title: How to do array combinations in Javascript?
 slug: array-combinations-and-permutations-in-javascript
 description: 
 date: Mon, 08 Mar 2021 17:21:59 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

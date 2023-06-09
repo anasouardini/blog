@@ -4,7 +4,7 @@ title: How to remove duplicates from a javascript array
 slug: remove-duplicates-from-a-javascript-array
 description: 
 date: Wed, 24 Feb 2021 20:56:18 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

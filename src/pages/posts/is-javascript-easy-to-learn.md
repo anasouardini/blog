@@ -4,7 +4,7 @@ title: Is Javascript Easy To Learn? - Compared With Other Languages
 slug: is-javascript-easy-to-learn
 description: 
 date: Mon, 09 Nov 2020 23:46:10 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

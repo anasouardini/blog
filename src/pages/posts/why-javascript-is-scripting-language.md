@@ -4,7 +4,7 @@ title: Why JavaScript is Considered a Scripting Language
 slug: why-javascript-is-scripting-language
 description: 
 date: Sat, 02 Jan 2021 15:16:03 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

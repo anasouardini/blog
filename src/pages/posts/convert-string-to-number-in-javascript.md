@@ -4,7 +4,7 @@ title: How to Convert String to Number in JavaScript?
 slug: convert-string-to-number-in-javascript
 description: 
 date: Thu, 24 Dec 2020 12:44:33 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---

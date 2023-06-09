@@ -4,7 +4,7 @@ title: What is the Difference Between Java and JavaScript
 slug: difference-between-java-and-javascript
 description: 
 date: Wed, 06 Jan 2021 14:35:14 +0000
-author: anas ouardini
+author: Anas Ouardini
 draft: false
 category: javascript js-questions
 ---
