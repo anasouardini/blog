@@ -10,8 +10,21 @@ const {title, description} = Astro.props;
         <meta name="generator" content={Astro.generator} />
         <title>{title ?? 'Blog'}</title>
         <meta name="description" content={description}/>
+        <link rel="sitemap" href="/sitemap-index.xml" />
     </head>
-    <body>
+    <style></style>
+    <body class=`min-h-[100vh] flex flex-col justify-between
+                bg-dark-1 text-white`>
+        <header>
+            <nav class="flex justify-between py-4 w-[95%] mx-auto max-w-[1100px]">
+                <a href="/">Logo</a>
+                <ul class="flex gap-4">
+                    <li><a href="/">posts</a></li>
+                    <!-- <li><a href="/">privacy policy</a></li>
+                    <li><a href="/">author</a></li> -->
+                </ul>
+            </nav>
+        </header>
         <slot>No content is available</slot>
         <script>
             const startDate = 2023;
@@ -19,6 +32,8 @@ const {title, description} = Astro.props;
             const footerDate = `${startDate}${endDate !== startDate ? '-'+endDate : ''}`
             document.querySelector('#footerDate').textContent = footerDate;
         </script>
-        <footer>Copyright &copy; — <span id="footerDate"></span></footer>
+        <footer class="py-3 text-center">
+            Copyright &copy; — <span id="footerDate"></span>
+        </footer>
     </body>
 </html>
