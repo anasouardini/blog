@@ -6,17 +6,77 @@ const {
 ---
 
 <Main {title} {description}>
-    <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] mt-10">
+    <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
+        <style is:inline>
+            p{
+                margin-bottom: 1rem
+            }
+            p:first-letter{
+                text-transform: uppercase
+            }
+            h1, h2, h3, h4, h5, h6{
+                color: #4C99EB;
+                text-transform: capitalize;
+                margin-bottom: 1rem;
+                margin-top: 2rem
+            }
+            h1{
+                font-size: 2.4rem;
+                margin-bottom: 2rem;
+            }
+            h2{
+                font-size: 2rem;
+                margin-bottom: 1.6rem;
+            }
+            h3{
+                font-size: 1.6rem;
+                margin-bottom: 1.2rem;
+            }
+            h4{
+                font-size: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            h5{
+                font-size: 0.8rem;
+                margin-bottom: 1.2rem;
+            }
+            h6{
+                font-size: 0.4rem;
+                margin-bottom: 1.2rem;
+            }
+            pre{
+                margin-bottom: 1rem;
+                padding: 1rem;
+                border-radius: 6px;
+            }
+            p > code{
+                padding: .1rem .3rem;
+                border-radius: 3px;
+                /* background: #A6E6FF; */
+                /* background: #212333; */
+                background: #302D4D;
+                /* color: #222; */
+            }
+            ul{
+                margin: 1rem 0;
+                padding-left: 2rem
+            }
+            li{
+                list-style-type: normal;
+            }
+            a{
+                color: #306296;
+                text-decoration: underline;
+            }
+            a:visited{
+                color: #1D3C5C;
+            }
+            a:hover{
+                color: #4C99EB;
+            }
+        </style>
         <article class="p-3">
-            <h1 class="capitalize text-3xl mb-10">{title}</h1>
-            <style is:inline>
-                p{margin-bottom: 1rem}
-                pre{
-                    margin-bottom: 1rem;
-                    padding: 1rem;
-                    border-radius: 6px;
-                }
-            </style>
+            <h1 class="capitalize">{title}</h1>
             <slot>blog post not found</slot>
         </article>
         <aside>
