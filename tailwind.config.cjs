@@ -5,9 +5,11 @@ module.exports = {
     content: ['index.astro', './src/**/*.{js,ts,jsx,tsx,html,astro}'],
     theme: {
         extend: {
+            container: {center: true},
             colors: {
                 primary: 'rgb(101 163 13)',
-                dark: '#191919',
+                'dark-1': '#222224',
+                'dark-2': '#2a2a2c',
             },
             boxShadow: { '2xl': '0 0px 20px 30px rgb(0 0 0 / .4)' },
             spacing: {
