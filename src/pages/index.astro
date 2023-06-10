@@ -8,7 +8,7 @@ const posts = await Astro.glob('./posts/*.md');
     <h1 class="mb-10 text-2xl">Blog Posts</h1>
     {
       posts
-        .filter((post) => !post.frontmatter.draft)
+        // .filter((post) => !post.frontmatter.draft)
         .map((post) => (
           <a href={`/posts/${post.frontmatter.slug}`} class="block w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
             <div
