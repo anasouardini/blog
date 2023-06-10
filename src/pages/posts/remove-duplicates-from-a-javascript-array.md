@@ -9,24 +9,11 @@ draft: false
 category: javascript js-questions
 ---
 
-
-<div class="wp-block-columns">
-
-<div class="wp-block-column" style="flex-basis:66.66%">
-
 I came across this question many times in my web development journey during interviews and also when I was preparing for them, they simply tell you to remove duplicates from a certain array, this problem can be asked in many different ways and with certain conditions, that's why I'm going to mention all the different methods techniques that can help you solve this really simple question.
 
 so that you can answer this question whenever you encountered one in your interview or in your project, and whatever the conditions are.
 
-</div>
-
-<div class="wp-block-column" style="flex-basis:33.33%">
-
 <figure class="wp-block-image size-large"><img src="/wp-content/uploads/2021/02/remove-duplicates-from-a-javascript-array-683x1024.webp" alt="" class="wp-image-943"/></figure>
-
-</div>
-
-</div>
 
 **the easiest and the quickest way to get rid of duplicates from an array and leave only the unique values is by using the ES6 <a aria-label=" (opens in a new tab)" href="https://medium.com/front-end-weekly/es6-set-vs-array-what-and-when-efc055655e1a" target="_blank" rel="noreferrer noopener nofollow" class="rank-math-link">Set</a> object, you simply give it any type and let it extract only the unique entries automatically.**
 
@@ -108,10 +95,10 @@ the same as the one above, it looks for the non-existence of elements of the not
 it checks if the element from the `notUniqueArray` array exists in the object, if not it assigns it to the key of the object and assigns `true` to the value just because it can't be empty, and then returns keys of that object which are the unique values of the `notUniqueArray` array, the cool thing about this method if your original array contains only numbers they will be ranged from the smallest to the biggest number.
 
 ```js
-  var notUniqueArray = ['1', '1', '3', '4', '🗿', '🗿', '0'];
-  makeItUnique(notUniqueArray); 
+var notUniqueArray = ['1', '1', '3', '4', '🗿', '🗿', '0'];
+makeItUnique(notUniqueArray); 
 
-  // it will return this array ["0", "1", "3", "4", "🗿"]
+// it will return this array ["0", "1", "3", "4", "🗿"]
 ```
 
 ### 3.implementing hash-map to eliminate duplicates from arrays
@@ -180,24 +167,24 @@ this solution is the easiest one to understand and also the most efficient one a
 here is the code example of what i just said:
 
 ```js
-  var uniqueChars = [];
-  function makeItUnique(array) {
-    array.forEach((c) => {
-      if (!uniqueChars.includes(c)) {
-          uniqueChars.push(c);
-      }
-    });
-    return uniqueChars;
-  }
+var uniqueChars = [];
+function makeItUnique(array) {
+  array.forEach((c) => {
+    if (!uniqueChars.includes(c)) {
+        uniqueChars.push(c);
+    }
+  });
+  return uniqueChars;
+}
 ```
 
 here is the output of this function.
 
 ```js
-  var notUniqueArray = ['1', '1', '3', '4', '😁', '😁', '0'];
-  makeItUnique(notUniqueArray);
+var notUniqueArray = ['1', '1', '3', '4', '😁', '😁', '0'];
+makeItUnique(notUniqueArray);
 
-  // it will return this array ["1", "3", "4", "😁", "0"]
+// it will return this array ["1", "3", "4", "😁", "0"]
 ```
 
 here is a table of the sates of each variable in this script while running:
@@ -227,41 +214,38 @@ now after you know what `Set` object is really doing, let me explain the followi
 I KNOW, the second step is a bit confusing, since you probably don't know how to convert `Set` object into an array.
 
 well, there are two simple and easy ways of doing that.
+
 - the first one is by using the `Array.from(SetResult)` method to store the unique result into an array like so `const uniqueArr = Array.from(new Set(hasDuplicatesArray))`.
 - the second way of doing it is by implementing what's called the Array Destructuring method which as simple as adding 3 dots before an array, object, or a set of values to make those values spread basically which is used like so `[...arr, 1, 3]`, and those 3 dots are called a spread operator, this means that inside of those brackets we have the arr array values followed by 1 and 3. and we can use it on Set In the same way, `const uniqueArr = [...new Set(notUniqueArr)]`.
 
 here is a video if you're a visual learner:
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=NIq3qLaHCIs
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=NIq3qLaHCIs</div></figure>
 
 now enough talking and let's wrap up the whole thing, so we can get this:
 
 ```js
-  function makeItUnique(){
-    // Step 1
-    const uniqueSet = new Set(array);// Set { '🗻', 1, 2, 3 }                                             
+function makeItUnique(){
+  // Step 1
+  const uniqueSet = new Set(array);// Set { '🗻', 1, 2, 3 }                                             
 
-    // Step 2
-    // method one
-    const uniqueArr = array.from(uniqueSet);
+  // Step 2
+  // method one
+  const uniqueArr = array.from(uniqueSet);
 
-    // method two
-    const uniqueArr = [...new Set(uniqueSet)];
+  // method two
+  const uniqueArr = [...new Set(uniqueSet)];
 
-    return uniqueArr;
-  }
+  return uniqueArr;
+}
 ```
 
 here is the result of the execution of `makeItUnique()` function:
 ```js
-  const array = ['🗻', 1, 2, '🗻', '🗻', 3];
-  makeItUnique(array);
+const array = ['🗻', 1, 2, '🗻', '🗻', 3];
+makeItUnique(array);
 
-  // ['🗻', 1, 2, 3 ]`</pre>
+// ['🗻', 1, 2, 3 ]`</pre>
 ```
 
 there is no table for this since it's really obvious and there is only one input and output.
@@ -269,19 +253,19 @@ there is no table for this since it's really obvious and there is only one input
 but here is the shortest line of code you can use to write this code:
 
 ```js
-  let unique = a => [...new Set(a)]; 😁
+let unique = a => [...new Set(a)]; 😁
 ```
 
 the only thing you might not understand is the arrow function which is use like so:
 
 ```js
-  let arr = function(par){ //do something; };
+let arr = function(par){ //do something; };
 
-  //OR an arrow function
-  let arr = (par) => { //do something; };
+//OR an arrow function
+let arr = (par) => { //do something; };
 
-  //OR a short arrow function
-  let arr = par => //do something;`</pre>
+//OR a short arrow function
+let arr = par => //do something;`</pre>
 ```
 
 if you ever used `Set` in Python you'll notice that they don't work the same, JavaScript's version keeps the insertion order, unlike Python's version which arranges values from the smaller to the bigger value.
@@ -312,10 +296,9 @@ this normal function can be exited only by using `return` or in the case of thro
 
 but as we said the generator function **can be stopped midway** and continue from where it stopped with no problem.
 
- developers give the generators many definitions, here are two of them that are really common:
+developers give the generators many definitions, here are two of them that are really common:
 
 - a generator is a unique class of function that made writing iterators a really simple task.
-
 - instead of returning a single value, a generator can generate a sequence of results (series of values).
 
 when a generator stops it returns an object on which you can call `next()`. in JavaScript each call of `next()` will result in an object like so:
@@ -342,11 +325,7 @@ function* funcName(){
 
 and here is a video for visual learners:
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=dcP039DYzmE
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=dcP039DYzmE</div></figure>
 
 #### using generators for removing duplicates
 
@@ -373,12 +352,12 @@ here is the code to run this function:
 
 ```js
 let uniqueValues = [];
- let notUnique = ['🗻', 1, 2, '🗻', '🗻', 3];
- let generator = makeItUnique(notUnique);
- for(let uniqueVal of generator){
-     uniqueValues.push(uniqueVal);
- }
- console.log(uniqueValues);
+let notUnique = ['🗻', 1, 2, '🗻', '🗻', 3];
+let generator = makeItUnique(notUnique);
+for(let uniqueVal of generator){
+    uniqueValues.push(uniqueVal);
+}
+console.log(uniqueValues);
 ```
 
 it might be very confusing to understand at first but keep in consideration that this is noway near efficient when it comes to removing duplicates.
@@ -387,11 +366,7 @@ now let's move on to the next solution.
 
 ### using map
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=G3BS3sh3D8Q
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=G3BS3sh3D8Q</div></figure>
 
 JavaScript `map` accepts an array and "map" it into something else. here is a simple example of what `map` can do:
 
@@ -433,11 +408,7 @@ so basically this function uses JS `map` to map through the array with duplicate
 
 here is a video for visual learners:
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=g1C40tDP0Bk
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=g1C40tDP0Bk</div></figure>
 
 this method is a little bit like `map` and `filter` except that it returns only one value, JS `reduce` method is looping through the array values one by one, it accepts two arguments:
 
@@ -503,11 +474,7 @@ here are the variables values on the fly:
 
 if you don't know how array.filter is working, here is a video that explains this in a really simple way  for the visual learners:
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=4_iT6EGkQfk
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=4_iT6EGkQfk</div></figure>
 
 the `filter` method is working almost like the `reduce` and `map` methods, it also takes a callback and returns elements that pass our condition. it's like `map` since it also returns multiple values except that map returns all the values without filtering them.
 
@@ -517,14 +484,14 @@ so with this JS method, we're going to get a loop that loops through the origina
 
 ```js
 function uniqueWithFilter(notUnique) {
-    const unique = [];
-    return notUnique.filter(element => {
-    if (unique.includes(element)) {
-            return false
-      } else {
-          return unique.push(element);
-      }
-    });
+  const unique = [];
+  return notUnique.filter(element => {
+  if (unique.includes(element)) {
+          return false
+    } else {
+        return unique.push(element);
+    }
+  });
 }
 ```
 
@@ -545,11 +512,7 @@ here is another way of doing it, which is to sort the array and then delete elem
 
 I will not go in-depth in `sort` method but here is a video that explains what is it and what it does:
 
-<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
-
-https://www.youtube.com/watch?v=RsFBsBep-hA
-
-</div></figure>
+<figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">https://www.youtube.com/watch?v=RsFBsBep-hA</div></figure>
 
 ```js
 function makeItUnique(notUnique) {
@@ -656,10 +619,10 @@ here is the code that implements these methods:
 
 ```js
 function makeItUnique(doubled) {
-    var unique = {};
-    return doubled.filter(function(item) {
-        return unique.hasOwnProperty(item) ? false : (unique[item] = true);
-    });
+  var unique = {};
+  return doubled.filter(function(item) {
+      return unique.hasOwnProperty(item) ? false : (unique[item] = true);
+  });
 }
 
 // unique{} has only unique items as the keys
@@ -679,15 +642,15 @@ after you saw those two solutions, here is a solution that combines the two toge
 
 ```js
 function makeItUnique(notUnique) {
-    var valueType = {"boolean":{}, "number":{}, "string":{}},
-          objs = [];
-    return notUnique.filter(function(value) {
-        var type = typeof value;
-        if(type in valueType)
-            return valueType[type].hasOwnProperty(value) ? false : (valueType[type][value] = true);
-        else
-            return objs.indexOf(value) >= 0 ? false : objs.push(value);
-    });
+  var valueType = {"boolean":{}, "number":{}, "string":{}},
+        objs = [];
+  return notUnique.filter(function(value) {
+      var type = typeof value;
+      if(type in valueType)
+          return valueType[type].hasOwnProperty(value) ? false : (valueType[type][value] = true);
+      else
+          return objs.indexOf(value) >= 0 ? false : objs.push(value);
+  });
 }
 ```
 
@@ -727,11 +690,11 @@ resorting to the linear search is the solution in case the key is not primitive:
 
 ```js
 function advancedUniq(notUnique, key) {
-    var index = [];
-    return notUnique.filter(function (value) {
-        var itemKey = key(value);
-        return index.indexOf(itemKey) >= 0 ? false : index.push(itemKey);
-    });
+  var index = [];
+  return notUnique.filter(function (value) {
+      var itemKey = key(value);
+      return index.indexOf(itemKey) >= 0 ? false : index.push(itemKey);
+  });
 }
 ```
 
@@ -739,11 +702,11 @@ in case you want to implement **ES6**, you can use **`set`**:
 
 ```js
 function advancedUniq(notUnique, key) {
-    let unique = new Set();
-    return notUnique.filter(value => {
-        let itemKey = key(value);
-        return unique.has(itemKey) ? false : unique.add(itemKey);
-    });
+  let unique = new Set();
+  return notUnique.filter(value => {
+      let itemKey = key(value);
+      return unique.has(itemKey) ? false : unique.add(itemKey);
+  });
 }
 ```
 
@@ -874,5 +837,3 @@ in general, those were some ways to remove duplicate values from your array usin
 also if you were using libraries, now you know what method they use in the background and that you can code the same thing without implementing any library. 
 
 I hope this wasn't a waste of your time and that I've provided the kind of information you needed.
-
-
