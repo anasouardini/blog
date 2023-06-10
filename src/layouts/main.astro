@@ -8,9 +8,11 @@ const {title, description} = Astro.props;
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+
         <title>{title ?? 'Blog'}</title>
         <meta name="description" content={description}/>
-        <link rel="sitemap" href="/sitemap-index.xml" />
     </head>
     <body class=`min-h-[100vh] flex flex-col justify-between
                 bg-dark-1 text-white`>
