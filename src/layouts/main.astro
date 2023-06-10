@@ -2,6 +2,9 @@
 const {
     type = 'website',
     title = 'Web Dev Blog',
+    author = 'Anas ouardini',
+    date = '',
+    tags = [],
     image = '',
     description = 'This blog is all about web development and web technologies in general.',
 } = Astro.props;
@@ -16,7 +19,16 @@ const {
         <link rel="sitemap" href="/sitemap-index.xml" />
 
         {type ? <meta property="og:type" content={type} /> : <></>}
+        {type === "article" ?
+                <>
+                    <meta property="article:author" content={author} />
+                    <meta property="article:published_time" content={date} />
+                    <meta property="article:tag" content={tags} />
+                </>
+            : <></>
+        }
         {title ? <meta property="og:title" content={title} /> : <></>}
+        {image ? <meta property="og:image:url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:secure_url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:alt" content={image.alt} /> : <></>}
         {image ? <meta property="twitter:card" content={image} /> : <></>}

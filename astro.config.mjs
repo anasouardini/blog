@@ -2,8 +2,8 @@ import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
 import robotsTxt from 'astro-robots-txt';
 import tailwind from "@astrojs/tailwind";
-
 import mdx from "@astrojs/mdx";
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -14,5 +14,7 @@ export default defineConfig({
     tailwind({
       // config:{applyBaseStyles: false}
     }),
-    mdx()],
+    mdx(),
+    compress()
+  ]
 });
