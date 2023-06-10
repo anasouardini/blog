@@ -7,6 +7,10 @@ date: Mon, 09 Nov 2020 23:38:05 +0000
 author: Anas Ouardini
 draft: false
 category: javascript js-questions
+image: {
+    url: "/wp-content/uploads/2020/11/are-2-hours-a-day-enough-to-learn-javascript-featured.webp",
+    alt: "are 2 hours a day enough to learn javascript - featured image",
+}
 ---
 
 
