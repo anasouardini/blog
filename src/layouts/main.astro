@@ -1,33 +1,50 @@
 ---
-const {title, description} = Astro.props;
-
+const {
+    type = 'website',
+    title = 'Web Dev Blog',
+    image = '',
+    description = 'This blog is all about web development and web technologies in general.',
+} = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" prefix="og: https://ogp.me/ns#">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
-        <meta name="generator" content={Astro.generator} />
+
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="sitemap" href="/sitemap-index.xml" />
 
+        {type ? <meta property="og:type" content={type} /> : <></>}
+        {title ? <meta property="og:title" content={title} /> : <></>}
+        {image ? <meta property="og:image" content={image} /> : <></>}
+        {image ? <meta property="twitter:card" content={image} /> : <></>}
+        {description ? <meta property="og:description" content={description} /> : <></>}
+        {true ? <meta property="og:local" content="en_US" /> : <></>}
+        {title ? <meta property="og:site_name" content={title} /> : <></>}
+        <!-- <meta property="og:url" content={} /> -->
+
         <title>{title ?? 'Blog'}</title>
-        <meta name="description" content={description}/>
+        <meta name="description" content={description} />
+
+        <meta name="generator" content={Astro.generator} />
     </head>
-    <body class=`min-h-[100vh] flex flex-col justify-between
-                bg-dark-1 text-white`>
+    <body
+        class=`min-h-[100vh] flex flex-col justify-between
+                bg-dark-1 text-white`
+    >
         <style>
             /* scroll bar */
             body::scrollbar,
             .scrollbar::scrollbar {
                 width: 6px;
-                background-color: #4C99EB;
+                background-color: #4c99eb;
             }
 
             body::scrollbar:horizontal,
             .scrollbar::scrollbar:horizontal {
                 width: 6px;
-                background-color: #4C99EB;
+                background-color: #4c99eb;
             }
 
             body::-webkit-scrollbar,
@@ -43,15 +60,22 @@ const {title, description} = Astro.props;
             body::-webkit-scrollbar-thumb,
             .scrollbar::-webkit-scrollbar-thumb {
                 border-radius: 5px;
-                background-color: #4C99EB;
+                background-color: #4c99eb;
             }
         </style>
         <header>
             <nav class="flex justify-center py-4 w-[95%] mx-auto max-w-[1400px]">
                 <!-- <p class="capitalize bg-orange-500 px-5 py-1 rounded-lg text-black font-bold text-xl">Site Is Under reconstruction...</p> -->
                 <ul class="flex gap-4">
-                    <li style="list-style: none;"><a style="color: white; text-decoration: none;" href="/">posts</a></li>
-                    <li style="list-style: none;"><a style="color: white; text-decoration: none;" href="https://anasouardini.online">personal-site</a></li>
+                    <li style="list-style: none;">
+                        <a style="color: white; text-decoration: none;" href="/">posts</a>
+                    </li>
+                    <li style="list-style: none;">
+                        <a
+                            style="color: white; text-decoration: none;"
+                            href="https://anasouardini.online">personal-site</a
+                        >
+                    </li>
                     <!-- <li><a href="/">privacy policy</a></li>
                     <li><a href="/">author</a></li> -->
                 </ul>
@@ -61,7 +85,9 @@ const {title, description} = Astro.props;
         <script>
             const startDate = 2023;
             const endDate = new Date().getFullYear();
-            const footerDate = `${startDate}${endDate !== startDate ? '-'+endDate : ''}`
+            const footerDate = `${startDate}${
+                endDate !== startDate ? '-' + endDate : ''
+            }`;
             document.querySelector('#footerDate').textContent = footerDate;
         </script>
         <footer class="py-3 text-center">

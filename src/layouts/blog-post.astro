@@ -1,11 +1,11 @@
 ---
 import Main from './main.astro';
 const {
-    frontmatter: {title, description},
+    frontmatter: {title, image, description, slug, date, author, category},
 } = Astro.props;
 ---
 
-<Main {title} {description}>
+<Main {title} {description} type="article" >
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <style is:inline>
             p{
@@ -22,7 +22,7 @@ const {
             }
             h1{
                 font-size: 2.4rem;
-                margin-bottom: 2rem;
+                margin-bottom: .5rem;
             }
             h2{
                 font-size: 2rem;
@@ -74,9 +74,12 @@ const {
             a:hover{
                 color: #4C99EB;
             }
+            figure{margin-bottom: 1rem}
         </style>
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
+            <p class="mb-10 text-gray-500 text-xl">Published at {date.split(' ').slice(0, 4).join(' ')} by {author}</p>
+            {image ? <figure><img src={image.url} alt={image.alt} /></figure> : <></>}
             <slot>blog post not found</slot>
         </article>
         <aside>
