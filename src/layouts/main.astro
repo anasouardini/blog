@@ -17,7 +17,8 @@ const {
 
         {type ? <meta property="og:type" content={type} /> : <></>}
         {title ? <meta property="og:title" content={title} /> : <></>}
-        {image ? <meta property="og:image" content={image} /> : <></>}
+        {image ? <meta property="og:image:secure_url" content={image.url} /> : <></>}
+        {image ? <meta property="og:image:alt" content={image.alt} /> : <></>}
         {image ? <meta property="twitter:card" content={image} /> : <></>}
         {description ? <meta property="og:description" content={description} /> : <></>}
         {true ? <meta property="og:local" content="en_US" /> : <></>}
