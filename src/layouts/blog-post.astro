@@ -1,11 +1,11 @@
 ---
 import Main from './main.astro';
 const {
-    frontmatter: {title, image, description, slug, date, author, category},
+    frontmatter: {title, image, description, slug, date, author, category, draft},
 } = Astro.props;
 ---
 
-<Main {title} {description} type="article" {author} {date} >
+<Main {title} {description} type="article" {author} {date} {slug} {category} {draft} >
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <style is:inline>
             p{
