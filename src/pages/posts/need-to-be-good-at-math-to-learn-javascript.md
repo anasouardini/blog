@@ -73,21 +73,13 @@ All you need to start learning JavaScript is a basic understanding of math; subt
 **recommended articles:**
 
 - <a href="/posts/wp-admin/post.php?post=513&action=edit" target="_blank" rel="noreferrer noopener">Is Learning HTML, CSS, and Javascript Enough to Get a Job?</a>
-
 - <a href="/posts/is-javascript-easy-to-learn/" target="_blank" rel="noreferrer noopener">Is JavaScript Language Easy to Learn?</a>
 
 **references:**
 
 - <a href="https://www.fullstackacademy.com/blog/coding-math-myth" target="_blank" rel="noreferrer noopener nofollow">https://www.fullstackacademy.com/blog/coding-math-myth</a>
-
 - <a href="https://flaviocopes.com/programming-math/" target="_blank" rel="noreferrer noopener nofollow">https://flaviocopes.com/programming-math/</a>
-
 - <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math" target="_blank" rel="noreferrer noopener nofollow">https://developer.mozilla.org/en-US/docs/Learn/JavaScript/First_steps/Math</a>
-
 - <a href="https://www.skillcrush.com/blog/do-i-need-to-be-good-at-math-to-code/" target="_blank" rel="noreferrer noopener nofollow">https://www.skillcrush.com/blog/do-i-need-to-be-good-at-math-to-code/</a>
-
 - <a href="https://forum.freecodecamp.org/t/should-i-be-good-at-math-to-be-a-web-developer/109535" target="_blank" rel="noreferrer noopener nofollow">https://forum.freecodecamp.org/t/should-i-be-good-at-math-to-be-a-web-developer/109535</a>
-
 - <a href="https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/" target="_blank" rel="noreferrer noopener nofollow">https://www.theatlantic.com/technology/archive/2015/09/you-dont-have-to-be-good-at-math-to-learn-to-code/403342/</a>
-
-

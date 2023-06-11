@@ -39,13 +39,9 @@ with that being said, if you're on the other hand a very slow typer or what we c
 if you're still not sure about what speed is good enough and what speed is really bad, here are some ranges and what you can expect from them:
 
 - **0-20:** Basically people will assume you are incompetent and you'll struggle a lot while coding.
-
 - **20-30:** you might be more skilled than others and you think faster than them but with this speed, you'll come across as a slower programmer since you'll struggle or you look like you're thinking a lot.
-
 - **30-45:** this is what you want to be if you're below this rate, it's normal, it doesn't make faster but you're not going to be slow at the same time, so it doesn't make much difference at the race.
-
 - **45-65:** you'll look like the guy that's good with computers even if you aren't since you'll seem very quick it might add some speed in coding but not much. so if you're just below this rate you don't have to go for this speed.
-
 - **65-100:** if you ever heard of what's a bottleneck, this is what typing is going to be for you when you're at this level of touch-typing, so typing isn't a problem for you anymore.
 
 it's like computer components, if your typing is a bottleneck then it doesn't matter at all since you reached the max speed at touch-typing, but if it's not then it does matter (but you might not need to change it, depends on your speed).
@@ -86,9 +82,9 @@ when I first started blogging I was I often forget about the paragraph that I'm 
 
 but that's me as a blogger, since blogging needs more speed in typing than coding, it's not just an opinion I also was a web developer that makes websites for clients on Fiverr one time.
 
-another thing is that typos in blogging are easy to find and fix but in code, it's very hard and you have read your whole code carefully in order to find that it's <code>function</code> instead of writing <code>function</code>
+another thing is that typos in blogging are easy to find and fix but in code, it's very hard and you have read your whole code carefully in order to find that it's `function` instead of writing `function`
 
-and you can't have a hint about the typo you make, for example when you type a command on CMD or on Linux Terminal when you hit Enter/return the terminal is not going to tell you that might wrote <code>dc</code> by mistake trying to write <code>cd</code> but instead, it shows you an "unknown command" message and that's all you have to work with to figure out what's the problem with your command.
+and you can't have a hint about the typo you make, for example when you type a command on CMD or on Linux Terminal when you hit Enter/return the terminal is not going to tell you that might wrote `dc` by mistake trying to write `cd` but instead, it shows you an "unknown command" message and that's all you have to work with to figure out what's the problem with your command.
 
 improving accuracy is not going to eliminate all these errors at once but it's going to reduce those typos to a minimum number, so expect to face these types of errors from time to time even if you have good typing skills.
 
@@ -110,9 +106,9 @@ as I said before, learning touch-typing could be less helpful than focusing on p
 
 I keep mentioning this point because it's very important to remember that typing is not coding. especially with nowadays tools such as IDEs which help you do less coding and spend more time on thinking.
 
-some features are reducing the effort you make to 40% by auto-completion and error correction while typing, basically, all the features that are not beginner-friendly which ruins your learning if you're a beginner, especially snippets feature which can automatically type a whole javascript or HTML component altogether by simply typing a shortcut for it which can be just two or three letters then pressing <code>TAB</code>,  and there you go, who needs fast typing anymore.
+some features are reducing the effort you make to 40% by auto-completion and error correction while typing, basically, all the features that are not beginner-friendly which ruins your learning if you're a beginner, especially snippets feature which can automatically type a whole javascript or HTML component altogether by simply typing a shortcut for it which can be just two or three letters then pressing `TAB`,  and there you go, who needs fast typing anymore.
 
-another feature is when editing a word or a tag or adding text to many <code><p></code> tags at once, then there is a hotkey for that, <code>Cmd + D</code> which is going to help you select every <code><p></code> tag that exists in your file, then you can do pretty much anything and it's going to be done for all of those selected tags like inserting text or adding an attribute.
+another feature is when editing a word or a tag or adding text to many `<p>` tags at once, then there is a hotkey for that, `Cmd + D` which is going to help you select every `<p>` tag that exists in your file, then you can do pretty much anything and it's going to be done for all of those selected tags like inserting text or adding an attribute.
 
 here is an example of writing an HTML login form, you'll get the full idea when watching this video:
 
@@ -153,13 +149,9 @@ it's an advantage to be able to type fast, you can call it a graph of a diminish
 if you think that only programmers are known by fast typing, and you really have to learn that in order to become a programmer, then you're wrong. now you might be asking then who are other people that really need to be able to type faster? here are some jobs that require touch-typing as a necessary skill in order for you to get hired.
 
 - **Data Entry**<br>each day more and more services are going online, and companies and startups need to implement databases in their project, and data entry means inserting random information in database tables, it involves inserting data which can contain some first names and last names, and it really needs you to be very accurate and fast at the same time, this might seem fast but no error should be inserted in the database.<br> 
-
 - **Freelance TranscriptionTechnology**<br>the need for transcription experts still not made obsolete, they still needed to create a typed log for spoken text. most songs and videos online require some accompanying text in order for their content to be searchable by web bots like google bots, in this kind of job, the more text you layout the more time you gain to do another one the more you can charge for your service.<br> 
-
 - **Assistant and Secretarial Work**<br>dictation and hand-written notes used to be the norm for secretarial work and assistance, the requirements of today's job are more inline with calendars maintaining, running social media accounts, answering emails. fast typing skills can really help you when writing those timely and professional emails in the face of an overflowing company inbox. so it's a must unless you're not planning to complete the rest of your duties.<br> 
-
 - **Journalism and Content-Creation**<br>when we're talking about news or content online, they really need to draft stories and scripts for their videos as fast as possible and with no mistakes, and this is when touch-typing comes to play. bloggers like me and other content creators like YouTubers also have to have this skill or they have to pay someone else to do it. so for these kinds of jobs where the writing is the main focus, touch-typing is definitely the skill to be needed after copy-writing.<br> 
-
 - **Copy-editing**<br>after a writer has done his part of writing ideas and information about a certain topic, the editor comes to edit all this text looking for grammar mistakes and formatting text in a readable way for the user, and the client always wants to publish his article ASAP, so if you keep looking at your keyboard each 5-10 letters you're just not quite there, time is money for you as an editor and for him as a blogger.
 
 ## how to actually learn fast typing
@@ -167,9 +159,7 @@ if you think that only programmers are known by fast typing, and you really have
 it's not a complicated thing at all, but needs a lot of practice, here are the steps o learning touch-typing:
 
 - Learn how to handle the keyboard. How to hold your hands, what fingers are covering what keys, etc.
-
 - Practice, over and over.
-
 - stick to one keyboard
 
 ### learn how to use the keyboard
@@ -203,13 +193,11 @@ Muscle and shortcut memory certainly help, but I don't know how important a skil
 **Membrane Keyboards:**
 
 - Arteck 2.4G Wireless Ultra-Slim <a href="https://amzn.to/2LzcHmK" rel="noreferrer noopener sponsored nofollow" target="_blank">check it on Amazon</a> (Affiliate Link)
-
 - Logitech Illuminated Ultrathin Keyboard K740 <a href="https://amzn.to/3pZFCzs" rel="noreferrer noopener sponsored nofollow" target="_blank">check it on Amazon</a> (Affiliate Link)
 
 **Mechanical Keyboards:**
 
 - Redragon K552 Mechanical Keyboard <a href="https://amzn.to/3i3aUmo" target="_blank" rel="noreferrer noopener sponsored nofollow">check it on Amazon</a> (Affiliate Link)
-
 - Logitech K845 Mechanical Illuminated Keyboard, Mechanical Switches <a href="https://amzn.to/3hRYbTq" target="_blank" rel="noreferrer noopener sponsored nofollow">check it on Amazon</a> (Affiliate Link)
 
 ## takeaway

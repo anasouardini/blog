@@ -77,7 +77,6 @@ Javascript was invented because Netscape needed a lightweight language but Java 
 the invention of Javascript was to satisfy different audiences:
 
 - Java professionals and component writers
-
 - designers and scripters (front-end developers)
 
 don't get me wrong there are no similarities between Java and Javascript today. the name of Javascript was an attempt to ride the wave of Java's popularity and that's to help speed up the process.
@@ -85,13 +84,9 @@ don't get me wrong there are no similarities between Java and Javascript today. 
 and the most important feature that Javascript was needed for in the web is that it makes it dynamic. you might not understand what dynamic really means, here is a list of things that could help you understand, things that Javascript added to the web:
 
 - Autocompletion
-
 - refreshing a score, rate, views, comments, etc, without refreshing the whole page
-
 - validating forms inputs
-
 - Playing audio and video
-
 - and more...
 
 Javascript is the first of it's kind, it's the only language that can be inserted directly in the HTML of a page. Javascript is understood by web browsers and that's what helps to create a powerful client-side experience.
@@ -117,13 +112,9 @@ V8 is made by Google as an open-source high-performance JIT engine for Javascrip
 and this is what optimizes your Javascript code and converts it into binary code for your CPU, I'm not going to go through all the things that V8 does and how it works, but here are some tasks that V8 takes care of:
 
 - Garbage Collection
-
 - Compilation to Machine code
-
 - Inline caching
-
 - Pointer compression
-
 - and much much more optimization
 
 as a matter of fact, the 4th task on the list is not an old technique in the V8, what it does is it boosts memory optimization without affecting the performance. but when this feature has been added to the V8 engine it really improved its performance. BTW if you're into this kind of detailed information there is an official V8 blog that might be very beneficial for you to visit.
@@ -147,13 +138,9 @@ the programming perspective is shifting from declarative towards imperative prog
 Javascript is present on many levels of programming:
 
 - Front end (Browsers)
-
 - Back end (Node.js)
-
 - Android/iOS (React Native, NativeScript, etc.)
-
 - Desktop (Electron)
-
 - Hybrid (Ionic)
 
 the thing that allows this is that V8 engine is written in C/C++ as I mentioned before.
@@ -239,29 +226,21 @@ Javascript's unique feature is what powers it. its frameworks and libraries and 
 here are some web applications that are using Javascript fully in their development:
 
 - PayPal
-
 - Yahoo
-
 - Netflix
-
 - Godaddy
 
 here are browser extensions that run Javascript under the hood:
 
 - Adblock Plus
-
 - HubSpot
-
 - LastPass
 
 here are some desktop apps that are built with Javascript:
 
 - Slack
-
 - Lightshot
-
 - Mozilla
-
 - Greasemonkey
 
 for example, Paypal was built with Java and based on it but they migrated to Javascript and LinkedIn also has changed their server-side into Node.js, I guess there is no need to give more examples but generally, a lot of web apps and big companies changed their projects language to Javascript.
@@ -345,5 +324,3 @@ so Javascript is really easy to start but also really hard to master.
 there are many factors that make Javascript popular and powerful but we can simply say that because it's the king of the web and the queen of mobile, it competes with the Front-End languages as well as with the Back-End languages, and also it's doing a good job even in the IoT (internet of things).
 
 so it's a very powerful language and can do a great job in building faster and high-performing web apps, browser extensions, desktop apps, and mobile software as well. simply you can use Javascript almost everywhere, and because it's great at doing a lot of things and has an open-standard (it's not owned by some corporation), that why it gets better and better really quickly. and this is why it's very famous and powerful.
-
-

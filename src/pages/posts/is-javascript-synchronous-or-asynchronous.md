@@ -83,9 +83,7 @@ A promise is designed to handle the asynchronous result of a task. With promises
 There are three states of promises:
 
 - **Pending:** This is the initial state before the promise succeeds or fails.
-
 - **Resolved:** This is the completed promise.
-
 - **Rejected:** This is a failed promise.
 
 Taking you through an example, upon requesting data from the server using a promise, it remains in pending mode until the data is received.
@@ -115,33 +113,19 @@ It can be concluded that JavaScript is a mix of both, synchronous and asynchrono
 **similar topics:**
 
 - <a href="/posts/why-javascript-is-scripting-language/" target="_blank" rel="noreferrer noopener">Why JavaScript is Considered a Scripting Language</a>
-
 - <a href="/posts/is-javascript-compiled-or-interpreted/" target="_blank" rel="noreferrer noopener">Is JavaScript Compiled or Interpreted</a>
-
 - <a href="/posts/why-javascript-is-a-lightweight-language/" target="_blank" rel="noreferrer noopener">Why JavaScript Is a Lightweight Language</a>
-
 - <a href="/posts/why-javascript-is-considered-as-a-dynamic-language/" target="_blank" rel="noreferrer noopener">why javascript is considered as a dynamic language?</a>
 
 **resources:**
 
 - [duplicate], W. (n.d.). What Does "Synchronised" Mean in Java? Retrieved from Stack Overflow: <a href="https://stackoverflow.com/questions/7848471/what-does-synchronised-mean-in-java" target="_blank" rel="noreferrer noopener nofollow">https://stackoverflow.com/questions/7848471/what-does-synchronised-mean-in-java</a>
-
 - Async Await in Java - DZone Java. (n.d.). Retrieved from dzone.com: <a href="https://dzone.com/articles/async-await-in-java" target="_blank" rel="noreferrer noopener nofollow">https://dzone.com/articles/async-await-in-java</a>
-
 - Async/Await. (n.d.). Retrieved from Javascript.info: <a href="https://javascript.info/async-await" target="_blank" rel="noreferrer noopener nofollow">https://javascript.info/async-await</a>
-
 - Callback vs Promises vs Async Await. (n.d.). Retrieved from Loginradius.com: <a href="https://www.loginradius.com/blog/async/callback-vs-promises-vs-async-await/" target="_blank" rel="noreferrer noopener nofollow">https://www.loginradius.com/blog/async/callback-vs-promises-vs-async-await/</a>
-
 - How to Use Async Await in JavaScript. (n.d.). Retrieved from Medium: <a href="https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb#:~:text=The%20await%20operator%20is%20used,not%20the%20who" target="_blank" rel="noreferrer noopener nofollow">https://medium.com/javascript-in-plain-english/async-await-javascript-5038668ec6eb#:~:text=The%20await%20operator%20is%20used,not%20the%20who</a>
-
 - Javin, P. (n.d.). Java Synchronization Tutorial: What, How, and Why? Retrieved from Javarevisited.blogspot.com: <a href="https://javarevisited.blogpost.com/2011/04/synchronization-in-java-synchronized.html?m=1" target="_blank" rel="noreferrer noopener nofollow">https://javarevisited.blogpost.com/2011/04/synchronization-in-java-synchronized.html?m=1</a>
-
 - Synchronous vs Asynchronous - Javatpoint. (n.d.). Retrieved from www.javatpoint.com: <a href="https://www.javapoint.com/understanding-synchronous-vs-asynchronous" target="_blank" rel="noreferrer noopener nofollow">https://www.javapoint.com/understanding-synchronous-vs-asynchronous</a>
-
 - Synchronous vs Asynchronous Programming - DZone Web Dev. (n.d.). Retrieved from dzone.com: <a href="https://dzone.com/articles/synchronous-vs-asynchronous-programming" target="_blank" rel="noreferrer noopener nofollow">https://dzone.com/articles/synchronous-vs-asynchronous-programming</a>
-
 - Synchronous?, W. (n.d.). When is JavaScript Synchronous? Retrieved from Stack Overflow: <a href="https://stackoverflow.com/questions/2035645/when-is-javascript-synchronous" target="_blank" rel="noreferrer noopener nofollow">https://stackoverflow.com/questions/2035645/when-is-javascript-synchronous</a>
-
 - When to Use (and Not to Use) Asynchronous Programming. (n.d.). Retrieved from Stackify: <a href="https://www.google.com/amp/s/stackify.com/when-to-use-asynchronous-programming/amp/" target="_blank" rel="noreferrer noopener nofollow">https://www.google.com/amp/s/stackify.com/when-to-use-asynchronous-programming/amp/</a>
-
-

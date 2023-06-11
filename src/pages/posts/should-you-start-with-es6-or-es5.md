@@ -67,37 +67,21 @@ almost everything that ES5 can do can be done with ES6, but there is always be a
 These were the new features released in 2009:
 
 - "use strict"
-
 - String.trim()
-
 - Array.forEach()
-
 - Array.reduceRight()
-
 - Array.filter()
-
 - Array.isArray()
-
 - Array.map()
-
 - Array.reduce()
-
 - Array.every()
-
 - Array.some()
-
 - Array.lastIndexOf()
-
 - Array.indexOf()
-
 - JSON.stringify()
-
 - JSON.parse()
-
 - Date.now()
-
 - New Object Property Methods
-
 - Property Getters and Setters
 
 if you want to read more you can visit <a href="https://www.w3schools.com/js/js_es5.asp" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">w3schools</a>.
@@ -105,45 +89,25 @@ if you want to read more you can visit <a href="https://www.w3schools.com/js/js_
 ### features that have been added to ECMAScript 6 (ES6)
 
 - arrow functions
-
 - classes
-
 - enhanced object literals
-
 - template strings
-
 - destructuring
-
 - default + rest + spread
-
 - let + const
-
 - iterators + for..of
-
 - generators
-
 - unicode
-
 - modules
-
 - module loaders
-
 - map + set + weakmap + weakset
-
 - proxies
-
 - symbols
-
 - subclassable built-ins
-
 - promises
-
 - math + number + string + array + object APIs
-
 - binary and octal literals
-
 - reflect api
-
 - tail calls
 
 ES6 and ES5 are two versions of the same scripting language, which is ECMAScript (ES) or Javascript. those two ES5 and ES6 have a lot in common since they are brothers from the same mother (ECMAScript), but on the other side they also have a lot of differences, and that's because ES6 was a big step forward that made a lot of changes to Javascript Syntax and implementations of its properties and features.
@@ -154,11 +118,11 @@ since I wrote it several times, you definitely know that ECMAScript is what ES s
 
 here is a table of pros and cons of both ES6 and ES5:
 
-<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td></td><td class="has-text-align-center" data-align="center">**ES6 (ECMAScript 6)**</td><td>**ES5 (ECMAScript 5)**</td></tr><tr><td>**PROS**               </td><td class="has-text-align-center" data-align="center">+ the property "tail call optimization" feature has been turned on in the case of implementing ES6.<br>+in order o fetch the computed values in a function, the keyword "return" can be avoided and we don't need to use the function keyword to define our functions. of course this is when using ES6.<br>+ this version of javascript (ES6), helps with using handle interpolation and also string templates in a mature and smart way while using the scripts.<br>+ another positive thing about ES6 is that it makes things easier with object literals which is a really helpful shorthand syntax.<br>+ the core code looks way cleaner and syntactical manner when using ES6.</td><td>+ you can apply "<code>access array </code>[]" feature also on strings when using ES5.<br>+ the language built-in names or what you might call reserved words can also be used to name properties.<br>+ allows you to implement multi-line literals.                                                              <br>+ you can describe functions and their usage in a clean manner with ES5.                                                                                                                                                              </td></tr><tr><td>**CONS**</td><td class="has-text-align-center" data-align="center">- since ES6 is not as old as ES5 obviously, the support for ES6 is a little bit behind compared to the old version.<br>- it lacks also when it comes to browser support but only when you compare it to ES5.<br>- in terms of best practices it might be a little confusing at the beginning of learning this technology.</td><td>- it might be obvious but, a lot of new and helpful features that ES6 includes which are what make it powerful are not present in ES5.<br></td></tr></tbody></table></figure>
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><td></td><td class="has-text-align-center" data-align="center">**ES6 (ECMAScript 6)**</td><td>**ES5 (ECMAScript 5)**</td></tr><tr><td>**PROS**               </td><td class="has-text-align-center" data-align="center">+ the property "tail call optimization" feature has been turned on in the case of implementing ES6.<br>+in order o fetch the computed values in a function, the keyword "return" can be avoided and we don't need to use the function keyword to define our functions. of course this is when using ES6.<br>+ this version of javascript (ES6), helps with using handle interpolation and also string templates in a mature and smart way while using the scripts.<br>+ another positive thing about ES6 is that it makes things easier with object literals which is a really helpful shorthand syntax.<br>+ the core code looks way cleaner and syntactical manner when using ES6.</td><td>+ you can apply "`access array `[]" feature also on strings when using ES5.<br>+ the language built-in names or what you might call reserved words can also be used to name properties.<br>+ allows you to implement multi-line literals.                                                              <br>+ you can describe functions and their usage in a clean manner with ES5.                                                                                                                                                              </td></tr><tr><td>**CONS**</td><td class="has-text-align-center" data-align="center">- since ES6 is not as old as ES5 obviously, the support for ES6 is a little bit behind compared to the old version.<br>- it lacks also when it comes to browser support but only when you compare it to ES5.<br>- in terms of best practices it might be a little confusing at the beginning of learning this technology.</td><td>- it might be obvious but, a lot of new and helpful features that ES6 includes which are what make it powerful are not present in ES5.<br></td></tr></tbody></table></figure>
 
 here is a table of comparison between ES5 and ES6:
 
-<figure class="wp-block-table is-style-stripes"><table><tbody><tr><th>Based on</th><th>ES5</th><th>ES6</th></tr><tr><td>**Definition**</td><td>if you know javascript then you know ES5, it's what you are probably learning right now, it's the old edition of javascript, not the oldest but it's very old.</td><td>it a version of Javascript but it's an update that contained a new set of features and a new way to write javascript, from its name you'll know that it's the sixth edition of javascript.</td></tr><tr><td>**Release**</td><td>its release was in 2009 by Brendan Eich</td><td>it was born in 2015.</td></tr><tr><td>**Data-types**</td><td>the supported data types in ES5 are the primitive data types which are (**integer**, **string**, **null**, **boolean**, **undefined**)</td><td>ES6 is an update so obviously, there are some different data types that have been added, it's one data type which is (**symbol**). it's for unique characters.</td></tr><tr><td>**Defining Variables**</td><td>supports only one way of doing it which is using the keyword <code>var</code> which doesn't let you distinguish between constants and variables.</td><td>in ES6, we don't use <code>var</code> anymore, there is now <code>let</code> and <code>const</code>, const for defining constants and let for variables obviously.</td></tr><tr><td>**Performance**</td><td>performance is one reason that causes updates to be happening in the first place, so ES6 is definitely going to have better performance comparing it to ES5.</td><td>ES6 performance is higher due to the features that have been added and the way ES6 is implementing the core of javascript.</td></tr><tr><td>**Support**</td><td>A wide range of communities supports it.</td><td>It also has a lot of community support, but it is lesser than ES5.</td></tr><tr><td>**Object Manipulation**</td><td>this is a con for ES5 since it costs you more time to do **object manipulation** in contrary to ES6.</td><td>in this version we have what's called restructuring and speed operators it can be done in a faster and smoother way.</td></tr><tr><td>.**Arrow Functions**</td><td>we used to use the <code>function</code> keyword to define the function and <code>return</code> keyword to return a calculated result from the function. </td><td>ES6 has what's called arrow functions which are making things way easier and simpler due to the cleaner syntax since you write less code and you don't have to use <code>return</code> and <code>function</code> keywords.</td></tr><tr><td>**Loops**</td><td>there was a little problem when iterating over items in an array in ES5.</td><td>in ES6 we have <code>for of</code> loops which solve that problem and also make things a lot easier.</td></tr></tbody></table></figure>
+<figure class="wp-block-table is-style-stripes"><table><tbody><tr><th>Based on</th><th>ES5</th><th>ES6</th></tr><tr><td>**Definition**</td><td>if you know javascript then you know ES5, it's what you are probably learning right now, it's the old edition of javascript, not the oldest but it's very old.</td><td>it a version of Javascript but it's an update that contained a new set of features and a new way to write javascript, from its name you'll know that it's the sixth edition of javascript.</td></tr><tr><td>**Release**</td><td>its release was in 2009 by Brendan Eich</td><td>it was born in 2015.</td></tr><tr><td>**Data-types**</td><td>the supported data types in ES5 are the primitive data types which are (**integer**, **string**, **null**, **boolean**, **undefined**)</td><td>ES6 is an update so obviously, there are some different data types that have been added, it's one data type which is (**symbol**). it's for unique characters.</td></tr><tr><td>**Defining Variables**</td><td>supports only one way of doing it which is using the keyword `var` which doesn't let you distinguish between constants and variables.</td><td>in ES6, we don't use `var` anymore, there is now `let` and `const`, const for defining constants and let for variables obviously.</td></tr><tr><td>**Performance**</td><td>performance is one reason that causes updates to be happening in the first place, so ES6 is definitely going to have better performance comparing it to ES5.</td><td>ES6 performance is higher due to the features that have been added and the way ES6 is implementing the core of javascript.</td></tr><tr><td>**Support**</td><td>A wide range of communities supports it.</td><td>It also has a lot of community support, but it is lesser than ES5.</td></tr><tr><td>**Object Manipulation**</td><td>this is a con for ES5 since it costs you more time to do **object manipulation** in contrary to ES6.</td><td>in this version we have what's called restructuring and speed operators it can be done in a faster and smoother way.</td></tr><tr><td>.**Arrow Functions**</td><td>we used to use the `function` keyword to define the function and `return` keyword to return a calculated result from the function. </td><td>ES6 has what's called arrow functions which are making things way easier and simpler due to the cleaner syntax since you write less code and you don't have to use `return` and `function` keywords.</td></tr><tr><td>**Loops**</td><td>there was a little problem when iterating over items in an array in ES5.</td><td>in ES6 we have `for of` loops which solve that problem and also make things a lot easier.</td></tr></tbody></table></figure>
 
 ### The elegance & productivity are with **ES6**.
 
@@ -166,45 +130,49 @@ take a look at the two versions of the same code, they both lead to the same res
 
 **ES5 Code**:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">[{lb:'Email',val:'ab@kg.co.sa'}].map(function(e){
-
-return '<div><label>'+e.lb+'</label>'+''+e.val+''+'</div>'           
-
-})</code></pre>
+```js
+[{lb:'Email',val:'ab@kg.co.sa'}].map(function(e){
+  return '<div><label>'+e.lb+'</label>'+''+e.val+''+'</div>'           
+})
+```
 
 **ES6 Code:**
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">[{lb:'Email',val:'ab@kg.co.sa'}].map(({lb,val})=>`<div><label>${lb}</label> ${val}</div>`)</code></pre>
+```js
+[{lb:'Email',val:'ab@kg.co.sa'}].map(({lb,val})=>`<div><label>${lb}</label> ${val}</div>`)
+```
 
 ### ES6 has Arrow Functions
 
 the syntax of writing functions in Javascript has changed with ES6, that's by introducing something called arrow functions, it really simplifies functions scope and also saves you a lot of time, by the way, it's the most popular feature in ES6. if you know ES6 you know arrow functions.
 
-arrow functions also get called "fat arrow" functions and that's because it utilizes the fat arrow token =>, one thing to know about arrow functions is that they are anonymous, and they have changed the way <code>this</code> binds in functions.
+arrow functions also get called "fat arrow" functions and that's because it utilizes the fat arrow token =>, one thing to know about arrow functions is that they are anonymous, and they have changed the way `this` binds in functions.
 
-along with simplifying the scoping of a function, arrow functions also simplifies <code>this</code> function. the work almost like lambda in C# or Python. 
+along with simplifying the scoping of a function, arrow functions also simplifies `this` function. the work almost like lambda in C# or Python. 
 
 this is the ES6 way of writing functions:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">() => {}</code></pre>
+```js
+() => {}
+```
 
 ### Manipulating objects in ES6 vs ES5
 
-Objects always get major overhauls in ES6. working with objects now is becoming very easy due to things like object destructuring and <code>rest</code> / <code>spread</code> operators, here is an example of merging two objects in ES5.
+Objects always get major overhauls in ES6. working with objects now is becoming very easy due to things like object destructuring and `rest` / `spread` operators, here is an example of merging two objects in ES5.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var object1 = { k: 4, j: 8 }
-
+```js
+var object1 = { k: 4, j: 8 }
 var object2 = { m: 2, g: 3, d: 4}
+var object3 = Object.assign(obj1, obj2)
+```
 
-var object3 = Object.assign(obj1, obj2)</code></pre>
+when merging two objects in ES5 we use `Object.assign()` which needs to inputs obj1 and obj2 and then outputs the merged object. let me show you how we can take care of that problem in ES6.
 
-when merging two objects in ES5 we use <code>Object.assign()</code> which needs to inputs obj1 and obj2 and then outputs the merged object. let me show you how we can take care of that problem in ES6.
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var object1 = { k: 4, j: 8 }
-
+```js
+var object1 = { k: 4, j: 8 }
 var object2 = { m: 2, g: 3, d: 4}
-
-const object3 = {...obj1, ...obj2}</code></pre>
+const object3 = {...obj1, ...obj2}
+```
 
 this syntax is really simple and easy to remember, those three dots are called the spread operator which is making objects a breeze for the developers, it's doing a lot of things but in our case, it's helping in merging objects.
 
@@ -212,57 +180,47 @@ this syntax is really simple and easy to remember, those three dots are called t
 
 object destructuring also made very easy with ES6, let's take a look, in this case, we have to extract multiple values from ES5 you have to write 3-4 lines of code like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var obj1 = { q: 2, w: 3, e: 4, r:5}
-
+```js
+var obj1 = { q: 2, w: 3, e: 4, r:5}
 var a = obj1.q
-
 var b = obj1.w
-
 var c = obj1.e
-
-var d = obj1.r</code></pre>
+var d = obj1.r
+```
 
 a little bit time-consuming. but wait we have ES6 here to rescue us, take a look at this code.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const obj1 = { q: 2, w: 3, e: 4, r:5}
-
+```js
+const obj1 = { q: 2, w: 3, e: 4, r:5}
 const {
-
   q,
-
   w,
-
   e,
-
   r
-
-} = obj1</code></pre>
+} = obj1
+```
 
 very cool, Last but not least look at another example which is defining objects.
 
 this is the way you define an object in ES5:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var q = 1
-
+```js
+var q = 1
 var w = 2
-
 var e = 3
-
 var r = 4
-
-var obj1 = { q: q, w: w, e: e, r: r }</code></pre>
+var obj1 = { q: q, w: w, e: e, r: r }
+```
 
 but when using ES6 it will be something like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var q = 1
-
+```js
+var q = 1
 var w = 2
-
 var e = 3
-
 var r = 4
-
-var obj1 = { q, w, e, r }</code></pre>
+var obj1 = { q, w, e, r }
+```
 
 it only works when the keys names and variables names are the exact same, it's a very handy shorthand.
 
@@ -274,73 +232,49 @@ and this feature really helps when writing code since it gives us a lot of freed
 
 let's write an Async functions in ES5 code, you can see the example:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function isBigger (a, b, cbfunction) {
-
-  
-
+```js
+function isBigger (a, b, cbfunction) {
   var bigger = false
-
   if(a > b) {
-
     bigger = true
-
   }
-
   cbfunction(bigger)
-
 }
 
 isBigger(1, 2, function (result) {
-
   if(result) {
-
     console.log('bigger');
-
   } else {
-
     console.log('smaller')
-
   }
+})
+```
 
-})</code></pre>
+we are defining the `isBigger()` function, which its job is to take three arguments, two numbers a and b, and a callback function that outputs the result. the function `isBigger()` when executed it checks if a is greater than b then make bigger true or false, then it calls the callback function `cbfunction()` and passes it the bigger variable to it so it can print it in the console.
 
-we are defining the <code>isBigger()</code> function, which its job is to take three arguments, two numbers a and b, and a callback function that outputs the result. the function <code>isBigger()</code> when executed it checks if a is greater than b then make bigger true or false, then it calls the callback function <code>cbfunction()</code> and passes it the bigger variable to it so it can print it in the console.
+<br>in the second chunk of code, we call the function `isGreater()` and pass the variables a and b alongside our callback function. in this callback function, we check whether the result is equal to true or false, and shows true or false in the console according to the result, here is the ES6 code that does just that:
 
-<br>in the second chunk of code, we call the function <code>isGreater()</code> and pass the variables a and b alongside our callback function. in this callback function, we check whether the result is equal to true or false, and shows true or false in the console according to the result, here is the ES6 code that does just that:
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const isBigger = (a, b) => {
-
+```js
+const isBigger = (a, b) => {
  return new Promise ((resolve, reject) => {
-
   if(a > b) {
-
    resolve(true)
-
   } else {
-
    reject(false)
-
   }
-
  })
-
 }
 
 isBigger(1, 2)
-
  .then(result => {
-
     console.log('bigger')
-
  })
-
  .catch(result => {
-
     console.log('smaller')
+ })
+```
 
- })</code></pre>
-
-the Promises in ES6 are an object that once called upon, it sill eventually resolve or reject and give you a response. so it allows you to <code>resolve</code> or <code>reject</code> some request, and when it does resolve a request,  it calls a callback provided in <code>then</code> but when rejecting it'll call the <code>catch</code> callback.
+the Promises in ES6 are an object that once called upon, it sill eventually resolve or reject and give you a response. so it allows you to `resolve` or `reject` some request, and when it does resolve a request,  it calls a callback provided in `then` but when rejecting it'll call the `catch` callback.
 
 it's easy to know if the request is returning a success or an error with ES6 Promises, and that helps you by not having to check things out in the callback function each time which is what happens with ES5 callback functions. so ES6 Promises are better.
 
@@ -348,47 +282,57 @@ it's easy to know if the request is returning a success or an error with ES6 Pro
 
 when ES6 specification came out, it changed how the exporting and importing modules works let's compare how it's different than ES5 exporting and importing. here is how ES5 is doing it:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var Module = { x: 1, y: function(){ console.log('This is the ES5 way') }}
-
-module.exports = Module;</code></pre>
+```js
+var Module = { x: 1, y: function(){ console.log('This is the ES5 way') }}
+module.exports = Module;
+```
 
 and here is the ES6 way of doing it:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const Module = { x: 1, y: () => { console.log('This is the ES6 way') }}
+```js
+const Module = { x: 1, y: () => { console.log('This is the ES6 way') }}
+export default Module;
+```
 
-export default Module;</code></pre>
-
-the second syntax is more readable. in addition to the <code>export</code> keyword, ES6 also came up with the <code>export default</code> wich only used when using single export, now let's take a look at how importing works in ES6:
+the second syntax is more readable. in addition to the `export` keyword, ES6 also came up with the `export default` wich only used when using single export, now let's take a look at how importing works in ES6:
 
 ES5 version
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var Module = require('./Module');</code></pre>
+```js
+var Module = require('./Module');
+```
 
 ES6 version
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">import Module from './Module';</code></pre>
+```js
+import Module from './Module';
+```
 
 Cool ha !!
 
-let me explain to you the <code>export default</code>, when you export default for exporting something you will import a module like this:
+let me explain to you the `export default`, when you export default for exporting something you will import a module like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">import Module from './Module';</code></pre>
+```js
+import Module from './Module';
+```
 
-what this line means is that we have exported a module by default using <code>export default</code>, so we have to import that module in our source file, and that's what we did with the line above.
+what this line means is that we have exported a module by default using `export default`, so we have to import that module in our source file, and that's what we did with the line above.
 
-another thing that you can do with modules in ES6 is that you can <code>export</code> and <code>import</code> many child modules or variables from one module.
+another thing that you can do with modules in ES6 is that you can `export` and `import` many child modules or variables from one module.
 
 so you'll export a module in your module file, and the code will be something like:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">export const x = 1;
-
+```js
+export const x = 1;
 export const y = 2;
-
-export const z = 'String';</code></pre>
+export const z = 'String';
+```
 
 and here is the importing line of code:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">import {x, y, z} from './myModule';</code></pre>
+```js
+import {x, y, z} from './myModule';
+```
 
 it's a very useful feature, if you remember the object destruction that I mentioned above, that what I used here to make things easier, so that's how you can import multi-child modules from one module.
 
@@ -406,19 +350,19 @@ the reason why being that is that ES6 is **syntactic sugar** on top of ES5, and 
 
 this is a piece of code that you would find in a typical Javascript use written in ES5:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function es5(par){
-
+```js
+function es5(par){
   par = par || {};
-
   var bar = par.bar || 42;
-
   return 'the meaning of life is ' + bar + '.';
-
-}</code></pre>
+}
+```
 
 and here is the same code but it's written in ES6:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">const es6 = ({bar = 42} = {}) => `the answer to life is ${bar}`;</code></pre>
+```js
+const es6 = ({bar = 42} = {}) => `the answer to life is ${bar}`;
+```
 
 the first thing you'll notice is that it's much shorter but other than that it's more declarative. how it's more declarative?
 
@@ -445,54 +389,47 @@ and the better you understand Javascript the better you going to be at React, so
 I mentioned that you don't need to learn all of it, so you might ask what exactly do I need to learn in ES6, will I say:
 
 - **class** - But just the bare bones. it's not going to take a lot to know how React uses classes.
-
 - **string template literals** - not so much because of React, almost every ES6 user I know I using it, it's popular so you have at least to understand it.
-
 - **arrow functions** - This is a big one - you'll find this everywhere on modern React.
-
 - **spread and rest operators**
-
 - **enhanced object literals**
-
 - **object restructuring**
 
 don't overthink it that much. I highly advise you to understand arrow functions first because they are a little bit confusing as they are a little different than a normal function. and they get used a lot. but most of the other stuff you'll pick up very easily. so overall they are just 6 features, it's not going to take you a month to understand them.
 
 I estimate that you'll need 5 minutes with each one of the features to understand the idea of it since they are not complicated. and maybe more with arrow functions, 30 minutes for arrow functions is going to be enough.
 
-let's go a little bit in details and talk about the arrow function component and how you pass props to an arrow function, you're going to find videos that talks about <code>this</code> keyword, and by having a stat with the arrow functions you figure out how it's working but it's going to make sense for you until you start practicing it with React.
+let's go a little bit in details and talk about the arrow function component and how you pass props to an arrow function, you're going to find videos that talks about `this` keyword, and by having a stat with the arrow functions you figure out how it's working but it's going to make sense for you until you start practicing it with React.
 
-I said earlier that you really need ES6 to learn React, don't get me wrong it really is needed, but you could also go straight to React and learn those topics as you go, you'll find something like <code>let</code>/<code>const</code>, <code>spread</code>/<code>rest</code> and all those features, you're not going to know what they're used for but you can google them as you go.
+I said earlier that you really need ES6 to learn React, don't get me wrong it really is needed, but you could also go straight to React and learn those topics as you go, you'll find something like `let`/`const`, `spread`/`rest` and all those features, you're not going to know what they're used for but you can google them as you go.
 
-one thing that might cause you some trouble when starting to learn React is with arrow functions, they allow you to access your component <code>this</code> object from inside the callback function of an event. so I thought it's going to be helpful to let you know that, here is the syntax that you're going to be using all day long when learning arrow function: 
+one thing that might cause you some trouble when starting to learn React is with arrow functions, they allow you to access your component `this` object from inside the callback function of an event. so I thought it's going to be helpful to let you know that, here is the syntax that you're going to be using all day long when learning arrow function: 
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">() => {}</code></pre>
+```js
+() => {}
+```
 
 rather than :
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function () {}</code></pre>
+```js
+function () {}
+```
 
 **so ES6 is really going to help when learning React, but let's talk a little bit in general, there are some concepts that you need to learn before any modern Javascript framework:**
 
 - fundamentals of JavaScript including [conditionals, looping structures along with functions and events].
-
 - Class and Objects.
-
 - map, filter, reduce.
-
 - Promises, fetch, async, await.
-
 - Loops *for in* and *for of* loops
-
 - modules (Very important).
-
 - Arrow functions, closure functions, iife functions (Immediately invoked function expression).
 
 Now you have everything you need. but let me tell you that Javascript frameworks come and go as well as the libraries, but the core is Javascript so if you learned the core every framework is going to be easier for you to pick up, React may disappear one day but since you have the core concepts you'll be safe.
 
 ## takeaway
 
- you might find Javascript very confusing, but it's a great language just try to avoid those bad articles and they are a lot out there. in this article, I provided the most information that you'll need to decide whether to learn ES5 or ES6 as a beginner.
+you might find Javascript very confusing, but it's a great language just try to avoid those bad articles and they are a lot out there. in this article, I provided the most information that you'll need to decide whether to learn ES5 or ES6 as a beginner.
 
 and also told you what's better and what's not the best but can be done so you can have the right approach to this topic, let me repeat some of the things that I mentioned before in a general way in this takeaway.
 
@@ -502,12 +439,10 @@ but skipping ES5 and going straight away to ES6 can be done and nobody is going 
 
 also, I've come across lots of books that are really useful but they are written with ES5 so you have to keep that in mind.
 
- from my experience, I guess suffering a bit with ES5 is going to make appreciate ES6 more, and also you're going to know why each feature was added to it, this is the nice part about learning programming languages, which is going step by step and learning each topic and why it's there in the first place.
+from my experience, I guess suffering a bit with ES5 is going to make appreciate ES6 more, and also you're going to know why each feature was added to it, this is the nice part about learning programming languages, which is going step by step and learning each topic and why it's there in the first place.
 
 some of the tips that I think are going to be helpful to know are choosing multiple sources and limit yourself just to one, you can watch youtube videos and follow people on Twitter (the right people), podcasts, blogs, and the list goes on. there are lots of articles that talk only about this and I'll suggest this one which is a really good guide through your journey <a href="http://jstherightway.org/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">js the right way</a>, I'll save this to my browser's bookmarks if I were you.
 
 "Javascript the definitive guide" and "you don't know JS" are very good books to follow in your journey. I also highly suggest this video course named "Advanced Javascript for serious Programmers". It should really open your eyes to the javascript paradigm.
 
 **the last thing that I feel I should tell you is Don't ever jump on frameworks because you will waste your time on configuration instead of spending it learning actual core javascript.**
-
-

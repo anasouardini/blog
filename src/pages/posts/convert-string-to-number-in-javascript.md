@@ -36,13 +36,16 @@ This method helps convert a string into a number with decimal points. This appro
 
 It usually starts at position zero, and it determines whether the character there can get converted into a real number. If there is no character to convert, the result is a NaN. Here is one such example:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">Const str = ‘What is better than 56?’
-
-console.log(parseInt(str)) //NaN</code></pre>
+```js
+Const str = ‘What is better than 56?’
+console.log(parseInt(str)) //NaN
+```
 
 Ideally, this example has no character at position zero, meaning the result will always be a NaN. Unless the character at position zero is valid, the method cannot carry out the test. Once it gets to an invalid point, it converts the current string to a number. For instance:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">console.log(parseInt (“42aspect23”)) //42</code></pre>
+```js
+console.log(parseInt (“42aspect23”)) //42
+```
 
 Here, the result is 42, as the method stops parsing at ‘aspect,’ a NaN.
 
@@ -56,7 +59,9 @@ There is no denying that parseFloat and parseInt are relatively similar. However
 
 **Here is an example**:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">Console.log (parseFloat (“2.156.3”)) // 2.156</code></pre>
+```js
+Console.log (parseFloat (“2.156.3”)) // 2.156
+```
 
 The return is 2.156. Typically, the first number in the string is the only one returned. Leading trailing and whitespaces are ignored. However, if the first character is not a number, the result will be a NaN.
 
@@ -66,26 +71,20 @@ This approach focuses on the number value. While it can handle one decimal, it w
 
 Ideally, this method does not attempt to parse through strings piece-by-piece. Instead, it converts the entire string argument into a number at once. Here is an example to illustrate this.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">Const str = ‘156xgf’;
-
+```js
+const str = '156xgf';
 Number (str); // NaN fails to convert the entire string despite attempting
-
-parseInt (s); // 156 It stops once it reaches the first letter, x</code></pre>
+parseInt (s); // 156 It stops once it reaches the first letter, x
+```
 
 Based on the illustration above, this approach relies on type conversion, which attempts to convert values to a number. Here are a few things that happen.
 
-- An empty string ‘’ becomes zero
-
+- An empty string `''` becomes zero
 - Non-numerical strings become NaN
-
 - Number ‘’ results in a 0
-
 - parseInt returns a NaN
-
 - While undefined becomes NaN, null becomes 0
-
 - True becomes 1
-
 - False returns 0
 
 ### Unary+ Operator
@@ -96,19 +95,19 @@ You can easily rely on it to parse various functions or the Number() functionali
 
 **Here are a few examples of how it works.**
 
-<pre class="wp-block-code"><code class="">+”698” returns // 698
-
-+”325.236” returns // 325.236
-
-+”325.236.25” returns NaN
-
-+”Bet on me” returns // NaN</code></pre>
+```js
++"698" // returns 698
++"325.236" // returns 325.236
++"325.236.25" // returns NaN
++"Bet on me" // returns NaN
+```
 
 **The unary operator could also use a negative or minus sign. For instance:**
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">Let a =65
-
-a =+a; // 65</code></pre>
+```js
+let a = 65
+a = +a; // 65
+```
 
 Ideally, the unary minus comes in to negate the value.
 
@@ -123,21 +122,13 @@ In conclusion, converting strings to numbers in JavaScript is an inevitable task
 here some recommended articles:
 
 - <a href="/posts/what-language-is-javascript-written-in/" target="_blank" rel="noreferrer noopener">what language is JavaScript is written in?</a>
-
 - <a href="/posts/why-javascript-is-bad-at-math/" target="_blank" rel="noreferrer noopener">why JavaScript is bad at math?</a>
 
 **Sources**:
 
 - <a rel="noreferrer noopener nofollow" href="https://stackabuse.com/javascript-convert-string-to-number/" target="_blank">https://stackabuse.com/javascript-convert-string-to-number/</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://www.freecodecamp.org/news/convert-string-to-number-javascript/" target="_blank">https://www.freecodecamp.org/news/convert-string-to-number-javascript/</a>
-
 - https://stackoverflow.com/questions/1133770/how-to-convert-a-string-to-an-integer-in-javascript
-
 - https://www.sitepoint.com/data-management-visualization-javascript/
-
 - https://www.javascripttutorial.net/javascript-unary-operators/
-
 - https://www.bitdegree.org/learn/javascript-convert-string-to-number#learn-syntax
-
-

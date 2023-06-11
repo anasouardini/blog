@@ -63,10 +63,10 @@ function makeItUnique(array) {
 here is what it will look like when you run the `makeItUnique()` function:
 
 ```js
-  var notUniqueArray = ['1', '1', '3', '4', '5', '5', '🗿'];
-  makeItUnique(notUniqueArray); 
+var notUniqueArray = ['1', '1', '3', '4', '5', '5', '🗿'];
+makeItUnique(notUniqueArray); 
 
-  // it will return this array ["🗿", "1", "3", "4", "5"]
+// it will return this array ["🗿", "1", "3", "4", "5"]
 ```
 
 this algorithm is using the O(n²) time complexity, and that's because we're looping through two arrays, if you're interested in making it less complex which means using only O(n) (linear time), well you have to implement a method called `hash-map`, which I'm going to explain in the 3d method.
@@ -208,9 +208,7 @@ and that's why when you provide it with an array of values that some of them are
 now after you know what `Set` object is really doing, let me explain the following code in two simple steps:
 
 - the first step which we explained which is using Set as a constructor to filter out the given array to remove duplicates from its values, then we assign that result to a variable.
-
 - the second step is where we have only unique values, but the thing is that `Set` is returning an array, so you can't use it like you normally use arrays, but we can convert that into an actual array.
-
 I KNOW, the second step is a bit confusing, since you probably don't know how to convert `Set` object into an array.
 
 well, there are two simple and easy ways of doing that.

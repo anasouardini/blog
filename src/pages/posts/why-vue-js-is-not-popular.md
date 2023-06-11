@@ -73,7 +73,6 @@ Additionally, Vue supports not existing plugins that can be used with other fram
 **Other factors that have contributed to less popularity for Vue.js include:**
 
 - A few learning resources with only Udemy offering Vue js lessons. Other frameworks like React has both Udemy and YouTube as the primary learning platforms for learning.<br>Reactivity complexity in Vue.
-
 - Shifting from one framework to another is both time and money-consuming. Therefore, not many people might be willing to shift from the frameworks they are using for Vue.
 
 However, when all is said, Vue remains one of the great frameworks for use by developers. The previous years have seen Vue become extremely popular amongst developers having it also gain support from Laravel.
@@ -101,5 +100,3 @@ so it's very easy to learn Vue js if you're interested in it with some fundament
 ## Takeaway
 
 While Vue might not be as popular as other frameworks, the number of developers using Vue is rising in a fast way. Notably, you might need to choose Vue.js if you need to get a working solution at the soonest time possible. Vue also makes a great framework for simple apps or lightning-fast ones. With the constant improvement of the Vue.js framework, its ease of use might have it battle for the title of the most popular JavaScript framework.
-
-

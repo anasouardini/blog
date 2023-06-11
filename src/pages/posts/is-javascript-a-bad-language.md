@@ -21,7 +21,6 @@ you might read some really mean comments on this language such as nasty or terri
 but the two main things that cause this language to come across as a bad language and maybe the worst language for some tasks are these two:
 
 - **Browsers Implementations:** this is the reason that makes it really impossible for JavaScript to run easily and to have full support by most of the browsers or at least a different version of the same browser. browsers have to keep updating continuously to keep supporting all the new features of JavaScript.
-
 - **JavaScript Frameworks:** also frameworks have a great role in making this language very poor, even the most reasonable framework to learn today has a lot of boilerplate code, all the code you're going to write using this framework is very repetitive. I tend to put many brackets, square brackets just to prevent stupid syntax errors.
 
 ## Context Matters
@@ -42,7 +41,7 @@ So, what are some of the more horrible examples of badly designed JavaScript?
 
 ### Console Everything
 
-One of the first things JavaScript coders learn is <code>cosole.log()</code>. When you are starting out, this function represents the quickest and easiest way to output the results of your code. Unfortunately, like a baby chick imprinting on its mother, JavaScript beginners seem to develop a special relationship with <code>cosole.log()</code> and use it far more liberally than they should.
+One of the first things JavaScript coders learn is `cosole.log()`. When you are starting out, this function represents the quickest and easiest way to output the results of your code. Unfortunately, like a baby chick imprinting on its mother, JavaScript beginners seem to develop a special relationship with `cosole.log()` and use it far more liberally than they should.
 
 It is not uncommon to see JavaScript log every little detail, from unnecessary debug information left over from the development process, indicating that a particular loop has… well… looped.
 
@@ -52,9 +51,9 @@ for (let i = 0; i &lt; 1024; i++) {
 }
 ```
 
-On top of being unnecessary, and given that just about anyone can view the JavaScript console, potentially a security concern logging things to the console does hit performance a little. It is a tiny hit, granted, but excessive use of <code>cosole.log()</code> will still make a noticeable impact on the performance of your script.
+On top of being unnecessary, and given that just about anyone can view the JavaScript console, potentially a security concern logging things to the console does hit performance a little. It is a tiny hit, granted, but excessive use of `cosole.log()` will still make a noticeable impact on the performance of your script.
 
-One small addition on this theme, there are context-appropriate console functions, such as console warn, and console error. <code>cosole.log()</code> is used too often in situations where a warning or error would be more appropriate.
+One small addition on this theme, there are context-appropriate console functions, such as console warn, and console error. `cosole.log()` is used too often in situations where a warning or error would be more appropriate.
 
 ```js
 console.log("User has entered name.");
@@ -119,7 +118,7 @@ JavaScript will always endeavor to make an apparent typing conflict work, but it
 ```js
 var firstNumber = "1";
 var secondNumber = 2;
-var result = firstNumber + secondNumber; </code></pre>
+var result = firstNumber + secondNumber; `</pre>
 ```
 In this case, the contents of result would read as a string that says “12”, rather than the number 12. A stricter language would require you to make it clear what you are trying to do, either by converting the string to a number or the number to a string before adding them together, and this helps prevent strange and unexpected errors farther down the line.
 
@@ -136,5 +135,3 @@ And, because the variable’s scope is global, if you make use of any third-part
 ## The Takeaway
 
 Is JavaScript bad? It’s not without its problems, and it certainly isn’t helped by some of the more terrible examples of code that can be found strewn across the web. But, like all languages, it can be wielded effectively with the right knowledge. And, as it is the de facto language of web browsers the world over, it probably isn’t going anywhere any time soon.
-
-

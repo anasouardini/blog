@@ -66,7 +66,7 @@ console.log(0.2 * 0.1); //0.020000000000000004
 
 keep in mind that this is a very normal thing as long as computers still using binary language which is going to be around for a very long time or maybe forever.
 
-Example in python 2\3
+Example in python 2\3:
 
 ```python
 python> .4 + .2
@@ -133,9 +133,7 @@ however, this doesn't explain all the differences between languages, in all thos
 there isn't an only way of formatting but there many used strategies for this, the three most common ones are:
 
 - Calculate/Compute and display 17 correctly-rounded significant digits, and maybe stripping trailing zeros if there are any. If the output is containing 17 digits it is guaranteed that you'll have a distinct representation of that binary64 in order for a floating-point value can be undoubtedly recovered from its representation. the smallest integer with this feature is 17. it's the strategy that Python version 2.6 uses.
-
 - Calculate and display the shortest decimal string that rounds back to the given binary64 number below the usual round-ties-to-even rounding mode. you might find this strategy complicated than the first one but preserves the property that distinct floats that have distinct representations. and it's more likely to output a more pleasant result.  and this special strategy is what all the languages I gave in the examples above are implementing except the R language.
-
 - Calculate and display 15 or fewer correctly rounded significant digits. what this can do is hiding some errors that appear when converting from decimal values to binary. so shows you the exact decimal arithmetic while it's a kind of illusion, but it works. one negative thing about it is that distinct floats can share the same representation. so the second strategy is what the other languages are implementing except the R language which is using this one.
 
 so now you know that this problem is also a thing that exists in other languages as well, but that doesn't mean that JavaScript doesn't have some weird and bad parts, check this article out where I talk only about <a href="/posts/why-javascript-is-weird/" target="_blank" rel="noreferrer noopener">why JavaScript is so weird</a>.
@@ -201,7 +199,18 @@ npm install mathjs
 and then you have to include it in your gulpfile.js:
 
 ```js
-import {   atan2, chain, derivative, e, evaluate, log, pi, pow, round, sqrt } from 'mathjs'
+import {
+  atan2,
+  chain,
+  derivative,
+  e,
+  evaluate,
+  log,
+  pi,
+  pow,
+  round,
+  sqrt
+} from 'mathjs'
 
 round(e, 3)                    // 2.718
 atan2(3, -3) / pi              // 0.75
@@ -226,5 +235,3 @@ to not make this article longer than it should be which I think it's already lon
 **recommended articles:**
 
 - <a rel="noreferrer noopener" href="/posts/need-to-be-good-at-math-to-learn-javascript/" target="_blank">Do You Need to Be Good at Math to Learn JavaScript?</a>
-
-

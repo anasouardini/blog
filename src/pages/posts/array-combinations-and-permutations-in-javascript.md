@@ -101,10 +101,11 @@ A simple way of doing it would be to do a double for loop on the array where you
 let array = ["banana", "apple" , "lemon", "mango"];
 let results = [];
 for (let j = 0; j < array.length - 1; j++) {
- // This is where you'll capture that last value
- for (let k = j + 1; j &lt; array.length; k++) {
-  results.push(`${array[j]} ${array[k]}`);
-}
+    // This is where you'll capture that last value
+    for (let k = j + 1; j &lt; array.length; k++) {
+        results.push(`${array[j]} ${array[k]}`);
+    } 
+} 
 
 console.log(results);
 ```

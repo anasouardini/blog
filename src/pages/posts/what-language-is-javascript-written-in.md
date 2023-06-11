@@ -9,7 +9,6 @@ draft: false
 category: javascript js-questions
 ---
 
-
 Have you ever wondered why JavaScript instantly became a popular choice among many developers? Typically, it is used by over 94% of web developers. Thanks to how it turned web browsers into applications, this choice is almost impossible to overlook. Perhaps it is because of the various merits it draws too.
 
 One question has always been what language JavaScript is written in. **Well, it is written in any language, thanks to its standard nature.**
@@ -21,11 +20,8 @@ Here are a few insights into this element.
 JavaScript is a client-side scripting language. It is flexible and powerful, making it easy to implement. This language can update, manage, and change HTML and CSS. Most developers will use it for the following reasons.
 
 - **Back-end web development:** You cannot overlook how versatile JavaScript is. Besides being used for front-end operation, you can rely on it to develop back-end infrastructure.
-
 - **Web browser games:** Most developers often integrate JavaScript with various web-based games. It ensures that the game is flawless.
-
 - **Mobile applications:** JavaScript helps in scripting different mobile applications. This way, the apps can work across various operating systems without any problem.
-
 - **Enhancing interactivity:** This scripting language helps boost interactivity on websites. As long as you do not want a static web page, you will have to embrace JavaScript.
 
 ## Which Language Is Used in Writing JavaScript?
@@ -61,15 +57,10 @@ While it had a relatively faulty start, this scripting language has grown popula
 Various reasons go into the popularity of this scripting language. Usually, the following will always suffice:
 
 - **Versatility**: You can rely on JavaScript for both back-end and front-end operations. Whether you are developing the back-end or the front-end, you will be confident of seamlessness. Besides, implementing it is relatively straightforward, as you do not require too much decoding.
-
 - **Standardized:** JavaScript is standardized, which means you get frequent updates.
-
 - **Seamless operation:** JavaScript relies on the Document Object Model when responding to user interactions. This model helps display web pages in a more structured manner.<br>Besides, it allows various websites to have interactivity, including object movement and scroll transitions. This aspect ensures that the browsers are not only faster but also user-friendly. Ideally, it helps convert a web page from a static one to an interactive site. Nothing could make it more appealing!
-
 - **Multiple frameworks:** There is no denying that JavaScript comes with multiple frameworks and libraries. These frameworks and libraries often help web developers create complex applications. What is more, everything gets done with relatively low overhead. Besides, you can import them in their codes to augment the functionality of their applications.
-
 - **You can use JavaScript for servers:** Yes. Various platforms, including Google and Facebook, have slowly embraced JavaScript for back-end programming. JavaScript has a server-side, whose popularity you cannot ignore. Its scalability has helped improve cloud computing. You can also integrate it with other languages, which helps communicate with databases.<br>In most cases, node.js is used in the server-side JavaScipt. Node has proven to be reliable, even on big platforms like eBay. It helps create scalable web applications, multiplayer games, and messaging platforms.
-
 - **Cross-platform applications:** The popularity of JavaScript on cross-platform applications is impossible to overstate. Thanks to the Electron.js framework, you can be sure of excellent desktop applications. These applications can work across various devices regardless of the operating system. Whether you want to animate, render, or scale, JavaScript will provide the right solution.
 
 you can read more about this:
@@ -83,13 +74,6 @@ In conclusion, JavaScript has become a relatively common option for most develop
 **resources:**
 
 - <a rel="noreferrer noopener nofollow" href="https://news.codecademy.com/javascript-history-popularity/" target="_blank">https://news.codecademy.com/javascript-history-popularity/</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://javascriptio.com/view/2969716/what-language-is-javascript-written-in" target="_blank">https://javascriptio.com/view/2969716/what-language-is-javascript-written-in</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17" target="_blank">https://medium.com/@_benaston/lesson-1a-the-history-of-javascript-8c1ce3bffb17</a>
-
-- <a rel="noreferrer noopener nofollow" href="https://web.stanford.edu/class/cs98si/slides/overview.html" target="_blank">https://web.stanford.edu/class/cs98si/slides/overview.html</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://www.springboard.com/blog/history-of-javascript/" target="_blank">https://www.springboard.com/blog/history-of-javascript/</a>
-
-

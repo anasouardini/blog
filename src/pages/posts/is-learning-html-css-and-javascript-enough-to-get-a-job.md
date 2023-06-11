@@ -53,15 +53,10 @@ If you know CSS, HTML, and Javascript only, freelancing is the best option. That
 **Here are a few opportunities you could consider when freelancing:**
 
 - Create static menus for various restaurants
-
 - Build multi-page static informational websites
-
 - Convert PSD files to CSS and HTML
-
 - Create sales pages and landing pages
-
 - Personalize WordPress sites
-
 - Come up with email templates for email platforms
 
 Notably, various sites are at your disposal when looking for these freelance jobs. Fiverr and Upwork are the best places to start, thanks to the thousands of jobs they post. These platforms often work best for beginners. Once you gain enough skills, you can consider reaching out to different potential clients.
@@ -75,23 +70,14 @@ There is no denying that full-time roles will often be a priority for most peopl
 For instance, you will readily thrive in various roles, including digital content editor and social media management. You could also consider virtual assistance tasks. Other jobs you could consider in the long term will include the following.
 
 - Content producer
-
 - Web editor
-
 - Website support specialist
-
 - HTML and CSS production specialist
-
 - Email marketing specialist
-
 - Entry-level web developer
-
 - Entry-level frontend specialist
-
 - Webmaster
-
 - Junior developer
-
 - WordPress developer
 
 ### How to Be Successful With CSS, HTML, and JavaScript Only
@@ -145,13 +131,9 @@ SEO often determines the rank of your website. Ensure that you understand how to
 Various benefits come with having skills in JavaScript, HTML, and CSS. Some of the reasons you should consider learning these skills are as follows:
 
 - It will be seamless to fine-tune the blogposts and themes on your site. Whichever content management system you will use, HTML, and CSS skills ensure that you get better results.
-
 - You will effortlessly build landing pages, which can help promote different products or services. Monetizing these platforms ensures that you have an extra income.
-
 - It will be a lot easier to work with other web designers and developers. These skills will help build the capacity to develop intuitive and responsive websites.
-
 - These skills will give you enough confidence to kickstart your career. Whether you choose to freelance or go for a permanent job, your skills will be enough to get a reliable website.
-
 - These skills help get a more reliable, faster, and much safer static CMS.
 
 ## takeaway
@@ -161,7 +143,4 @@ In conclusion, you can scarcely dismiss the urgency of having enough skills to k
 **References**:
 
 - <a rel="noreferrer noopener nofollow" href="https://skillcrush.com/blog/skillcrushtv-9-jobs-html-css/" target="_blank">https://skillcrush.com/blog/skillcrushtv-9-jobs-html-css/</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://dev.to/fayaz/html-css-js-are-not-enough-esp-if-you-plan-to-be-a-independent-dev-2a77" target="_blank">https://dev.to/fayaz/html-css-js-are-not-enough-esp-if-you-plan-to-be-a-independent-dev-2a77</a>
-
-

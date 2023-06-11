@@ -97,9 +97,7 @@ your kid doesn't know if he is going to get that phone or not in the next month.
 so the promise is that simple in the beginning, but it has 3 states:
 
 - **Pending:** your kid doesn't know if he's going to get that phone
-
 - **Fulfilled:** you have the money, you're going to buy him a phone
-
 - **Rejected:** you don't have the money, you're not going to buy him a phone
 
 Javascript Promises are a little bit hard to learn, but as you see it's easy to understand, but once you try to do some fancy stuff with it prepare for some errors that you can't explain why they popped up.
@@ -112,7 +110,7 @@ this might be not good for your web app, and that's where the asynchronous progr
 
 the asynchronous model allows for multiple tasks to be happening at the same time, the long-running tasks will continue running while other tasks are doing their thing until the long-running tasks finish and then the script gets informed and get the returning result (calculations, data from an API, etc).
 
-that behavior of the asynchronous model is happening on its own function call stack, and this is why people find it to be hard to learn, so without promises, managing exceptions across asynchronous code is really hard. and since each callback starts with an empty stack, the <code>catch</code> handlers would not be on the stack when they throw an exception.
+that behavior of the asynchronous model is happening on its own function call stack, and this is why people find it to be hard to learn, so without promises, managing exceptions across asynchronous code is really hard. and since each callback starts with an empty stack, the `catch` handlers would not be on the stack when they throw an exception.
 
 ### Closures
 
@@ -127,9 +125,7 @@ when I was learning javascript, the most difficult thing that I faced a hard tim
 so the hard part, when I was learning OOP, is the "why" part of it, but the mechanics of it were slightly simple, it was more like a solution in search of a problem to solve, here some reasons you might find OOP hard to learn:
 
 - learning Object Orienting from the start is the first reason that leads to the lack of understanding of why it's there, so it's a bad idea. In some cases the procedural coding is not a "bad habit" and it might be the best way to learn something. before you learn procedural programming good enough for its limitations to become visible, the problem is this is what every course is teaching you.
-
 - the thing that is going to help you grasp OOP is knowing the basics of data structures before learning OOP.
-
 - if you ever heard of "seeing the forest through the trees", it's what design patterns are helping you with, when you learn them you'll start to see where implementing OOP is going to solve a huge problem and where it's not required. Furthermore, when you really understand OOP, most design patterns become obvious in hindsight.
 
 ## Comparing JavaScript to Other Programming Languages
@@ -169,5 +165,3 @@ with this in mind, just keeping your learning sessions consistent is going to ge
 the most thing to remember is that Javascript is an interpreted language and that's why it's easier than most languages. that's what allows you to test your project before even finishing it, whenever you write few lines you'll see the result right away in the browser and that what helped me a lot when I was learning it.
 
 and for a web page, even a small piece of Javascript code can do some good enhancements to your webpage. I find that very helpful for my productivity.
-
-

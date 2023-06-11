@@ -10,7 +10,7 @@ const posts = await Astro.glob('./*.md');
       posts
         .filter((post) => !post.frontmatter.draft)
         .map((post) => (
-          <a href={`/posts/${post.frontmatter.slug}`} class="block w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
+          <a href={`/posts/${post.frontmatter.slug}`} class="block max-w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
             <div
               aria-label="blog post card"
               class="p-4 text-gray-200"

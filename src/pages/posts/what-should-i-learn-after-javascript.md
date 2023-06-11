@@ -9,10 +9,9 @@ draft: false
 category: javascript js-questions
 ---
 
-
 so you just finished your vanilla Javascript courses and had some training and became good at Javascript and you started wondering what should you learn next, the answer I provide in this article is for someone who knows HTML, CSS, and vanilla Javascript with DOM manipulation. so what should you learn after learning Javascript?
 
-**after you've learned Javascript you can go for learning some back-end language like PHP or Nodejs which is built with Javascript, this is of course if you're planning for becoming a full-stack developer. or you could learn some libraries like jQuery which can help you reduce Javascript lines and thus reducing the time needed to complete a specific task. or you could go for some more Javascript by learning ES6 and ES7, and there are JS frameworks like Vuejs which can help you do some cool stuff more easily. **
+**after you've learned Javascript you can go for learning some back-end language like PHP or Nodejs which is built with Javascript, this is of course if you're planning for becoming a full-stack developer. or you could learn some libraries like jQuery which can help you reduce Javascript lines and thus reducing the time needed to complete a specific task. or you could go for some more Javascript by learning ES6 and ES7, and there are JS frameworks like Vuejs which can help you do some cool stuff more easily.**
 
 so it's all up to you whether you want to become a full-stack developer that can build a website without contacting some back-end developer to help you with the back-end which can be really useful or just focus on the front-end which is really powerful since you're focusing gon one thing.
 
@@ -46,20 +45,14 @@ ES6 has a really simple syntax that can help you reduce the lines of code that y
 
 I was going to recommend learning ES6 after learning OOP and functional Javascript but you might get discouraged from facing all those new concepts, so think learning ES6 first is better.
 
-**2) learn functional Javascript: **I think it's better to talk about what functional programming isn't, before talking about what it is. and here are all the language constructs that you should forget about when learning functional Javascript:
+**2) learn functional Javascript:** I think it's better to talk about what functional programming isn't, before talking about what it is. and here are all the language constructs that you should forget about when learning functional Javascript:
 
 - Loops (**while, do...while, for, for...of, for...in**)
-
 - Void functions
-
 - Array mutator methods (<code>cop**y within, fill<strong>, sort, splice, unshift**, pop, push</strong></code>)
-
 - Object mutation (for example: **o.x = 5;**)
-
 - Variable declarations **var** or **let**
-
 - Map mutator methods (**clear, delete, set**)
-
 - Set mutator methods (**add, clear, delete**)
 
 you might think seriously!! how would I program without these features? that is what functional programming takes care of.
@@ -68,34 +61,27 @@ if you read about this you'll what are the differences between pure which reduce
 
 here is a little example to remove a little bit of confusion:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">//normal JS code 
-
+```js
+//normal JS code 
 let Ar = [4, 5, 6];
-
 for (let i=0; i < Ar.length; i++)
-
     Ar [i] = Ar[i] + 1;
+console.log(Ar); //here is the result [5, 6, 7]
+```
 
-console.log(Ar); //here is the result [5, 6, 7]</code></pre>
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">//here is the functional JS version of the code
-
+```js
+//here is the functional JS version of the code
 let Ar = [4, 5, 6];
-
 Ar.map( item => return item + 1  );
-
 console.log(Ar); // the result is [4, 5, 6]
-
-//the changes are only exist in the function</code></pre>
+//the changes only exist in the function
+```
 
 the benefits of using functional Javascript (functional programming in general) are:
 
 - clean code
-
 - syntactic efficiency
-
 - more abstract (no for loops, etc)
-
 - reduction of errors
 
 **3) learn Javascript OOP:** OOP can be really complicated very quickly and hard to understand, but I'm going to give a simplistic view of what it is, and if I tried to fully explain it, it would be very confusing for you than helpful.
@@ -123,11 +109,8 @@ I also didn't afford a book I just downloaded that book as a PDF for free, but i
 here are some books that are really going to change your way you understand Javascript:
 
 - Eloquent JavaScript
-
 - You don’t know JS
-
 - Javascript the weird parts
-
 - the specs on ES6/ES2016/Harmony (not a book but there are articles about this, it would be helpful)
 
 ## learn jQuery after javascript
@@ -203,5 +186,3 @@ the thing is it's only up to you to choose what to learn after you've finished y
 and you might also like to just stay in the front-end and master that, then there is a lot to learn, not because the back-end doesn't have more things to learn but when you don't have any back-end language you can't learn anything before learning that language.
 
 within those things in front-end, there are things that just helps speed up your coding and to make it easy for you to continue learning and building projects like CSS preprocessors and task runners, and other things that are improving the core fundamentals of Javascript like ES6 and frameworks.
-
-

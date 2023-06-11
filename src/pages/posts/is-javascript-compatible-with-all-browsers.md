@@ -116,13 +116,9 @@ it is a normal thing that you'll have cross-browser compatibility issues no matt
 as I mentioned above when using frameworks really facilitate the development of cross-browser compatible web apps/websites, and here are some of those frameworks:
 
 - <a href="https://reactjs.org/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">React.js</a>
-
 - <a href="https://angular.io/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Angular</a>
-
 - <a href="https://vuejs.org/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Vue.js</a>
-
 - <a href="https://ionicframework.com/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Ionic</a>
-
 - <a href="https://www.emberjs.com/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener nofollow" class="rank-math-link">Ember.js</a>
 
 ## takeaway
@@ -136,23 +132,12 @@ and if you are an advanced developer and you want to fix issues that hearts your
 **tips that helps solving Javascript cross-browser compatibility issues:**
 
 - **Validate your code**
-
 - **Fail gracefully**
-
 - **Know your audience**
-
 - **Consider using a framework**
-
 - **Keep your design simple**
-
 - **Reuse and reduce components**
-
 - **Test with the difficult browsers first**
-
 - **Create test scripts**
-
 - **Test as you go along**
-
 - **Check your features**
-
-

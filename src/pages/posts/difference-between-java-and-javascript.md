@@ -25,11 +25,8 @@ What this means is that your browser at that time was interpreting the commands 
 **feel free to check these articles if you want to know more about JavaScript:**
 
 - <a rel="noreferrer noopener" href="/posts/why-javascript-is-scripting-language/" target="_blank">Why JavaScript is Considered a Scripting Language</a>
-
 - <a rel="noreferrer noopener" href="/posts/does-javascript-have-classes/" target="_blank">Does JavaScript Have Classes</a>
-
 - <a rel="noreferrer noopener" href="/posts/why-javascript-is-a-lightweight-language/" target="_blank">Why JavaScript Is a Lightweight Language</a>
-
 - <a href="/posts/is-javascript-synchronous-or-asynchronous/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Is JavaScript Synchronous or Asynchronous</a>
 
 ## the history of Java
@@ -49,11 +46,8 @@ Java is applied in many different places including creating desktop applications
 It comes down to the use to distinguish Java from JavaScript. While JavaScript is mostly used for developing client-side scripts, Java is typically used for server-side development. Below are the primary differences between JavaScript and Java.
 
 - Each language needs different plug-ins
-
 - JavaScript is all-text while Java must be compiled
-
 - Java is an OOP language while JavaScript is an Object-Based scripting language
-
 - Both Java and JavaScript are creating apps that run in the browser and desktop but Java is more powerful on the desktop while JavaScript is more powerful on the browser
 
 ## Similarities Between JavaScript and Java
@@ -61,9 +55,7 @@ It comes down to the use to distinguish Java from JavaScript. While JavaScript i
 Although the two languages have several differences, they also share some similarities. Understanding the similarities will help you understand the two languages on a surface level. Here goes all the similarities between JavaScript and Java:
 
 - Both JavaScript and Java use the popular C syntax
-
 - Both JavaScript and Java are used in client-side applications
-
 - JavaScript includes several Java naming conventions
 
 ## Which of the Two Should I Learn?
@@ -89,13 +81,7 @@ You will become more employable and skilled when you learn both Java and JavaScr
 **references:**
 
 - <a href="https://skillcrush.com/blog/whats-the-difference-between-java-and-javascript/" target="_blank" rel="noreferrer noopener nofollow">https://skillcrush.com/blog/whats-the-difference-between-java-and-javascript/</a>
-
 - <a href="https://www.codecademy.com/forum_questions/4fe46886d5de070003017288" target="_blank" rel="noreferrer noopener nofollow">https://www.codecademy.com/forum_questions/4fe46886d5de070003017288</a>
-
 - <a href="https://www.javatpoint.com/difference-between-java-and-javascript" target="_blank" rel="noreferrer noopener nofollow">https://www.javatpoint.com/difference-between-java-and-javascript</a>
-
 - <a href="https://www.tutorialspoint.com/What-is-the-difference-between-Java-and-JavaScript" target="_blank" rel="noreferrer noopener nofollow">https://www.tutorialspoint.com/What-is-the-difference-between-Java-and-JavaScript</a>
-
 - <a href="https://www.geeksforgeeks.org/difference-between-java-and-javascript/" target="_blank" rel="noreferrer noopener nofollow">https://www.geeksforgeeks.org/difference-between-java-and-javascript/</a>
-
-

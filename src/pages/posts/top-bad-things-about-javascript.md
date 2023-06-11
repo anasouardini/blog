@@ -9,7 +9,6 @@ draft: false
 category: javascript js-questions
 ---
 
-
 JS is one of the most popular programming languages on the web. however, it sometimes becomes a nightmare to work with. In this article, I am going to analyze the 10 bad things about java that the developers got all wrong.
 
 **The 10 bad things about java include the lack of an integer type, loose typing, automatic insertion of semicolons, over-dependence on global variables, a code that can fail without warning, use of object prototypes, disadvantageous in asynchronous programming, and more. **
@@ -28,21 +27,17 @@ Now let us go through them in more details:
 
 The integer type is a crucial part of most programming languages, JS lacks the integer types and depends on floating–point as its numerical type, think this was a wrong move by the developers as it may be a problem when you are dealing with 64-bit integers.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"><code>console.log(0.253 + 1); //1.2530000000000001</code>
-
-<code>console.log(0.2 * 0.1); //0.020000000000000004</code>
-
+```js
+console.log(0.253 + 1); //1.2530000000000001
+console.log(0.2 * 0.1); //0.020000000000000004
 x = 1.0000000000000001;
-
 if ( x === 1 ) { console.log( "true" ) } // true
-
 console.log( typeof NaN ) // number //  wait ... what???
 
 // here is the weirdest one
-
 NaN != NaN // true
-
-NaN !== NaN // true</code></pre>
+NaN !== NaN // true
+```
 
 **if you don't know what this means you can read <a aria-label="this article (opens in a new tab)" href="/posts/why-javascript-is-bad-at-math/" target="_blank" rel="noreferrer noopener" class="rank-math-link">this article</a> that i wrote about this topic in-depth, I called it why JS is bad at math?**
 
@@ -54,17 +49,19 @@ Loose typing means that you don't have to specify the type of information that i
 
 here is an example of loose typing:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">var text = ' i am a text ';
-
-let num = 911;</code></pre>
+```js
+var text = ' i am a text ';
+let num = 911;
+```
 
 as you see we didn't specify the type of the data stored in those variables.
 
 now, here is an example of strong tying:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">string text = ' i am a text ';
-
-int number = 123;</code></pre>
+```js
+string text = 'I am a text ';
+int number = 123;
+```
 
 instead of letting JavaScript decide what type of data this is we specify it ourselves.
 
@@ -78,9 +75,10 @@ JS inserts a semicolon automatically when you are writing a code; I believe that
 
 while reading somebody's code you might find it written like this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">console.log( " display this " )
-
-console.log( " display this " )</code></pre>
+```js
+console.log( " display this " )
+console.log( " display this " )
+```
 
 as you see there is no semicolon at the end of each instruction, which doesn't give you any errors because the language takes care of it. but this doesn't mean that this is a good thing because it can cause errors in the long run when using a complicated syntax as js doesn't know where exactly to put a semicolon.
 
@@ -96,17 +94,15 @@ The nature of JS has made it possible to create codes that are very difficult to
 
 Why did they have to develop a language and make it over-depend on global variables? I have no idea; all I know is that global variables always tend to complicate programs. They also have some horrible scoping rules that will disappoint you.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">function doSomething(){
-
+```js
+function doSomething(){
     day = "saturday";
-
 }
-
 doSomething();
 
 // you can use the variable day here
-
-console.log( day );</code></pre>
+console.log( day );
+```
 
 ### A code can fail without a warning
 
@@ -165,5 +161,3 @@ JS is a well-established programming language, there are few things that I can s
 ## Wrap up
 
 There are a lot of things that are bad with JS, I managed to select the top 10 things that I believe are wrong with JS, and I believe it is up to the developers to fix most of these things because let’s face it, nobody wants to use a programming language that makes their life hard.
-
-

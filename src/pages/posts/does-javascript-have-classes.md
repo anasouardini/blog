@@ -61,17 +61,11 @@ Although PBP is easy and comfortable to use, class-based OPP is more sturdy and 
 **recommended articles:**
 
 - <a href="/posts/is-javascript-synchronous-or-asynchronous/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Is JavaScript Synchronous or Asynchronous</a>
-
 - <a href="/posts/is-javascript-compiled-or-interpreted/" target="_blank" aria-label=" (opens in a new tab)" rel="noreferrer noopener" class="rank-math-link">Is JavaScript Compiled or Interpreted</a>
 
 **resources:**
 
 - <a href="https://stackoverflow.com/questions/2752868/does-javascript-have-classes" target="_blank" rel="noreferrer noopener nofollow">https://stackoverflow.com/questions/2752868/does-javascript-have-classes</a>
-
 - <a href="https://www.quora.com/Does-JavaScript-have-class" target="_blank" rel="noreferrer noopener nofollow">https://www.quora.com/Does-JavaScript-have-class</a>
-
 - <a href="https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript" target="_blank" rel="noreferrer noopener nofollow">https://www.digitalocean.com/community/tutorials/understanding-classes-in-javascript</a>
-
 - <a href="https://medium.com/background-thread/why-javascript-is-an-oop-language-even-though-it-doesnt-have-classes-92a4e202176f" target="_blank" rel="noreferrer noopener nofollow">https://medium.com/background-thread/why-javascript-is-an-oop-language-even-though-it-doesnt-have-classes-92a4e202176f</a>
-
-

@@ -48,13 +48,16 @@ I've been asking these kinds of questions and I was checking tons of articles an
 
 let me show you an example of what makes Javascript a dynamic language:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"><code>  var myString = 'I am a string';
+```js
+var myString = 'I am a string';
+// assign an integer to myString
+myString = 1;
 
-  <code>myString</code></code>  <code>= 1; // assign an integer to <code>myString</code>
+// 1 is loged to the console
+console.log(myString);
+```
 
-  console.log(<code>myString</code>); // 1 is loged to the console</code></code></pre>
-
-The variable <code>myString</code> was a string before I assign the integer 1 to it, but then it switched to an integer when I did.
+The variable `myString` was a string before I assign the integer 1 to it, but then it switched to an integer when I did.
 
 you can copy the code and run it on your browser and then open up the console (using F12 in most browsers), you'll find that there is no error even though I've changed the variable type by assigning an integer to a string variable. that what I meant when I was talking about changing the variable type during the execution time.
 
@@ -72,29 +75,28 @@ the first one which you already know is that dynamically-typed languages (Javasc
 
 for example, if your code is written in a statically-typed language such as Java and contains errors, it will not compile until you fix that error. another thing is statically-typed languages require the data type of your variables to be declared before you can use them, while there is no such restriction in dynamically-typed languages, here are two examples about this:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">    // here is a statically-typed example written in Java
+```js
+// here is a statically-typed example written in Java
+int n;
+n = 5;
 
-    int n;
+// here is a dynamically-typed example written in Java
+n = 5
+```
 
-    n = 5;</code></pre>
-
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">    // here is a dynamically-typed example written in Java
-
-    n = 5</code></pre>
-
-both of them are doing the same job which is creating a variable <code>num</code> and assign the number 5 as it's value, as you see there is a difference between the two which lies under the first line in the Java code, <code>int num</code>, which defines the data type of <code>num</code> as an integer. so it expects its variables to have their types declared before assigning values to them. Groovy on the other hand is dynamically-typed so it determines its variables' data types based on the values you assign to them, so it doesn't require type declaration. that's why dynamically-typed languages are a little bit easy to learn and they save you a lot of time and space.
+both of them are doing the same job which is creating a variable `num` and assign the number 5 as it's value, as you see there is a difference between the two which lies under the first line in the Java code, `int num`, which defines the data type of `num` as an integer. so it expects its variables to have their types declared before assigning values to them. Groovy on the other hand is dynamically-typed so it determines its variables' data types based on the values you assign to them, so it doesn't require type declaration. that's why dynamically-typed languages are a little bit easy to learn and they save you a lot of time and space.
 
 speaking the easiness of a language, here is a topic where i talk about <a href="/posts/is-javascript-easy-to-learn/" class="rank-math-link">is javascript an easy langauge to learn?</a>
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">    // here is an example in Groovy
+```js
+// here is an example in Groovy
+number = 5
+// there is a typo in number when reassigning
+numbre= (number + 15) / 2
+```
+I've written this code to show you a common problem that people face when learning a dynamically-typed language which is a typo in the variable's name if you didn't notice it yet. although it easy to learn and debug but it can lead to some issues like this. it may not show any error since `numbr` doesn't have to be declared with a data type behind it.
 
-    number = 5
-
-    numbre= (number + 15) / 2  // there is a typo in number when reassigning</code></pre>
-
-I've written this code to show you a common problem that people face when learning a dynamically-typed language which is a typo in the variable's name if you didn't notice it yet. although it easy to learn and debug but it can lead to some issues like this. it may not show any error since <code>numbr</code> doesn't have to be declared with a data type behind it.
-
-but when you try to do some calculations with <code>number</code> assuming that the first calculation <code>(number + 15)/2</code> is saved to <code>number</code> you'll face a really hard time figuring out where that weird number came from. but when using a statically-typed language it'll tell you that number is not defined and save you a lot of headaches.
+but when you try to do some calculations with `number` assuming that the first calculation `(number + 15)/2` is saved to `number` you'll face a really hard time figuring out where that weird number came from. but when using a statically-typed language it'll tell you that number is not defined and save you a lot of headaches.
 
 so now you know what a dynamically-typed language and how it's different than a statically-typed language, and you know about the two concepts, you can pretty much tell the difference between some languages since it's easy for you to class the two types of languages.
 
@@ -105,5 +107,3 @@ there you have it, you got all the information that you need about this topic, a
 I think a better question would be what does dynamically-typed mean and if Javascript is also considered a dynamic language, which the answer would be yes Javascript is dynamic/dynamically-typed language since it doesn't check the type of the variable until it is executing the script.
 
 by the way languages, types are not limited to dynamic and static but there are tons of ways that you can class languages, other terms you might hear about during your learning curve are strongly and weakly typed languages, you can go ahead and read more about them as well if you're interested.
-
-

@@ -81,5 +81,3 @@ Regular updates are the best way to keep you secured from JavaScript hackers. It
 - <a href="https://stackoverflow.com/questions/13385388/is-it-possible-to-hack-with-javascript/13843366" target="_blank" rel="noreferrer noopener nofollow">https://stackoverflow.com/questions/13385388/is-it-possible-to-hack-with-javascript/13843366</a>
 
 - <a href="https://softwareengineering.stackexchange.com/questions/200790/how-easy-is-it-to-hack-javascript-in-a-browser" target="_blank" rel="noreferrer noopener nofollow">https://softwareengineering.stackexchange.com/questions/200790/how-easy-is-it-to-hack-javascript-in-a-browser</a>
-
-

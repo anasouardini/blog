@@ -17,13 +17,9 @@ Even though JavaScript is one of the most powerful and popular programming langu
 **here are the reasons why javascript is considered a weird language:**
 
 - It is a strange contradiction
-
 - JavaScript does not break complicated problems into smaller sections
-
 - There is no integer type
-
 - It’s more verbose compared to other languages
-
 - When using JavaScript, Null is an object
 
 ## how Javascript is operating?
@@ -33,11 +29,8 @@ In the simplest terms, JavaScript is a scripting language that comes in handy wh
 Such content includes features like:
 
 - Interactive forms 
-
 - Animated graphics
-
 - Autocomplete text suggestions
-
 - Photo slideshows
 
 An even better way to understand how JavaScript operates is to think about specific web features that you interact with every other day, even though you may have taken them for granted. One such web feature is the automatic updating of your Facebook timeline, and the other is when Google suggests different search terms that are closely related to what you have typed.
@@ -97,13 +90,9 @@ It’s obvious that learning and writing JavaScript will feel challenging, stran
 **related topic:**
 
 - <a href="/posts/why-javascript-is-bad-at-math/" target="_blank" rel="noreferrer noopener">why JavaScript is bad at math?</a>
-
 - <a href="/posts/what-language-is-javascript-written-in/" target="_blank" rel="noreferrer noopener">what language is JavaScript written in?</a>
 
 **resources**:
 
 - <a href="https://medium.com/swlh/javascript-is-weird-554c3dac0c98" target="_blank" rel="noreferrer noopener nofollow">https://medium.com/swlh/javascript-is-weird-554c3dac0c98</a>
-
 - <a href="https://www.skillcrush.com/blog/javascript/" target="_blank" rel="noreferrer noopener nofollow">https://www.skillcrush.com/blog/javascript/</a>
-
-

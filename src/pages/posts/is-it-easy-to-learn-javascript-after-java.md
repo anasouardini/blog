@@ -49,7 +49,6 @@ You can barely overlook the popularity of JavaScript. It accounts for up to 55.4
 Various projects require skills in JavaScript, making it a necessary skill. Typically, this language will function well wherever there is a browser. Since most applications will want interactivity, you will barely miss out on the job market.
 
 - **It is straightforward to learn:** While it is a high-level scripting language, JavaScript is relatively more straightforward to learn. You could spend a little more time learning this language, but it will be worth your time. As long as you have the basics at your fingertips, you will have no reason to worry. Frequent updates can only make things much better for you.
-
 - **Multiple applications:** As mentioned, you can use JavaScript across any application. This language will seamlessly work wherever there is a browser. It will also assure you of applications that can be used across different operating systems. What is more, these apps will be live and interactive, assuring the end-user of better interfaces.
 
 In conclusion, JavaScript is one of the most popular scripting languages to learn. Learning it after Java is one of the best decisions you could ever make. It can only make things more straightforward and seamless. If you intend to learn any language today, let it be JavaScript.
@@ -57,9 +56,5 @@ In conclusion, JavaScript is one of the most popular scripting languages to lear
 **References**:
 
 - <a rel="noreferrer noopener nofollow" href="https://jaxenter.com/learn-javascript-171411.html" target="_blank">https://jaxenter.com/learn-javascript-171411.html</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/" target="_blank">https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/</a>
-
 - <a rel="noreferrer noopener nofollow" href="https://skillcrush.com/blog/how-hard-is-it-to-learn-javascript/" target="_blank">https://skillcrush.com/blog/how-hard-is-it-to-learn-javascript/</a>
-
-

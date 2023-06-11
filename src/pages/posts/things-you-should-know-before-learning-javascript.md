@@ -9,7 +9,6 @@ draft: false
 category: javascript js-questions
 ---
 
-
 so you're planning to learn Javascript for the web and you're wondering about what technologies and concepts should you understand before you start learning Javascript. and that's what I'm going to talk about in this article. so what are the things that you should know before learning Javascript?
 
 **before you learn Javascript you need to understand web fundamentals such as HTTP/HTTPS, TCP/IP, how a browser is working, etc., and also you have to learn HTML and CSS languages since those are the basics of front-end web development.**
@@ -81,13 +80,9 @@ i don't want to make this section very long, but I just want you to know that it
 **here is a list of these web fundamentals:**
 
 - HTTP/HTTPS
-
 - TCP/IP
-
 - how browsers work (browser engines)
-
 - cookies, sessions, local storage
-
 - how servers communicate (optional)
 
 web fundamentals don't end here but those are the most things that you're going to need to know before learning Javascript, the other fundamentals are not necessary for now, but you'll learn them when you get to the advanced stuff.
@@ -102,7 +97,7 @@ so don't do what I did and avoid crash courses unless you already know HTML and 
 
 as you know HTML is a markup language that creates the DOM elements for your web page, but nowadays it has some really nice features that help reduce your use of CSS, so you're not going to regret it if you really learn HTML as it should be learned, so keep that in mind.
 
-also CSS still a styling language that styles your DOM elements that you create with HTML, but also it has some changes recently that will help you with reducing the lines of your Javascript code and also its complexity and some of those features are counters, variables (custom properties),  <code>is()</code>, <code>matches()</code>, <code>any()</code>, scroll-snap, and so on, some of them are not supported yet in all browsers and also are a little bit advanced but you get the point.
+also CSS still a styling language that styles your DOM elements that you create with HTML, but also it has some changes recently that will help you with reducing the lines of your Javascript code and also its complexity and some of those features are counters, variables (custom properties),  `is()`, `matches()`, `any()`, scroll-snap, and so on, some of them are not supported yet in all browsers and also are a little bit advanced but you get the point.
 
 even though doing everything in Javascript is going to help you a lot to have a solid understanding of javascript language, but knowing those features is going to make a better developer overall, and Javascript skills can be enhanced by many exercises and challenges.
 
@@ -131,11 +126,8 @@ here is an article that I wrote that talks about all reasons that might or might
 **here is a takeaway from all of this:**
 
 - Understanding the core principles of the web, you more are likely going to hit a wall due to the evolution of web languages and the invention of new frameworks.
-
 - If you understand the core fundamentals of JS will make you able to solve complex problems.
-
 - Your productivity is going to go up on the front-end as well as the back-end.
-
 - You'll know how exactly are browsers and computers work.
 
 ## what to learn before getting deeper into javascript
@@ -145,13 +137,9 @@ There are certain topics, which must be learned before, learning the basic, conc
 if you're planning to get good at Javascript and learn the advanced stuff which is a good thing to do, you have to focus on these concepts which are basic but very important.
 
 - ***Control Flow***<br>1.1. if<br>1.2. else<br>1.3 advanced-conditional<br>1.4. switch-for
-
-- ***Handling Errors***<br> you can start with those two basic commands, which are used for handling errors using the console, ***<code>console.log</code>***, and ***<code>console.error</code>*** respectively.
-
+- ***Handling Errors***<br> you can start with those two basic commands, which are used for handling errors using the console, ***`console.log`***, and ***`console.error`*** respectively.
 - ***Data Models***<br>The data has to be specified, it has to be kept separate or in chunks. though, and designed in that way. It also functions the various types of ***Parameters, objects, and variables,*** etc.
-
 - **Asynchronicity**<br>**Promises** and **Async Await** are used for asynchronous tasks in your web app, To avoid such type of errors, the ***Promises*** or ***Async await*** is used in the apps.
-
 - ***Node.js***<br>automation is what you're going to need down the road when the work you're trying to do is getting heavier and heavier, So, using Javascript, to automate is needed.
 
 ## takeaway
@@ -165,9 +153,5 @@ remember that Javascript is a way to interact with HTML tags that you create and
 let me list those things for you so you don't have to read through all of those paragraphs if you're in a hurry.
 
 - **Web Fundamentals**<br>1.1 **HTTP/HTTPS**<br>1.2 **TCP/IP**<br>1.3 **How Servers Communicate**<br>1.4 **Cookies, Sessions, Local Storage**
-
 - **HTML**
-
 - **CSS**
-
-

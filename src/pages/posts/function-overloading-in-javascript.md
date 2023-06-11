@@ -20,47 +20,31 @@ So, let's imagine an example of a simple function in which you pass in a string.
 
 So, let's take a look at how function overloading could make this easier. Remember, even though the below code example is in JavaScript, this code would *not* work. JavaScript will simply overwrite any previously declared functions with the one that was declared last. But it should help to illustrate what we mean.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">
+```js
+function greetuser(name) {
+    console.log(name);
+}
 
-    function greetuser(name) {
+function greetuser(firstname, surname) {
+    console.log(firstname, surname);
+}
 
-        console.log(name);
-
-     }
-
-     function greetuser(firstname, surname) {
-
-         console.log(firstname, surname);
-
-     }
-
-     greetuser("John");
-
-     greetuser("John", "Smith");
-
-</code></pre>
+greetuser("John");
+greetuser("John", "Smith");
+```
 
 And from there you could refine the code so that the first and last name overload, rather than directly logging the greeting, combines the two strings and then calls the first function, like so:
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers">
-
-     function greetuser(name) {
-
-         console.log(name);
-
-     }
-
-     function greetuser(firstname, surname) {
-
-         var name = firstname + ' ' + surname;
-
-         greetuser(name);
-
-     }
-
-     greetuser("John", "Smith");
-
-</code></pre>
+```js
+function greetuser(name) {
+    console.log(name);
+}
+function greetuser(firstname, surname) {
+    var name = firstname + ' ' + surname;
+    greetuser(name);
+}
+greetuser("John", "Smith");
+```
 
 Now you would have the benefit of function overloading, but you still keep everything in one place, since the overloaded first and last name function simply combines the two names and throws it back to the original function (with a space in between the names, of course), so any changes to your user greeting code only need to be made in the first greetuser function.
 
@@ -70,37 +54,24 @@ But alas, JavaScript does not support this incredibly useful function. But fear 
 
 Okay, I'll be honest with you, this solution is not nearly as elegant as native function overloading support, but it *is* considerably more elegant than having fifteen different variations of the same function! Let's look at a code example first, and then we'll go through what is happening.
 
-<pre class="wp-block-code"><code lang="javascript" class="language-javascript line-numbers"> function overloadFunction() {
-
-     var str = 0;
-
-     if (arguments.length == 0) {
-
-         str = "No name was entered"
-
-     }
-
-     else if (arguments.length == 1) {
-
-         str = arguments[0];
-
-     }
-
-     else if (arguments.length == 2) {
-
-         str = arguments[0] + ' ' + arguments[1];
-
-     }
-
-     console.log(str);
-
+```js
+function overloadFunction() {
+    var str = 0;
+    if (arguments.length == 0) {
+        str = "No name was entered"
+    }
+    else if (arguments.length == 1) {
+        str = arguments[0];
+    }
+    else if (arguments.length == 2) {
+        str = arguments[0] + ' ' + arguments[1];
+    }
+    console.log(str);
  }
-
  overloadFunction();
-
  overloadFunction("John");
-
- overloadFunction("John", "Smith");</code></pre>
+ overloadFunction("John", "Smith");
+```
 
 Now, if you're looking closely, you might be wondering where that "arguments" array came from. JavaScript may not support function overloading natively, but it does have some advantages. The arguments array is accessible inside of any function and contains all of the arguments passed to that function. So, as you can see, we don't need to have function overloading in the conventional sense, we can just create a catchall function that takes anything, and work out what to do with the arguments from there.
 
@@ -125,5 +96,3 @@ Because there is no restriction on what we can pass in as an argument, we are go
 ## Final Thoughts
 
 Hopefully now you're now well-versed in what function overloading is, why it's useful, and how to mimic the functionality in JavaScript. As a general rule, it is good practice to look for ways to make your code more efficient, and anything that makes your code more streamlined should be looked at as a good thing, and avoiding creating a dozen functions with the same purpose is certainly that.
-
-

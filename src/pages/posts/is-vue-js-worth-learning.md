@@ -67,9 +67,5 @@ Taking the advantages of Vue over other JS frameworks, it's safe to say that thi
 **Sources**:
 
 - <a href="https://www.netguru.com/blog/why-vue-js" target="_blank" rel="noreferrer noopener">https://skillcrush.com/blog/what-is-a-javascript-framework/.</a>
-
 - <a href="https://www.netguru.com/blog/why-vue-js" target="_blank" rel="noreferrer noopener">https://fullscale.io/blog/what-is-software-scalability/.</a>
-
 - <a href="https://www.netguru.com/blog/why-vue-js" target="_blank" rel="noreferrer noopener">https://www.netguru.com/blog/why-vue-js.</a>
-
-

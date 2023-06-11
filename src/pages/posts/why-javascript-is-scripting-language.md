@@ -73,11 +73,8 @@ When you look around, you will notice that different libraries form part of diff
 Scripting languages are used in so many different areas. Below is a quick look at the most common applications of scripting languages such as JavaScript:
 
 - Scripting languages get used in web applications. Understand that they are used on both the client and server-side. The server-side languages include PHP, JavaScript, and Perl, while the client-side include AJAX, JavaScript, and jQuery.
-
 - Scripting languages are applied in system administration. Commonly used languages for this function include Python, Perl, and Shell scripts.
-
 - They are used in multimedia and game applications.
-
 - Used to generate and create plugins and extensions for applications.
 
 and this is one of the reasons why JavaScript is so powerful and popular, and i wrote an article about all the reasons behind JavaScript's popularity and power:
@@ -93,13 +90,7 @@ JavaScript is a scripting language that opens up a lot of possibilities and solu
 **resources:**
 
 - <a href="https://stackoverflow.com/questions/968461/why-is-javascript-called-a-scripting-language" target="_blank" rel="noreferrer noopener nofollow">https://stackoverflow.com/questions/968461/why-is-javascript-called-a-scripting-language</a>
-
 - <a href="https://www.quora.com/Why-is-JavaScript-called-a-scripting-language" rel="noreferrer noopener nofollow" target="_blank">https://www.quora.com/Why-is-JavaScript-called-a-scripting-language</a>
-
 - <a href="https://www.geeksforgeeks.org/whats-the-difference-between-scripting-and-programming-languages/" target="_blank" rel="noreferrer noopener nofollow">https://www.geeksforgeeks.org/whats-the-difference-between-scripting-and-programming-languages/</a>
-
 - <a href="https://www.quora.com/What-are-the-advantages-and-disadvantages-of-scripting-languages-for-scientific-computing" rel="noreferrer noopener nofollow" target="_blank">https://www.quora.com/What-are-the-advantages-and-disadvantages-of-scripting-languages-for-scientific-computing</a>
-
 - <a href="https://www.geeksforgeeks.org/introduction-to-scripting-languages/" target="_blank" rel="noreferrer noopener nofollow">https://www.geeksforgeeks.org/introduction-to-scripting-languages/</a>
-
-
