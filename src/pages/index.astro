@@ -4,25 +4,8 @@ const posts = await Astro.glob('./posts/*.md');
 ---
 
 <Main title="Blog Posts">
-  <main class="w-[90%] mx-auto max-w-[1000px] my-10">
-    <h1 class="mb-10 text-2xl">Blog Posts</h1>
-    {
-      posts
-        .filter((post) => !post.frontmatter.draft)
-        .map((post) => (
-          <a href={`/posts/${post.frontmatter.slug}`} class="block w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
-            <div
-              aria-label="blog post card"
-              class="p-4 text-gray-200"
-            >
-              <h2 class="text-xl mb-2 capitalize">{post.frontmatter.title}</h2>
-              <p class="text-md">
-               <span class="text-gray-500">Published on</span> {post.frontmatter.date.split(' ').slice(0, 4).join(' ')}
-                <span class="text-gray-500">by</span> {post.frontmatter.author}
-              </p>
-            </div>
-          </a>
-        ))
-    }
+  <main class="w-[90%] h-[80vh] mx-auto max-w-[1000px] my-10">
+    <h1 class="mb-10 text-2xl text-center">Welcome to my blog</h1>
+    <p class="text-center text-xl text-red-400">The home page is not implemented yet!</p>
   </main>
 </Main>
