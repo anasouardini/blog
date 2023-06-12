@@ -7,6 +7,30 @@ const {
 
 <Main {title} {description} type="article" {author} {date} {slug} {category} {draft} >
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
+        <script>
+            const clipboard = navigator.clipboard;
+            Array.from(document.querySelectorAll('pre')).forEach(block => {
+                const copyCodeBtn = document.createElement('button');
+                copyCodeBtn.innerText = clipboard ? "Copy" : "Clipboard not supported";
+                copyCodeBtn.setAttribute('data-copyCodeBtn', true);
+                copyCodeBtn.setAttribute('style', `position: absolute; top: 0; right: 0;
+                                        color: #4C99EB; background: #222;
+                                        padding: 8px; margin: 5px; border-radius: 6px;`);
+                block.style.position = 'relative';
+                block.prepend(copyCodeBtn);
+                if(clipboard){
+                    copyCodeBtn.addEventListener('click', ({target})=>{
+                        clipboard.writeText(target.nextElementSibling.innerText);
+
+                        copyCodeBtn.innerText = "Code Copied!";
+                        setTimeout(() => {
+                            copyCodeBtn.innerText = "Copy";
+                        }, 700);
+                    });
+                }
+            });
+
+        </script>
         <style is:inline>
             p{
                 margin-bottom: 1rem;
