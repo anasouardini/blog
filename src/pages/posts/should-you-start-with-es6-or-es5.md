@@ -150,11 +150,7 @@ arrow functions also get called "fat arrow" functions and that's because it util
 
 along with simplifying the scoping of a function, arrow functions also simplifies `this` function. the work almost like lambda in C# or Python. 
 
-this is the ES6 way of writing functions:
-
-```js
-() => {}
-```
+this is the ES6 way of writing functions: `() => {}`
 
 ### Manipulating objects in ES6 vs ES5
 
@@ -403,17 +399,7 @@ let's go a little bit in details and talk about the arrow function component and
 
 I said earlier that you really need ES6 to learn React, don't get me wrong it really is needed, but you could also go straight to React and learn those topics as you go, you'll find something like `let`/`const`, `spread`/`rest` and all those features, you're not going to know what they're used for but you can google them as you go.
 
-one thing that might cause you some trouble when starting to learn React is with arrow functions, they allow you to access your component `this` object from inside the callback function of an event. so I thought it's going to be helpful to let you know that, here is the syntax that you're going to be using all day long when learning arrow function: 
-
-```js
-() => {}
-```
-
-rather than :
-
-```js
-function () {}
-```
+one thing that might cause you some trouble when starting to learn React is with arrow functions, they allow you to access your component `this` object from inside the callback function of an event. so I thought it's going to be helpful to let you know that, here is the syntax that you're going to be using all day long when learning arrow function: `() => {}` rather than : `function () {}`
 
 **so ES6 is really going to help when learning React, but let's talk a little bit in general, there are some concepts that you need to learn before any modern Javascript framework:**
 

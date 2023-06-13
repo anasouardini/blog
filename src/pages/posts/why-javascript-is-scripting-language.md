@@ -9,7 +9,6 @@ draft: false
 category: javascript js-questions
 ---
 
-
 JavaScript, developed by Brendan Eich, is a scripting language that works within HTML pages. However, most people tend to wonder why JavaScript is considered a scripting language when it differs greatly from Java. Understand that Java is an existing programming language that handles its task quite differently from JavaScript.
 
 Originally, JavaScript was referred to as Live Script during the development stage. But since Java had become incredibly popular, Brendan Eich changed the name to JavaScript. Although this move was purely done for marketing reasons, JavaScript is still viewed as a scripting language.
@@ -22,15 +21,15 @@ the same thing is happening with a shell script like Python and PHP, or any othe
 
 ## Understanding the Differences Between Programming and Scripting
 
-First, understand that all scripting languages constitute programming languages. In theory, however, the theoretical is in the fact that scripting languages do not need a compilation step. For example, a C program will need compiling before you can run it. A scripting language, on the other hand, does not need to be complied.
+First, understand that all scripting languages constitute programming languages. In theory, however, the theoretical is in the fact that scripting languages do not need a compilation step. For example, a `C` program will need compiling before you can run it. A scripting language, on the other hand, does not need to be complied.
 
-You will soon find out that complied programs tend to run smoother and faster than the interpreted programs. Note that the compiled programs are first converted code for the native machine. Compilers will also read and analyze any line of code only ones, and report all the errors in the system collectively. The interpreter can analyze the code statements every time it stops at that instance.
+You will soon find out that complied programs tend to run smoother and faster than the interpreted programs. Note that the compiled programs are first converted from code to bytes for the machines to understand it. Compilers will also read and analyze any line of code only ones, and report all the errors in the system collectively. The interpreter can analyze the code statements every time it stops at that instance.
 
 In reality, the difference between scripting and programming is getting blurred with changes in technology. There have been great improvements in computation capabilities of advanced coding practices and modern hardware over the past years.
 
-When deciding whether a language falls under a programming language or scripting language, you also have to look at the environment of execution. Understand that you can design a C language interpreter and use it as a scripting language. At the same time, you can also create a compiler for JavaScript and apply it in a non-scripting manner. Examples include the JavaScript engine used in Goggle Chrome which complies with the regular JavaScript code into machine code, instead of interpreting.
+When deciding whether a language falls under a programming language or scripting language, you also have to look at the environment of execution. Understand that you can design a `C` language interpreter and use it as a scripting language. At the same time, you can also create a compiler for JavaScript and apply it in a non-scripting manner. Examples include the JavaScript engine used in Goggle Chrome which complies regular JavaScript code into machine code/bytes/binary, instead of interpreting.
 
-Are you curious to know some of the traditionally used scripting languages that don’t need a compilation step? Well, for starters we have JavaScript, PHP, Python, and VBScript. The common programming languages that are used with explicit compilation steps include C and C++.
+Are you curious to know some of the traditionally used scripting languages that don’t need a compilation step? Well, for starters we have JavaScript, PHP, Python, and VBScript. The common programming languages that are used with **explicit** compilation steps include `C` and `C++`.
 
 ## Advantages of Scripting Languages
 
