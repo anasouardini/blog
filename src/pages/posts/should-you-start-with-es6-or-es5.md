@@ -407,7 +407,7 @@ one thing that might cause you some trouble when starting to learn React is with
 - Class and Objects.
 - map, filter, reduce.
 - Promises, fetch, async, await.
-- Loops *for in* and *for of* loops
+- Loops `for in` and `for of` loops
 - modules (Very important).
 - Arrow functions, closure functions, iife functions (Immediately invoked function expression).
 

@@ -74,22 +74,20 @@ const {
                 padding: 1rem;
                 border-radius: 6px;
             }
-            p > code{
+            *:not(pre) > code{
                 padding: .1rem .3rem;
-                border-radius: 3px;
-                /* background: #A6E6FF; */
-                /* background: #212333; */
-                background: #302D4D;
-                /* color: #222; */
+                color: rgb(248, 160, 175);
             }
-            ul{
+            ul, ol{
                 margin: 1rem 0;
                 padding-left: 2rem
             }
             li{
                 list-style-type: normal;
                 font-size: 1.1rem;
+                margin-bottom: 0.2rem;
             }
+            li::marker{color: #4C99EB}
             a{
                 color: #339CFF;
                 text-decoration: underline;
