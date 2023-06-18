@@ -9,6 +9,7 @@ const {
     tags = [],
     image = '',
     description = 'This blog is all about web development and web technologies in general.',
+    customStatus
 } = Astro.props;
 ---
 
@@ -21,6 +22,8 @@ const {
         <link rel="sitemap" href="/sitemap-index.xml" />
 
         <link rel="canonical" href={Astro.url} />
+
+        {customStatus ? <meta http-equiv="status" content={customStatus.content} /> : <></>}
 
         {type ? <meta property="og:type" content={type} /> : <></>}
         {type === "article"
