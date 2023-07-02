@@ -1,12 +1,16 @@
 ---
 layout: "../../layouts/blog-post.astro"
-title: top 3 misconceptions about arrow functions in javascript
-slug: top-3-misconceptions-about-arrow-functions-in-javascript
+title: Why React isn't Dead Yet?
+slug: why-react-is-not-dead-yet
 description: 
-date: Sun Jun 11 2023
+date: Sun July 02 2023
 author: Anas Ouardini
 draft: false
-category: javascript list
+category: javascript React
+image: {
+    url: "/media/thumbnails/why-react-is-not-dead-yet.jpg",
+    alt: "Why React isn't Dead Yet?",
+}
 ---
 
 In the fast-paced world of web development, technologies come and go at an astonishing rate. However, React, the JavaScript library for building user interfaces, continues to hold a prominent position and remains as relevant as ever. Despite the emergence of newer frameworks and libraries, React's popularity and widespread adoption among developers persist.
