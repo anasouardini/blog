@@ -35,13 +35,15 @@ If you already know that, you might find this tweet intertaining.
 
 ![Tanner Linsley calling Reactjs "Re-render"](/media/react-should-have-been-called-re-render.png)
 
+Yes, it re-renders too much, it doesn't do that on itself, but it inherently encourages it.
+
 Also, go ahead and try to compare Reactjs to something like Solidjs and Svelt, I won't talk about it in this article, but you'll find that React is not really meant for speed.
 
 So now that It's clear as to why I'm calling Reactjs slow, let me tell you why VDOM does not make it any faster.
 
 ## Why Virtual DOM does not make React faster
 
-Well, same as before, the VDOM wasn't meant for that: it was invented to solve a React's problem, which is what I rambled about above.
+Well, same as before, the VDOM wasn't meant for that: it was invented to solve a React's problem, which is what I briefly mentioned above.
 
 A: When you overuse the `useState` hook as an amateur, or if your app gets really huge and you start to *just* want it to work which leads you to start Re-rendering all of your components all over the place, or even worse, you misuse the `useContext` API which Re-renders the entirety of your app... your app will eventually start getting slower and slower, *unless you're a React wizard*.
 
