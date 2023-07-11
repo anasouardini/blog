@@ -1,11 +1,11 @@
 ---
 layout: "../../layouts/blog-post.astro"
 title: Does Virtual DOM make Reactjs faster?
+seo_title: Does Virtual DOM make Reactjs faster?
 slug: does-virtual-dom-make-reactjs-faster
 description: 
 date: Sun July 04 2023
 author: Anas Ouardini
-draft: false
 category: javascript React
 image: {
     url: "/media/thumbnails/does-virtual-dom-make-reactjs-faster.png",
@@ -33,7 +33,7 @@ But isn't Reactjs just JavaScript? **Yes**, now you might be thinking: what does
 
 If you already know that, you might find this tweet intertaining.
 
-![Tanner Linsley calling Reactjs "Re-render"](/media/react-should-have-been-called-re-render.png)
+![A tweet where Tanner Linsley calling Reactjs "Re-render"](/media/react-should-have-been-called-re-render.png)
 
 Yes, it re-renders too much, it doesn't do that on itself, but it inherently encourages it.
 
