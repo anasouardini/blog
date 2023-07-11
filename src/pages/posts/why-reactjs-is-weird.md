@@ -181,6 +181,10 @@ But keep in mind that "best practices" are not always *good*, sometimes you have
 
 I don't know why they say that, but props are defenitely not immutable.
 
+**Maybe I'm confused but also almost everyone else**. In React's Docs, They say [props are Read-Only](https://legacy.reactjs.org/docs/components-and-props.html#props-are-read-only). Maybe they only mean that they shall not be modified which I mostly agree with that, modifying arguments has caused me a lot of headaches.
+
+But since a lot of people say that props are not mutable, I think it's the Documentation's maintainer's fault.
+
 ## do you really need forwardRef to reference a DOM element in a child component?
 
 This one perplexes me, React doesn't let you simply pass an attribute called `ref` to your child component, if you try to do that all you'll get is an error.
