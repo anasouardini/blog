@@ -107,9 +107,11 @@ import tools from '../tools'
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
             <p class="mb-10 text-gray-500 text-xl">Published at {date.split(' ').slice(0, 4).join(' ')} by {author}</p>
-            {image
+            {
+                image
                 ? <figure class="featured"><img src={image.url} alt={image.alt} /></figure>
-                : <figure class="featured"><img src={`/media/thumbnails/${tools.slugify(title)}.png`} alt={tools.slugify(title)} /></figure>}
+                : <></>
+            }
             <slot>blog post not found</slot>
         </article>
         <aside>

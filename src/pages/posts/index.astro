@@ -16,6 +16,7 @@ import tools from '../../tools';
               aria-label="blog post card"
               class="p-4 text-gray-200"
             >
+              <figure class="pb-[1.2rem]"><img src={post.frontmatter.image?.url}/></figure>
               <h2 class="text-xl mb-2 capitalize">{post.frontmatter.title}</h2>
               <p class="text-md">
                <span class="text-gray-500">Published on</span> {post.frontmatter.date.split(' ').slice(0, 4).join(' ')}
