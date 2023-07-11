@@ -1,11 +1,13 @@
 ---
 import Main from './main.astro';
 const {
-    frontmatter: {title, image, description, slug, date, author, category, draft},
+    frontmatter: {title, seo_title, description, seo_description, image, slug, date, author, category, draft},
 } = Astro.props;
+
+import tools from '../tools'
 ---
 
-<Main {title} {description} type="article" {author} {date} {slug} {category} {draft} >
+<Main {title} {description} {seo_title} {seo_description} type="article" {author} {date} {slug} {category} {draft} >
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <script>
             const clipboard = navigator.clipboard;
@@ -71,8 +73,8 @@ const {
                 margin-bottom: 1.2rem;
             }
             pre{
-                margin-bottom: 1rem;
-                padding: 1rem;
+                margin-bottom: 1.2rem;
+                padding: 1.4rem;
                 border-radius: 6px;
             }
             *:not(pre) > code{
@@ -99,12 +101,15 @@ const {
             a:hover{
                 color: #339CFF;
             } */
-            figure{margin-bottom: 1rem}
+            figure{margin-bottom: 1.2rem}
+            figure.featured{margin-bottom: 1.5rem}
         </style>
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
             <p class="mb-10 text-gray-500 text-xl">Published at {date.split(' ').slice(0, 4).join(' ')} by {author}</p>
-            {image ? <figure><img src={image.url} alt={image.alt} /></figure> : <></>}
+            {image
+                ? <figure class="featured"><img src={image.url} alt={image.alt} /></figure>
+                : <figure class="featured"><img src={`/media/thumbnails/${tools.slugify(title)}.png`} alt={tools.slugify(title)} /></figure>}
             <slot>blog post not found</slot>
         </article>
         <aside>

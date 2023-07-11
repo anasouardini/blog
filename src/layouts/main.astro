@@ -2,13 +2,15 @@
 const {
     type = 'website',
     title = 'Web Dev Blog',
+    seo_title = 'Web Dev Blog',
+    description,
+    seo_description,
     author = 'Anas ouardini',
     draft = false,
     slug,
     date,
     tags = [],
     image = '',
-    description = 'This blog is all about web development and web technologies in general.',
     customStatus
 } = Astro.props;
 ---
@@ -35,19 +37,23 @@ const {
             </>
             : <></>
         }
-        {title ? <meta property="og:title" content={title} /> : <></>}
+        {title ? <meta property="og:title" content={title ?? seo_title} /> : <></>}
         {image ? <meta property="og:image" content={image.url} /> : <></>}
         {image ? <meta property="og:image:url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:secure_url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:alt" content={image.alt} /> : <></>}
         {image ? <meta property="twitter:card" content={image} /> : <></>}
-        {description ? <meta property="og:description" content={description} /> : <></>}
+        {description ? <meta property="og:description" content={description ?? seo_description} /> : <></>}
         {true ? <meta property="og:local" content="en_US" /> : <></>}
-        {title ? <meta property="og:site_name" content={title} /> : <></>}
+        {title
+            ? <meta property="og:site_name" content={title ?? seo_title} />
+            : <></> }
         <!-- <meta property="og:url" content={} /> -->
 
-        <title>{title ?? 'Blog'}</title>
-        <meta name="description" content={description} />
+        <title>{seo_title ?? 'Anas Ouardini Blog'}</title>
+        {seo_description
+            ? <meta name="description" content={seo_description ?? description} />
+            : <></>}
 
         <meta name="generator" content={Astro.generator} />
     </head>
