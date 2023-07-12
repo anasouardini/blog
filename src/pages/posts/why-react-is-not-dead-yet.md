@@ -59,7 +59,7 @@ Moreover, the popularity of React has resulted in a high demand for React develo
 
 ## Takeaway:
 
-React's remarkable journey from its introduction in 2013 to its continued prominence in 2023 is a testament to its strength and adaptability.
+React's remarkable journey from its introduction in 2013 to its continued prominence in 2023 is a testament to its strength and adaptability despite all of its [weirdness](/posts/why-reactjs-is-weird) and lack of performance.
 
 Its large and vibrant community, component-based architecture, flexibility, extensive ecosystem, industry adoption, and market demand all contribute to React's ongoing success.
 
