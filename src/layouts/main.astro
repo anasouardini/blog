@@ -56,6 +56,17 @@ const {
             : <></>}
 
         <meta name="generator" content={Astro.generator} />
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H89S5V1C0M"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-H89S5V1C0M');
+        </script>
+
     </head>
     <body
         class=`min-h-[100vh] flex flex-col justify-between
