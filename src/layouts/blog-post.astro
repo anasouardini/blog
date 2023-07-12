@@ -7,7 +7,13 @@ const {
 import tools from '../tools'
 ---
 
-<Main title={`${title} - Anas Ouardini`} {description} seo_title={`${seo_title} - Anas Ouardini`} {seo_description} type="article" {author} {date} {slug} {category} {draft} >
+<Main
+    title={`${title} - Anas Ouardini`}
+    seo_title={`${seo_title} - Anas Ouardini`}
+    {description}
+    {seo_description} type="article"
+    {author} {date} {slug} {category} {draft} >
+
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <script>
             const clipboard = navigator.clipboard;
@@ -114,9 +120,5 @@ import tools from '../tools'
             }
             <slot>blog post not found</slot>
         </article>
-        <aside>
-            <div></div>
-            <div></div>
-        </aside>
     </main>
 </Main>
