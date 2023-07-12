@@ -58,13 +58,21 @@ const {
         <meta name="generator" content={Astro.generator} />
 
         <!-- Google tag (gtag.js) -->
+        <script>
+            if('localhost' == window.location.hostname){
+                console.log('GA has been disabled');
+                window['ga-disable-G-H89S5V1C0M'] = true;
+            }
+        </script>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-H89S5V1C0M"></script>
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+            if('localhost' != window.location.hostname){
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', 'G-H89S5V1C0M');
+                gtag('config', 'G-H89S5V1C0M');
+            }
         </script>
 
     </head>
