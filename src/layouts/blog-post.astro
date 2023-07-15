@@ -2,6 +2,7 @@
 import Main from './main.astro';
 const {
     frontmatter: {title, seo_title, description, seo_description, image, slug, date, author, category, draft},
+    headings
 } = Astro.props;
 
 import tools from '../tools'
@@ -113,6 +114,19 @@ import tools from '../tools'
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
             <p class="mb-10 text-gray-500 text-xl">Published at {date.split(' ').slice(0, 4).join(' ')} by {author}</p>
+
+            <div class="pb-6" aria-label="table of content">
+                Table Of Content:
+                <ul>
+                    {headings.map((h2)=>(
+                        <li class="list-disc" style={`margin-left: calc(${h2.depth - 2}rem * 1.5)`}>
+                            <a href={`#${h2.slug}`} class="no-underline max-w-min text-white">
+                                {h2.text}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
             {
                 image
                 ? <figure class="featured"><img src={image.url} alt={image.alt} /></figure>
