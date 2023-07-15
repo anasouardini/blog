@@ -41,6 +41,21 @@ import tools from '../tools'
 
         </script>
         <style is:inline>
+            summary::marker{color: transparent;}
+
+            blockquote{
+                padding-left: 3rem;
+                position: relative
+            }
+            blockquote:before{
+                content: '“';
+                z-index: -100;
+                color: rgb(248, 160, 175);
+                position: absolute;
+                top: -30px; left: 0;
+                font-size: 4.5rem
+            }
+
             p{
                 margin-bottom: 1.2rem;
                 font-size: 1.2rem;
