@@ -75,7 +75,8 @@ That's if you follow what React's team tells you, what about ignoring the rules?
 return React.createElement(
   'h1',
   {class: 'makeItBeautiful'},
-  'hello world');
+  'hello world'
+);
 ```
 
 Go ahead, press `Ctrl+Shift+J` and type `{class: 'makeItBeautiful'}` and tell me if you get any errors about a reserved keyword called `class`, the V8 engine is more than happy to run that sweet code of yours. For your information, the specific part in React that doesn't allow you to use `class` instead of `className` is the `render` function.
@@ -85,6 +86,34 @@ I can go a little deeper into this and write my own `render` function and allow 
 So all of this is about `class` vs `className`? **NO**, apply this to all more-than-one-word-camel-cased JSX elements attributes.
 
 Next Reason as to why I think React is weird. This is where I might get a lot of hate, **some Reactjs hooks are just unnecessary**, [grinding my teeth].
+
+## no built-in state management?
+
+If you're like many React developers, you probably don't like using `useReducer`, it's more work. Same here.
+
+Also the context API `useContext` is terrible, the intrinsic re-rendering is keeping away from it in almost all use cases.
+
+Speaking of myself, I never use `useContext`, unless it's abstracted and the app is really small to make use of a state manager. If you don't know you can use the context API through React-router.
+
+I also don't use the state Reducer, when my app reaches the point where I need to "reduce" my states and their actions I find myself in need of a state manager... that simple.
+
+Maybe I don't belong to the majority of developers category, but I think a lot of people would really appreciate a global state manager like Jotai (my favorite). No more understanding how `useContext` works, no more figuring out why you re-render too much, and no more figuring out which state manager is the best.
+
+Complex projects, probably, need complex solutions, but a built-in 10 lines state manager would be a really good start. It costs next to nothing, eliminates a lot of overthinking and debugging and making React's learning even easier.
+
+Yes, letting room for innovation is really good, but state managers kind of reached that point of becoming like `useState`, if you know what I mean. Innovation is not that necessary in this matter.
+
+If I were React, I would just extend myself with a lovely global state manager and ditch `useState`, `useReducer` and `useContext`. That could be a bad practice though.
+
+Without derailing too much. Next argument.
+
+## why do I need to write wrappers around each library I import to my react app?
+
+You think it's a really simple library (which probably is), until you actually use it in React, it's like squeezing a watermelon into a mason jar.
+
+You have to use all sorts of hooks like `useMemo`, `useCallback`, `useEffect`, etc just to make it work without clashing with React.
+
+I have no idea how to solve this, but I hope it's going to be fixed in the future.
 
 ## Reactjs useImperativeHandle is not necessary
 
@@ -169,7 +198,7 @@ const C2 = ()=>{
 }
 ```
 
-Althouhg, I've never used neither of them, I always give full access of the child's DOM elements to the parent, that way, the parent component **has all of it's logic in it**, which looks like a clean code to me, if the parent is the only component that's going to use that function `changeValue` why not move that logic to the parent itself!, maybe it's not a good idea, it's arguable anyways.
+Although, I've never used neither of them, I always give full access of the child's DOM elements to the parent, that way, the parent component **has all of it's logic in it**, which looks like a clean code to me, if the parent is the only component that's going to use that function `changeValue` why not move that logic to the parent itself!, maybe it's not a good idea, it's arguable anyways.
 
 Maybe I would use `useImperativeHandle` when working with a team just because it's more common.
 
