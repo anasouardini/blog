@@ -247,7 +247,7 @@ So yeah, just another boilerplate that you're being advised to use when there is
 
 ## Takeaway
 
-There is not much to take away from this article, to be honest, I just want to say: use less React and more JavaScript whenever it's possible. Although some of these tools are really common in the real world, I myself would use them to keep the codebase consistent and the debugging easier.
+There is nothing really practical to take away from this article, to be honest, I just want to say: use less React and more JavaScript whenever it's possible. Although some of these tools are really common in the real world, I myself would use them to keep the codebase consistent and the debugging easier.
 
 All of what I said doesn't make the library bad or useless, it has some quircks that I've learned to cope with, just like silly JavaScript.
 
