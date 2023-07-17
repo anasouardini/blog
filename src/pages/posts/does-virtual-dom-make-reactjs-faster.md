@@ -33,7 +33,7 @@ But isn't Reactjs just JavaScript? **Yes**, now you might be thinking: what does
 
 If you already know that, you might find this tweet intertaining.
 
-![A tweet where Tanner Linsley calling Reactjs "Re-render"](/media/react-should-have-been-called-re-render.png)
+![A tweet where Tanner Linsley calling Reactjs "Re-render"](/media/react-should-have-been-called-re-render.webp)
 
 Yes, it re-renders too much, it doesn't do that on itself, but it inherently encourages it.
 
