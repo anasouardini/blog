@@ -1,9 +1,21 @@
 ---
 import Main from './main.astro';
-const {
-    frontmatter: {title, seo_title, description, seo_description, image, slug, date, author, category, draft},
+let {
+    frontmatter: {title, seo_title, description, seo_description, image, slug, date, seo_date, author, category, draft},
     headings
 } = Astro.props;
+ 
+date = date.split(' ').slice(0, 4).join(' ');
+if(!seo_date){
+    const stupidJSDateFormat = new Date(date).toISOString().split('T')[0];
+    const dateChunks = stupidJSDateFormat.split('-');
+    console.log(dateChunks[2]);
+    dateChunks[2] = `${parseInt(dateChunks[2]) + 1}`;
+    if(dateChunks[2].length === 1){
+        dateChunks[2] = `0${dateChunks[2]}`;
+    }
+    seo_date = dateChunks.join('-');
+}
 
 import tools from '../tools'
 ---
@@ -128,7 +140,10 @@ import tools from '../tools'
         </style>
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
-            <p class="mb-10 text-gray-500 text-xl">Published at {date.split(' ').slice(0, 4).join(' ')} by {author}</p>
+            <p class="mb-10 text-gray-500 text-xl">Published at
+                <time datetime={`${seo_date}`} >{date}</time>
+                by {author}
+            </p>
 
             <div class="pb-6" aria-label="table of content">
                 Table Of Content:
