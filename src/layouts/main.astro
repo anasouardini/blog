@@ -7,7 +7,6 @@ const {
     seo_description,
     author = 'Anas ouardini',
     draft = false,
-    slug,
     date,
     seo_date,
     tags = [],
@@ -18,7 +17,7 @@ const {
 import tools from '../tools';
 ---
 
-<html lang="en" prefix="og: https://ogp.me/ns#">
+<html style="scroll-behavior: smooth;" lang="en" prefix="og: https://ogp.me/ns#">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
@@ -110,6 +109,7 @@ import tools from '../tools';
 
     </head>
     <body
+        id="body"
         class=`min-h-[100vh] flex flex-col justify-between
                 bg-dark-1 text-white`
     >
@@ -174,6 +174,12 @@ import tools from '../tools';
             }`;
             document.querySelector('#footerDate').textContent = footerDate;
         </script>
+        <a class={`sticky bottom-0
+                    ml-auto mr-10 mb-10
+                    text-[4rem] no-underline
+                    -rotate-90`}
+            href="#body">
+        »</a>
         <footer class="py-5 text-center">
             Copyright &copy; — made by Anas Ouardini — <span id="footerDate"></span>
         </footer>
