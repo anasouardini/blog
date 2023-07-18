@@ -82,7 +82,7 @@ import tools from '../tools'
                 font-size: 1.2rem;
                 line-height: 1.75;
             }
-            p:first-letter{
+            p:first-letter, li:first-letter{
                 text-transform: uppercase
             }
             h1, h2, h3, h4, h5, h6{
@@ -154,8 +154,6 @@ import tools from '../tools'
                 by {author}
             </p>
 
-            <div class="pb-6" aria-label="table of content">
-                Table Of Content:
             {import.meta.env.MODE === 'development'
                 ?   <div class={`border-2 border-red-400 p-3 rounded-lg mb-7 flex gap-10`}>
                         <div>
@@ -211,6 +209,8 @@ import tools from '../tools'
                 :<></>
             }
 
+            <div class="pb-6 border-2 border-blue-400 rounded-lg p-4 mb-6" aria-label="table of content">
+                <span class="text-blue-400 text-xl">Table Of Content:</span>
                 <ul>
                     {headings.map((h2)=>(
                         <li class="list-disc" style={`margin-left: calc(${h2.depth - 2}rem * 1.5)`}>
