@@ -1,4 +1,3 @@
-
 function slugify(str) {
   return String(str)
     .normalize('NFKD') // split accented characters into their base characters and diacritical marks
@@ -10,4 +9,10 @@ function slugify(str) {
     .replace(/-+/g, '-'); // remove consecutive hyphens
 }
 
-export default {slugify}
+const strCount = (str, target)=>{
+  const smallCaseTarget = target.toLowerCase();
+  const smallCaseStr = str.toLowerCase();
+  return smallCaseTarget.split(smallCaseStr).length - 1;
+}
+
+export default {slugify, strCount}
