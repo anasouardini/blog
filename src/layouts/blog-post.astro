@@ -1,9 +1,16 @@
 ---
 import Main from './main.astro';
 let {
-    frontmatter: {title, seo_title, description, seo_description, image, slug, date, seo_date, author, category, draft},
+    frontmatter: {
+        title, seo_title, description, seo_description,
+        image, slug, date, seo_date, author, category, draft,
+        keywords=[], todos=[]
+    },
     headings
 } = Astro.props;
+
+const rawContent = Astro.props.rawContent();
+const compiledContent= Astro.props.compiledContent();
  
 date = date.split(' ').slice(0, 4).join(' ');
 if(!seo_date){
@@ -16,6 +23,8 @@ if(!seo_date){
     }
     seo_date = dateChunks.join('-');
 }
+
+let wordCount = rawContent.split(' ').length;
 
 import tools from '../tools'
 ---
@@ -147,6 +156,61 @@ import tools from '../tools'
 
             <div class="pb-6" aria-label="table of content">
                 Table Of Content:
+            {import.meta.env.MODE === 'development'
+                ?   <div class={`border-2 border-red-400 p-3 rounded-lg mb-7 flex gap-10`}>
+                        <div>
+                            <p class="m-0">Title Length:  <span class="text-red-400">{seo_title.length}</span></p>
+                            <p class="m-0">Post Length:  <span class="text-red-400">{wordCount}</span></p>
+                            <ul>
+                                {keywords.map((keyword)=>{
+                                    return <li>{keyword}:
+                                        <span class="text-red-400">
+                                            { tools.strCount(keyword, rawContent)}
+                                        </span>
+                                    </li>
+                                })}
+                            </ul>
+                        </div>
+                        <div>
+                            <p class="m-0">Images:
+                                <span class="text-red-400">
+                                    {tools.strCount('<img ', compiledContent)}
+                                </span>
+                            </p>
+                            <p class="m-0">Tables:
+                                <span class="text-red-400">
+                                    {tools.strCount('<table ', compiledContent)}
+                                </span>
+                            </p>
+                            <p class="m-0">Videos:
+                                <span class="text-red-400">
+                                    {tools.strCount('<video ', compiledContent)}
+                                </span>
+                            </p>
+                            <p class="m-0">Links:
+                                <span class="text-red-400">
+                                    {tools.strCount('<a ', compiledContent)}
+                                </span>
+                            </p>
+                            <p class="m-0">longest p:
+                                <span class="text-red-400">{rawContent.split('\n').reduce((max, p)=>{
+                                    const pLength = p.split(' ').length;
+                                    return pLength > max ? pLength : max;
+                                }, 0)}</span>
+                            </p>
+                        </div>
+                        <div>
+                            Todos:
+                            <ul>
+                                {todos.map((todo)=>{
+                                    return <li>{todo}</li>
+                                })}
+                            </ul>
+                        </div>
+                    </div>
+                :<></>
+            }
+
                 <ul>
                     {headings.map((h2)=>(
                         <li class="list-disc" style={`margin-left: calc(${h2.depth - 2}rem * 1.5)`}>
