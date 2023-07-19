@@ -1,6 +1,5 @@
 import fs from 'fs';
-
-const filePathList = ['./dist/index.html', './dist/privacy-policy/index.html', './dist/posts/index.html'];
+import path from 'path';
 
 const fixJsonLD = (file)=>{
     let htmlString = fs.readFileSync(file, 'utf-8');
@@ -27,6 +26,29 @@ const fixJsonLD = (file)=>{
 
     fs.writeFileSync(file, htmlString);
 }
-filePathList.forEach((file)=>{
-    fixJsonLD(file);
+
+function listHtmlFiles(directoryPath) {
+    const htmlFiles = [];
+
+    function traverseDirectory(dir) {
+        const files = fs.readdirSync(dir);
+
+        files.forEach((file) => {
+        const filePath = path.join(dir, file);
+        const stat = fs.statSync(filePath);
+
+        if (stat.isDirectory()) {
+            traverseDirectory(filePath);
+        } else if (path.extname(filePath) === '.html') {
+            htmlFiles.push(filePath);
+        }
+        });
+    }
+    traverseDirectory(directoryPath);
+
+    return htmlFiles;
+}
+
+listHtmlFiles('./dist').forEach((file)=>{
+    fixJsonLD(`./${file}`);
 });
