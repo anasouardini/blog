@@ -14,6 +14,31 @@ const {
     customStatus
 } = Astro.props;
 
+const jsonLd = {
+    "@context": "https://shcema.org",
+    "@type": type === "article" ? 'BlogPosting' : type,
+    "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id":  `/${tools.slugify(seo_title ?? title)}`
+    },
+    "headline": seo_title ?? title,
+    "description": seo_description,
+    "author": {
+        "@type": "Person",
+        "name": "Anas Ouardini"
+    },
+    "datePublished": seo_date ?? date,
+    "dateModified": seo_date ?? date,
+    "publisher": {
+        "@type": "Person",
+        "name": author ?? "Anas Ouardini",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "/favicon.svg"
+        }
+    }
+}
+
 import tools from '../tools';
 ---
 
@@ -61,34 +86,6 @@ import tools from '../tools';
 
         <!-- JSON+LD -->
         <!-- TODO: image(url), articleBody, author{url: aboutpage} -->
-        {
-            <script type="application/ld+json">
-            {
-                "@context": "https://shcema.org",
-                "@type": type === "article" ? 'BlogPosting' : type,
-                "mainEntityOfPage": {
-                    "@type": "WebPage",
-                    "@id":  `/${tools.slugify(seo_title ?? title)}`
-                },
-                "headline": seo_title ?? title,
-                "description": seo_description,
-                "author": {
-                    "@type": "Person",
-                    "name": "Anas Ouardini"
-                },
-                "datePublished": seo_date ?? date,
-                "dateModified": seo_date ?? date,
-                "publisher": {
-                    "@type": "Person",
-                    "name": author ?? "Anas Ouardini",
-                    "logo": {
-                        "@type": "ImageObject",
-                        "url": "/favicon.svg"
-                    }
-                },
-            }
-            </script>
-        }
 
         <!-- Google tag (gtag.js) -->
         <script>
