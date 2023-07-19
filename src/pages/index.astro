@@ -1,6 +1,13 @@
 ---
-import Main from './../layouts/main.astro';
-const posts = await Astro.glob('./posts/*.md');
+import Main from '../layouts/main.astro';
+import {getCollection} from "astro:content";
+const posts = await getCollection("posts", ({data})=>{
+  // if(import.meta.env.MODE === 'development'){
+  //     return true;
+  // }
+  return !data.draft && data.title.includes('why');
+});
+// const posts = await Astro.glob('./posts/*.md');
 import tools from '../tools';
 ---
 
@@ -9,17 +16,16 @@ import tools from '../tools';
     <h1 class="mb-10 text-2xl">Featured Blog Posts</h1>
     {
       posts
-        .filter((post) => post.frontmatter.title.includes('why'))
         .map((post) => (
-          <a href={`/posts/${post.frontmatter.slug}`} class="block max-w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
+          <a href={`/posts/${post.slug}`} class="block max-w-[35rem] mb-5 bg-dark-2 rounded-[3%]">
             <div
               aria-label="blog post card"
               class="p-4 text-gray-200"
             >
-              <h2 class="text-xl mb-2 capitalize">{post.frontmatter.title}</h2>
+              <h2 class="text-blue-400 text-xl mb-2 capitalize">{post.data.title}</h2>
               <p class="text-md">
-               <span class="text-gray-500">Published on</span> {post.frontmatter.date.split(' ').slice(0, 4).join(' ')}
-                <span class="text-gray-500">by</span> {post.frontmatter.author}
+               <span class="text-gray-500">Published on</span> {post.data.date.split(' ').slice(0, 4).join(' ')}
+                <span class="text-gray-500">by</span> {post.data.author}
               </p>
             </div>
           </a>
