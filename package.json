@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build && node fixJsonLD.js",
+    "build": "astro build",
     "fixjsonld": "node fixJsonLD.js",
     "preview": "astro preview",
     "astro": "astro"

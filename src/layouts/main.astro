@@ -14,30 +14,33 @@ const {
     customStatus
 } = Astro.props;
 
-const jsonLd = {
-    "@context": "https://shcema.org",
-    "@type": type,
-    "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id":  `/${tools.slugify(seo_title ?? title)}`
-    },
-    "headline": seo_title ?? title,
-    "description": seo_description,
-    "author": {
-        "@type": "Person",
-        "name": "Anas Ouardini"
-    },
-    "datePublished": seo_date ?? date,
-    "dateModified": seo_date ?? date,
-    "publisher": {
-        "@type": "Person",
-        "name": author ?? "Anas Ouardini",
-        "logo": {
-            "@type": "ImageObject",
-            "url": "/favicon.svg"
+const jsonLDStr = `
+<script type="application/ld+json">
+    {
+        "@context": "https://shcema.org",
+        "@type": "${type}",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id":  "/${tools.slugify(seo_title ?? title)}"
+        },
+        "headline": "${seo_title ?? title}",
+        "description": "${seo_description ?? description}",
+        "author": {
+            "@type": "Person",
+            "name": "Anas Ouardini"
+        },
+        "datePublished": "${seo_date ?? date}",
+        "dateModified": "${seo_date ?? date}",
+        "publisher": {
+            "@type": "Person",
+            "name": ${`"${author}"` ?? "Anas Ouardini"},
+            "logo": {
+                "@type": "ImageObject",
+                "url": "/favicon.svg"
+            }
         }
     }
-}
+</script>`
 
 import tools from '../tools';
 ---
@@ -86,6 +89,7 @@ import tools from '../tools';
 
         <!-- JSON+LD -->
         <!-- TODO: image(url), articleBody, author{url: aboutpage} -->
+        <Fragment set:html={jsonLDStr}/>
 
         <!-- Google tag (gtag.js) -->
         <script>
@@ -110,10 +114,6 @@ import tools from '../tools';
         class=`min-h-[100vh] flex flex-col justify-between
                 bg-dark-1 text-white`
     >
-        <p type="application/ld+json">
-            {JSON.stringify(jsonLd)}
-        </p>
-
         <style>
             /* scroll bar */
             body::scrollbar,
