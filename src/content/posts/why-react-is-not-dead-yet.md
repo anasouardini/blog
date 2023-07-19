@@ -1,11 +1,13 @@
 ---
 title: Why React isn't Dead Yet?
-slug: why-react-is-not-dead-yet
-description: 
+seo_title: Why React isn't Dead Yet?
+description: Why React isn't Dead Yet?
+seo_description: Why React isn't Dead Yet?
 date: Sun July 02 2023
+seo_date: 2023-07-02
 author: Anas Ouardini
 draft: false
-category: javascript React
+category: [JavaScript, Reactjs]
 image: {
     url: "/media/thumbnails/why-react-is-not-dead-yet.jpg",
     alt: Why React isn't Dead Yet?,

@@ -1,13 +1,14 @@
 ---
 title: why Vue js is not popular?
-slug: why-vue-js-is-not-popular
-description: 
-date: Sun, 13 Dec 2020 12:44:49 +0000
+seo_title: why Vue js is not popular?
+description: why Vue js is not popular?
+seo_description: why Vue js is not popular?
+date: Sun, 13 Dec 2020
+seo_date: 2020-12-13
 author: Anas Ouardini
 draft: false
-category: javascript js-questions
+category: [JavaScript, JS-Questions]
 ---
-
 
 While coding languages are of full status on their own, frameworks have been associated with making developers’ work easier thanks to the provision of a smooth development basis. To complement the need for optimal frameworks, developers have had a variety of front-end frameworks for their pursuits with only a few remaining popular. According to Stack Overflow, while Vue.js has seen incredible growth and success in the previous years, the framework remains unpopular with only 15.2% using it.
 

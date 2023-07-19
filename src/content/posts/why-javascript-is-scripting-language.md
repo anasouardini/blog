@@ -1,11 +1,13 @@
 ---
 title: Why JavaScript is Called a Scripting Language
-slug: why-javascript-is-scripting-language
-description: 
-date: Sat, 02 Jan 2021 15:16:03 +0000
+seo_title: Why JavaScript is Called a Scripting Language
+description: Why JavaScript is Called a Scripting Language
+seo_description: Why JavaScript is Called a Scripting Language
+date: Sat, 02 Jan 2021
+seo_date: 2021-01-02
 author: Anas Ouardini
 draft: false
-category: javascript js-questions
+category: [JavaScript, JS-Questions]
 ---
 
 JavaScript, developed by Brendan Eich, is a scripting language that works within HTML pages. However, most people tend to wonder why JavaScript is considered a scripting language when it differs greatly from Java. Understand that Java is an existing programming language that handles its task quite differently from JavaScript.

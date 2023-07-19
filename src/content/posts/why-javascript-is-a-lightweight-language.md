@@ -1,11 +1,13 @@
 ---
 title: Why JavaScript Is a Lightweight Language
-slug: why-javascript-is-a-lightweight-language
-description: 
-date: Thu, 31 Dec 2020 13:35:50 +0000
+seo_title: Why JavaScript Is a Lightweight Language
+description: Why JavaScript Is a Lightweight Language
+seo_description: Why JavaScript Is a Lightweight Language
+date: Thu, 31 Dec 2020
+seo_date: 2020-12-31
 author: Anas Ouardini
 draft: false
-category: javascript js-questions
+category: [JavaScript, JS-Questions]
 ---
 
 You can barely overlook the popularity of JavaScript, thanks to its reliability and how flexible it is. This powerful programming language has become the core of web technology. However, one question that always lingers is whether JavaScript is a lightweight language. Well, here are a few pieces of invaluable information.

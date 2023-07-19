@@ -1,12 +1,12 @@
 ---
-slug: why-reactjs-is-weird
 title: why reactjs is weird
 seo_title: why reactjs is weird
-description: 
+description: Reactjs has very wierd set of behaviours and tools, Since the time I've read React's documentation, I've been wondering why they say what they say, because most of their justifications are not really that convincing.
 seo_description: Reactjs has very wierd set of behaviours and tools, Since the time I've read React's documentation, I've been wondering why they say what they say, because most of their justifications are not really that convincing.
 date: Tue, 11 Jul 2023
+seo_date: 2023-07-11
 author: Anas Ouardini
-category: javascript react
+category: [JavaScript, Reactjs]
 image: {
   url: /media/thumbnails/why-reactjs-is-weird.png,
   alt: why-reactjs-is-weird

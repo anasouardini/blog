@@ -18,9 +18,10 @@ const post:CollectionEntry<"posts"> = Astro.props.entry;
 const { 
     data: {
         title, seo_title, description, seo_description,
-        image, slug, date, seo_date, author, category, draft,
+        image, date, seo_date, author, category, draft,
         keywords=[], todos=[]
     },
+    slug,
     body,
     render
 } = post;
@@ -32,9 +33,10 @@ import tools from '../../tools'
 <Main
     title={`${title} - Anas Ouardini`}
     seo_title={`${seo_title} - Anas Ouardini`}
+    slug={`${slug}-anas-ouardini`}
     {description}
     {seo_description} type="BlogPosting"
-    {author} {date} {slug} {category} {draft} >
+    {author} {date} {seo_date} {slug} {category} {draft} >
 
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <!-- dynamically setting copy button for code snippets -->

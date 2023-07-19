@@ -10,7 +10,7 @@ export const collections = {
                 description: z.string(),
                 seo_description: z.string(),
                 date: z.string(),
-                seo_date: z.date().transform((str)=> new Date(str).toISOString()),
+                seo_date: z.date().transform((str)=> new Date(str).toISOString().split('T')[0]),
                 author: z.enum(['Anas Ouardini']).default('Anas Ouardini'),
                 category: z.array(z.enum(['JavaScript', 'JS-Questions', 'Reactjs', 'Performance'])),
                 image: z.object({url: z.string(), alt: z.string()}).optional(),

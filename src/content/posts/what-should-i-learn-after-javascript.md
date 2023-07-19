@@ -1,11 +1,13 @@
 ---
 title: what should I learn after javascript?
-slug: what-should-i-learn-after-javascript
-description: 
+seo_title: what should I learn after javascript?
+description: what should I learn after javascript?
+seo_description: what should I learn after javascript?
 date: Mon, 16 Nov 2020 04:23:59 +0000
+seo_date: 2020-11-16
 author: Anas Ouardini
 draft: false
-category: javascript js-questions
+category: [JavaScript, JS-Questions]
 ---
 
 so you just finished your vanilla Javascript courses and had some training and became good at Javascript and you started wondering what should you learn next, the answer I provide in this article is for someone who knows HTML, CSS, and vanilla Javascript with DOM manipulation. so what should you learn after learning Javascript?

@@ -1,11 +1,13 @@
 ---
 title: why javascript is considered as a dynamic language?
-slug: why-javascript-is-considered-as-a-dynamic-language
-description: 
+seo_title: why javascript is considered as a dynamic language?
+description: why javascript is considered as a dynamic language?
+seo_description: why javascript is considered as a dynamic language?
 date: Sat, 14 Nov 2020 04:10:36 +0000
+seo_date: 2020-11-14
 author: Anas Ouardini
 draft: false
-category: javascript js-questions
+category: [JavaScript, JS-Questions]
 ---
 
 
