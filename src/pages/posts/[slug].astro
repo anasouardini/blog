@@ -15,9 +15,9 @@ export async function getStaticPaths() {
 }
 
 const post:CollectionEntry<"posts"> = Astro.props.entry;
-const { 
+let { 
     data: {
-        title, seo_title, description, seo_description,
+        lang, title, seo_title, description, seo_description,
         image, date, seo_date, author, category, draft,
         keywords=[], todos=[]
     },
@@ -27,16 +27,23 @@ const {
 } = post;
 const { Content, headings } = await render();
 
+// set defaults
+seo_title += ` - ${author}`;
+// title += ` - ${author}`;
+title ??= seo_title;
+description ??= seo_description;
+date ??= `${seo_date}`;
+author ??= 'Anas Ouardini';
+draft ??= false;
+lang ??= "en_US"
+
 import tools from '../../tools'
 ---
 
 <Main
-    title={`${title} - Anas Ouardini`}
-    seo_title={`${seo_title} - Anas Ouardini`}
-    slug={`${slug}-anas-ouardini`}
-    {description}
+    {lang} {title} {seo_title} {slug} {description}
     {seo_description} type="BlogPosting"
-    {author} {date} {seo_date} {slug} {category} {draft} >
+    {author} {date} {seo_date} {category} {draft} >
 
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <!-- dynamically setting copy button for code snippets -->

@@ -4,6 +4,7 @@ export const collections = {
     posts: defineCollection(
         {
             schema: z.object({
+                lang: z.string().default("en_US").optional(),
                 draft: z.boolean().default(false),
                 title: z.string(),
                 seo_title: z.string(),
@@ -16,7 +17,7 @@ export const collections = {
                 image: z.object({url: z.string(), alt: z.string()}).optional(),
                 sharing_image: z.object({url: z.string(), alt: z.string()}).optional(),
                 keywords: z.array(z.string()).optional(),
-                todo: z.array(z.string()).optional(),
+                todos: z.array(z.string()).optional(),
             })
         }
     )

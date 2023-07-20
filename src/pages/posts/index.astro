@@ -6,9 +6,22 @@ const posts = await getCollection('posts', ({data})=>{
 });
 console.log(posts[0]);
 import tools from '../../tools';
+
+const author = "Anas Ouardini";
+const type = "WebSite";
+const lang = "en_US";
+const title = `${author}'s Blog Posts`;
+const seo_title = title;
+const slug = tools.slugify(title);
+const description = "";
+const seo_description = description;
+const date = "Tue June 06 2023";
+const seo_date = "2023-06-04";
 ---
 
-<Main title="Anas Ouardini's Blog Posts" type="WebSite" date="2023-06-04" seo_date="2023-06-04">
+<Main {type} {lang} {author} {title} {seo_title} {slug}
+    {description} {seo_description} {date} {seo_date}>
+
   <main class="w-[90%] mx-auto max-w-[1000px] my-10">
     <h1 class="mb-10 text-2xl">Blog Posts</h1>
     {

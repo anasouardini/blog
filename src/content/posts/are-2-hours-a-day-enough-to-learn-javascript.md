@@ -14,6 +14,9 @@ image: {
 keywords: [
     "learn JavaScript"
 ]
+todos: [
+    "re-write this garbage"
+]
 ---
 
 

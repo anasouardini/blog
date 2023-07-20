@@ -1,18 +1,8 @@
 ---
 const {
-    type = 'blog',
-    slug,
-    title = 'Web Dev Blog',
-    seo_title = 'Web Dev Blog',
-    description,
-    seo_description,
-    author = 'Anas ouardini',
-    draft = false,
-    date,
-    seo_date,
-    tags = [],
-    image = '',
-    customStatus
+    type, lang, slug,
+    title, seo_title, description, seo_description,
+    author, draft, date, seo_date, category, image, customStatus
 } = Astro.props;
 
 const jsonLDStr = `
@@ -22,19 +12,19 @@ const jsonLDStr = `
         "@type": "${type}",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id":  "/${tools.slugify(seo_title ?? title)}"
+            "@id":  "/${tools.slugify(seo_title)}"
         },
-        "headline": "${seo_title ?? title}",
-        "description": "${seo_description ?? description}",
+        "headline": "${seo_title}",
+        "description": "${seo_description}",
         "author": {
             "@type": "Person",
             "name": "Anas Ouardini"
         },
-        "datePublished": "${seo_date ?? date}",
-        "dateModified": "${seo_date ?? date}",
+        "datePublished": "${seo_date}",
+        "dateModified": "${seo_date}",
         "publisher": {
             "@type": "Person",
-            "name": ${`"${author}"` ?? "Anas Ouardini"},
+            "name": ${`"${author}"`},
             "logo": {
                 "@type": "ImageObject",
                 "url": "/favicon.svg"
@@ -46,7 +36,7 @@ const jsonLDStr = `
 import tools from '../tools';
 ---
 
-<html style="scroll-behavior: smooth;" lang="en" prefix="og: https://ogp.me/ns#">
+<html style="scroll-behavior: smooth;" lang={lang.split('_')[0]} prefix="og: https://ogp.me/ns#">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width" />
@@ -62,28 +52,27 @@ import tools from '../tools';
         {type === "BlogPosting"
             ?<>
                 <meta property="article:author" content={author} />
-                <meta property="article:published_time" content={seo_date ?? date} />
-                <meta property="article:tag" content={tags} />
+                <meta property="article:published_time" content={seo_date} />
+                <meta property="article:tag" content={category.join(' ')} />
                 {draft ? <meta name="robots" content="noidnex" /> : <></>}
             </>
             : <></>
         }
-        {title ? <meta property="og:title" content={title ?? seo_title} /> : <></>}
+        <meta property="og:local" content={lang} />
+        {title ? <meta property="og:title" content={title} /> : <></>}
+        {description ? <meta property="og:description" content={description} /> : <></>}
         {image ? <meta property="og:image" content={image.url} /> : <></>}
         {image ? <meta property="og:image:url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:secure_url" content={image.url} /> : <></>}
         {image ? <meta property="og:image:alt" content={image.alt} /> : <></>}
         {image ? <meta property="twitter:card" content={image} /> : <></>}
-        {description ? <meta property="og:description" content={description ?? seo_description} /> : <></>}
-        {true ? <meta property="og:local" content="en_US" /> : <></>}
         {title
-            ? <meta property="og:site_name" content={title ?? seo_title} />
+            ? <meta property="og:site_name" content={title} />
             : <></> }
-        <!-- <meta property="og:url" content={} /> -->
 
-        <title>{seo_title ?? 'Anas Ouardini Blog'}</title>
+        <title>{seo_title}</title>
         {seo_description
-            ? <meta name="description" content={seo_description ?? description} />
+            ? <meta name="description" content={seo_description} />
             : <></>}
 
         <meta name="generator" content={Astro.generator} />

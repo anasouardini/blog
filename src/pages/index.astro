@@ -9,9 +9,22 @@ const posts = await getCollection("posts", ({data})=>{
 });
 // const posts = await Astro.glob('./posts/*.md');
 import tools from '../tools';
+
+const author = "Anas Ouardini";
+const type = "WebSite";
+const lang = "en_US";
+const title = `${author}'s Blog - home page`;
+const seo_title = title;
+const slug = tools.slugify(title);
+const description = "";
+const seo_description = description;
+const date = "Tue June 06 2023";
+const seo_date = "2023-06-04";
 ---
 
-<Main title="Anas Ouardini's Blog - home page" type="WebSite" date="2023-06-04" seo_date="2023-06-04">
+<Main {type} {lang} {author} {title} {seo_title} {slug}
+    {description} {seo_description} {date} {seo_date}>
+
   <main class="w-[90%] h-[80vh] mx-auto max-w-[1000px] my-10">
     <h1 class="mb-10 text-2xl">Featured Blog Posts</h1>
     {
