@@ -3,7 +3,7 @@ title: Is Vue JS Easy To Learn
 seo_title: Is Vue JS Easy To Learn
 description: Is Vue JS Easy To Learn
 seo_description: Is Vue JS Easy To Learn
-date: Wed, 09 Dec 2020 13:40:12 +0000
+date: Wed, 09 Dec 2020
 seo_date: 2020-12-09
 author: Anas Ouardini
 draft: false

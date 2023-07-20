@@ -3,7 +3,7 @@ title: does fast typing help with coding
 seo_title: does fast typing help with coding
 description: does fast typing help with coding
 seo_description: does fast typing help with coding
-date: Tue, 01 Dec 2020 11:58:01 +0000
+date: Tue, 01 Dec 2020
 seo_date: 2020-12-01
 author: Anas Ouardini
 draft: false

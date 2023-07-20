@@ -3,7 +3,7 @@ title: Is JavaScript Synchronous or Asynchronous
 seo_title: Is JavaScript Synchronous or Asynchronous
 description: Is JavaScript Synchronous or Asynchronous
 seo_description: Is JavaScript Synchronous or Asynchronous
-date: Wed, 30 Dec 2020 15:55:32 +0000
+date: Wed, 30 Dec 2020
 seo_date: 2020-12-30
 author: Anas Ouardini
 draft: false

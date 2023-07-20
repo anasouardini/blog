@@ -3,7 +3,7 @@ title: Is Javascript Easy To Learn? - Compared With Other Languages
 seo_title: Is Javascript Easy To Learn? - Compared With Other Languages
 description: Is Javascript Easy To Learn? - Compared With Other Languages
 seo_description: Is Javascript Easy To Learn? - Compared With Other Languages
-date: Mon, 09 Nov 2020 23:46:10 +0000
+date: Mon, 09 Nov 2020
 seo_date: 2020-11-09
 author: Anas Ouardini
 draft: false

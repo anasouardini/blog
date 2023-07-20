@@ -3,7 +3,7 @@ title: Should I Start Learning JavaScript ES6 Or ES5 As a Beginner?
 seo_title: Should I Start Learning JavaScript ES6 Or ES5 As a Beginner?
 description: Should I Start Learning JavaScript ES6 Or ES5 As a Beginner?
 seo_description: Should I Start Learning JavaScript ES6 Or ES5 As a Beginner?
-date: Mon, 09 Nov 2020 23:42:58 +0000
+date: Mon, 09 Nov 2020
 seo_date: 2020-11-09
 author: Anas Ouardini
 draft: false

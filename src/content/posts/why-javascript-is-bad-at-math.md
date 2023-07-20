@@ -3,7 +3,7 @@ title: Why Javascript Is Noob at Math?
 seo_title: Why Javascript Is Noob at Math?
 description: Why Javascript Is Noob at Math?
 seo_description: Why Javascript Is Noob at Math?
-date: Tue, 24 Nov 2020 15:18:21 +0000
+date: Tue, 24 Nov 2020
 seo_date: 2020-11-24
 author: Anas Ouardini
 draft: false

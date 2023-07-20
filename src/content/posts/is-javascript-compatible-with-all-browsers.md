@@ -3,13 +3,12 @@ title: is javascript compatible with all browsers? JS cross-browser
 seo_title: is javascript compatible with all browsers? JS cross-browser
 description: is javascript compatible with all browsers? JS cross-browser
 seo_description: is javascript compatible with all browsers? JS cross-browser
-date: Thu, 12 Nov 2020 23:09:53 +0000
+date: Thu, 12 Nov 2020
 seo_date: 2020-11-12
 author: Anas Ouardini
 draft: false
 category: [JavaScript, JS-Questions]
 ---
-
 
 nowadays there are lots of technologies out there, but there is no technology that vilified as Javascript when it comes to cross-browser compatibility. I hear that a lot from other developers especially the advanced people in Javascript who are using the bleeding-edge features.
 

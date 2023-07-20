@@ -3,7 +3,7 @@ title: Is JavaScript a Bad Language?
 seo_title: Is JavaScript a Bad Language?
 description: Is JavaScript a Bad Language?
 seo_description: Is JavaScript a Bad Language?
-date: Thu, 04 Mar 2021 15:59:23 +0000
+date: Thu, 04 Mar 2021
 seo_date: 2021-03-04
 author: Anas Ouardini
 draft: false

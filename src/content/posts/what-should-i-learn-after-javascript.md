@@ -3,7 +3,7 @@ title: what should I learn after javascript?
 seo_title: what should I learn after javascript?
 description: what should I learn after javascript?
 seo_description: what should I learn after javascript?
-date: Mon, 16 Nov 2020 04:23:59 +0000
+date: Mon, 16 Nov 2020
 seo_date: 2020-11-16
 author: Anas Ouardini
 draft: false

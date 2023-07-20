@@ -3,7 +3,7 @@ title: How to remove duplicates from a javascript array
 seo_title: How to remove duplicates from a javascript array
 description: How to remove duplicates from a javascript array
 seo_description: How to remove duplicates from a javascript array
-date: Wed, 24 Feb 2021 20:56:18 +0000
+date: Wed, 24 Feb 2021
 seo_date: 2021-02-24
 author: Anas Ouardini
 draft: false

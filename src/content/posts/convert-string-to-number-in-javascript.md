@@ -3,7 +3,7 @@ title: How to Convert String to Number in JavaScript?
 seo_title: How to Convert String to Number in JavaScript?
 description: How to Convert String to Number in JavaScript?
 seo_description: How to Convert String to Number in JavaScript?
-date: Thu, 24 Dec 2020 12:44:33 +0000
+date: Thu, 24 Dec 2020
 seo_date: 2020-12-24
 author: Anas Ouardini
 draft: false

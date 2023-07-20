@@ -3,7 +3,7 @@ title: Does JavaScript Have Classes
 seo_title: Does JavaScript Have Classes
 description: Does JavaScript Have Classes
 seo_description: Does JavaScript Have Classes
-date: Thu, 31 Dec 2020 22:29:18 +0000
+date: Thu, 31 Dec 2020
 seo_date: 2020-12-31
 author: Anas Ouardini
 draft: false

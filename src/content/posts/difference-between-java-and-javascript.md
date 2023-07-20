@@ -3,7 +3,7 @@ title: What is the Difference Between Java and JavaScript
 seo_title: What is the Difference Between Java and JavaScript
 description: What is the Difference Between Java and JavaScript 
 seo_description: What is the Difference Between Java and JavaScript 
-date: Wed, 06 Jan 2021 14:35:14 +0000
+date: Wed, 06 Jan 2021
 seo_date: 2021-01-06
 author: Anas Ouardini
 draft: false

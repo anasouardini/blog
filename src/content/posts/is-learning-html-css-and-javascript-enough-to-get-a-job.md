@@ -3,7 +3,7 @@ title: Is Learning HTML, CSS, and Javascript Enough to Get a Job?
 seo_title: Is Learning HTML, CSS, and Javascript Enough to Get a Job?
 description: Is Learning HTML, CSS, and Javascript Enough to Get a Job?
 seo_description: Is Learning HTML, CSS, and Javascript Enough to Get a Job?
-date: Wed, 16 Dec 2020 13:49:28 +0000
+date: Wed, 16 Dec 2020
 seo_date: 2020-12-16
 author: Anas Ouardini
 draft: false
