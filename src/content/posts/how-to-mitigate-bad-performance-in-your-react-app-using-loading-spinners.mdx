@@ -117,19 +117,19 @@ There is a lot to talk about here, this would form another blog post, It might b
 
 Some of these are mentioned in the previous sub-headings, but here is an ordered list that you can refer to:
 
-1. not having a fallback:
+### not having a fallback:
 
 You can't guarantee that at the end of your loading spinner is a happy 200 response, you ought to cover all edge cases if you can.
 
 It's not a hard task to implement a fallback for your API request, but if you don't do it, your app will, again, look like it's broken after your hard efforts.
 
-2. not having a timeout:
+### not having a timeout:
 
 Users do not have all day, you have to give up probing after an unscientifically decided-upon period. Or else you'll get the same bad vibes as above.
 
 I'll go even further and add a totally vague estimate of time to load just to keep the user interested for enough time before I display the boring message: "The server is not responsive; please try later.".
 
-3. not having a progress bar:
+### not having a progress bar:
 
 This is not really a mistake according to **my definition**, but you're going to be missing out on a cool "patience booster" technique.
 
@@ -137,19 +137,19 @@ Loading spinners provide visual feedback to users during resource-intensive oper
 
 A cool-looking progress bar will extend that period when the user is, hopefully, excited about what's next.
 
-4. not covering all target components:
+### not covering all target components:
 
 Make sure you don't miss any component that needs a loading spinner, or else your layout is going to be confusing and shifting all around.
 
 Not much to say about this, it's pretty obvious by now.
 
-5. not informing the user of what he/she is exactly waiting for.
+### not informing the user of what he/she is exactly waiting for.
 
 A loading spinner is only half the story, I personally have no problem waiting for black boxes to open, but I don't think most people are.
 
 In my opinion, always label your loading spinner unless it messes up your UI, especially with small-sized components.
 
-6. no graceful transition between loading and loaded states
+### no graceful transition between loading and loaded states
 
 Another not a real mistake, but it's way better UX to see a smooth transition between a "pending" state and a "success" one, I'm not sure it matters when the response is a 400 or 500 :)
 
@@ -161,23 +161,23 @@ Although it's called a spinner, it can be literally any animation you want.
 
 These types are my personal collection; not a scientific study.
 
-1. Good Old Spinner:
+### Good Old Spinner:
 
 Use this one if you don't care, or you have mind-blowing creativity. It's hard to make this one interesting.
 
 Make any shape and make it spin... there you go. It could be like an infinity symbol, you get the idea.
 
-2. Visually Satisfying Spinner: I personally like water drops.
+### Visually Satisfying Spinner: I personally like water drops.
 
 Some shapes are hard to get used to, I could keep looking at a water drop animation all day.
 
 Although it defers from person to person and it's also hard to implement technically, if you could, I think that would make your perfect spinner.
 
-3. Trending Spinner: something that most users could relate to.
+### Trending Spinner: something that most users could relate to.
 
 It could be like a fidget spinner (if that's still a thing), or a recent meme, unless you have a huge brand in which case you won't be reading this.
 
-4. Visually Complex Spinner: Something that you'd stare at for a lot of time to understand.
+### Visually Complex Spinner: Something that you'd stare at for a lot of time to understand.
 
 This could be really complex to implement, visualizing physics with CSS is really hard.
 
@@ -185,11 +185,11 @@ And maybe It'll lose its effectiveness rather easily if you have lots of recurri
 
 Think about it, it might be worth it for your app.
 
-5. Funny Spinners:
+### Funny Spinners:
 
 Yes, this one is also relative to the user, I found that a curved pencil that moves in circles and erases what it draws really funny when I first saw it.
 
-6. Field-Related Spinners: something generic that represents your field
+### Field-Related Spinners: something generic that represents your field
 
 If your app is about cooking, you could make a pane that flips meat in the air or something. Maybe the color of the meat could indicate the progress of the task (big brain [wink]).
 
