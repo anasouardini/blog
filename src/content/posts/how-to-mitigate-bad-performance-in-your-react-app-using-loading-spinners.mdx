@@ -1,0 +1,267 @@
+---
+title: Full Guide On mitigating bad performance using loading spinners
+seo_title: mitigate bad performance in React apps with loading spinners
+description: Loading spinners do not increase the performance of your React app, they're just a smoke screen to hide the performance issues that you can fix, the priority is to fix the issue and then hide what's left by changing the user's perception of "performance".
+seo_description: Loading spinners do not increase the performance of your React app, they're just a smoke screen to hide the performance issues that you can fix, the priority is to fix the issue and then hide what's left by changing the user's perception of "performance".
+date: Sun, 09 Jul 2023
+seo_date: 2023-07-09
+author: Anas Ouardini
+category: [JavaScript, Reactjs, Performance]
+keywords: [
+    'loading',
+    'spinner',
+    'react',
+    'performance',
+]
+todos: [
+    'check grammar',
+    'proof-read',
+]
+---
+
+import Block from '../../components/blogPostBlocks.astro';
+
+Since you are here, chances are, you already know how bad it is the user experience of staring at a blank page for seconds which feels like hours, that's why I'm not going to annoy you with why you should do it.
+
+To keep it short, loading spinners are like any other technology i.e. you don't want to ignore it when you need it and you don't want to overuse it as well.
+
+A rule of thumb is to use it only when you don't have any control over how long a task will take or when you're absolutely sure that the task is always going to make the user wait for a while on whatever device is used to access your app.
+
+<Block type='note'>
+  Now, I mention React here and there, but most of this can be carried with you to any other library or framework, heck, or even pure JavaScript.
+</Block>
+
+## Performance bottlenecks in React that require loading spinners
+
+We all know that React apps tend to re-render a lot, instead of rendering an empty table for example, it's better to just render a simple loading spinner to hold the table's position without making the CPU work harder than necessary.
+
+That last bit is important: what's the point of avoiding the empty table when your loading spinner requires more CPU cycles?
+
+There are not many unique cases here, most of the scenarios where users would wait for their data to show up, are when a React app (client) waits for a response from the server, mainly due to the low performance of our users' devices (mostly phones) or their internet subscription.
+
+You rarely want to do this, but sometimes you have a CPU-intensive task that, for some reason, you don't want to assign to your Back-End.
+
+It might be due to the complexity of implementing such logic on the Back-End v.s. on the client, or maybe you have to render a very complex animation that the user would appreciate in a certain scenario.
+
+I think it's pretty obvious when it comes to, in a framework-agnostic manner, the situation that would require a little loading spinner.
+
+## Your React app performance on phones vs computers
+
+you don't want to do CPU-heavy tasks on a mobile phone, most phones do not come prepared to run a web assembly video editing app or "Crisis" for that matter.
+
+speaking of games, some gaming phones are equipped with really good CPUs and integrated GPUs that can handle some of that heavy rendering. I can't give you a percentage since the mobile market is always changing, but we're speaking about the minority of mobile phones here.
+
+**maybe** if you have a gaming-centric app, most of your traffic would come from such devices, other than that, I think you should make it easier to compute and add a lovely and mobile-friendly loading spinner.
+
+Other than that, the only thing left to think about is the network-related performance, in which case all devices are the same, whether it's a 12 Cores gaming beast or a Samsung Galaxy Pro.
+
+*Just kidding*, network requests are not free, they also need **some** CPU power, although not that much but be careful when you're audience are my grandma and her friends.
+
+Generally, **you're still safe even if you go nuts with the network requests, but not the case when it comes to CPU-heavy tasks.**
+
+**It's usually fine, however, when most of your audience are computers.**
+
+"But who cares" you might say, "I'm just going to throw a little loading spinner at it, and problem solved", Yh, **NO**, that's not how it works.
+
+Users are coming to your app, not for getting dizzy watching your cute little ESS (Ever Spinning Spinner) fidget spinner with *"Be patient"* under it, more on that below.
+
+## How do loading spinners work in react
+
+Keep in mind that loading spinners do not prevent re-rendering your react components, it's just another component itself, let's call it a fake component or placeholder component.
+
+Whether you're using a library such as `React-query` from Tanstack, or `useEffect` (which is not recommended), it all boils down to checking the state of your network request or your long-lasting task.
+
+And whether you implement the logic yourself or your loading spinner library does it for you, there must be some logic that is deciding between loading your component or loading the temporary loading spinner.
+
+You can do this however you like, but this is the most simple straightforward method.
+
+![how loading spinners work in react](/media/how-loading-spinners-work-in-react.webp)
+
+The `Target Component` block is the end state, where all data has been received, and the `deciding logic` rendered your target component with the received data.
+
+In some cases, you might want to pass both the target component and the state of your network request to the loading spinner library.
+
+Keep in mind that your app will render twice, so make sure to not abuse it or implement it carelessly, or else you're going to end up posting these kinds of tweets:
+
+![react should have been called re-render](/media/react-should-have-been-called-re-render.webp)
+
+although that was a fair point.
+
+After the task is done and the result is received, whether it's a "200" response or not, you **re-render** and show either an error or successfully fetched/computed data.
+
+Again: although I'm talking about React here, you can, generally, apply this to any other library or even pure js.
+
+## Effective usage of loading spinners without affecting the user experience
+
+One thing to keep in mind is: performance is relative, everyone perceives it differently.
+
+To effectively use loading spinners to your advantage, you have to influence the perception of performance in the user's mind.
+
+Here are some tips on how you can achieve such a result, these techniques are to be implemented when your loading spinner is in view:
+
+1. Use progress indicators
+2. Involve complex UI (be careful with this one)
+3. Show interesting and clever quotes (I love this one)
+4. Share tips on how to use the app
+5. Be creative about your loading spinner: it doesn't have to be a spinning circle
+6. Implement a timeout after a certain threshold: don't let the user wait forever
+7. Use a loading spinner for each component that requires time to load: don't use one main spinner for the whole app
+8. Avoid using them when the component loads instantly (it depends on your use case)
+9. Help the user be aware of what's coming after the spinner
+10. Test the loading spinner carefully, locally and in production. You can even put an A/B test in place
+11. Loading spinners do not enhance performance: make sure you implement performance-enhancing techniques such as lazy loading.
+
+There is a lot to talk about here, this would form another blog post, It might be on my blog already, feel free to use the search bar above.
+
+## Common mistakes when implementing a loading spinner
+
+Some of these are mentioned in the previous sub-headings, but here is an ordered list that you can refer to:
+
+1. not having a fallback:
+
+You can't guarantee that at the end of your loading spinner is a happy 200 response, you ought to cover all edge cases if you can.
+
+It's not a hard task to implement a fallback for your API request, but if you don't do it, your app will, again, look like it's broken after your hard efforts.
+
+2. not having a timeout:
+
+Users do not have all day, you have to give up probing after an unscientifically decided-upon period. Or else you'll get the same bad vibes as above.
+
+I'll go even further and add a totally vague estimate of time to load just to keep the user interested for enough time before I display the boring message: "The server is not responsive; please try later.".
+
+3. not having a progress bar:
+
+This is not really a mistake according to **my definition**, but you're going to be missing out on a cool "patience booster" technique.
+
+Loading spinners provide visual feedback to users during resource-intensive operations, if the user stares too long in a eventually boring loading spinner, the visual feedback is not interesting anymore.
+
+A cool-looking progress bar will extend that period when the user is, hopefully, excited about what's next.
+
+4. not covering all target components:
+
+Make sure you don't miss any component that needs a loading spinner, or else your layout is going to be confusing and shifting all around.
+
+Not much to say about this, it's pretty obvious by now.
+
+5. not informing the user of what he/she is exactly waiting for.
+
+A loading spinner is only half the story, I personally have no problem waiting for black boxes to open, but I don't think most people are.
+
+In my opinion, always label your loading spinner unless it messes up your UI, especially with small-sized components.
+
+6. no graceful transition between loading and loaded states
+
+Another not a real mistake, but it's way better UX to see a smooth transition between a "pending" state and a "success" one, I'm not sure it matters when the response is a 400 or 500 :)
+
+But you get the idea, do it if you care that much.
+
+## types of loading spinners
+
+Although it's called a spinner, it can be literally any animation you want.
+
+These types are my personal collection; not a scientific study.
+
+1. Good Old Spinner:
+
+Use this one if you don't care, or you have mind-blowing creativity. It's hard to make this one interesting.
+
+Make any shape and make it spin... there you go. It could be like an infinity symbol, you get the idea.
+
+2. Visually Satisfying Spinner: I personally like water drops.
+
+Some shapes are hard to get used to, I could keep looking at a water drop animation all day.
+
+Although it defers from person to person and it's also hard to implement technically, if you could, I think that would make your perfect spinner.
+
+3. Trending Spinner: something that most users could relate to.
+
+It could be like a fidget spinner (if that's still a thing), or a recent meme, unless you have a huge brand in which case you won't be reading this.
+
+4. Visually Complex Spinner: Something that you'd stare at for a lot of time to understand.
+
+This could be really complex to implement, visualizing physics with CSS is really hard.
+
+And maybe It'll lose its effectiveness rather easily if you have lots of recurring users, not as fast as the simple boring ones anyways.
+
+Think about it, it might be worth it for your app.
+
+5. Funny Spinners:
+
+Yes, this one is also relative to the user, I found that a curved pencil that moves in circles and erases what it draws really funny when I first saw it.
+
+6. Field-Related Spinners: something generic that represents your field
+
+If your app is about cooking, you could make a pane that flips meat in the air or something. Maybe the color of the meat could indicate the progress of the task (big brain [wink]).
+
+It might also be really specific to your app and what you specialize in, or even specific to the exact task you're processing while still relating to the field somehow (two stones with one bird).
+
+As you can tell, there is no limit to what types of spinners could exist. My advice is to find a good balance between interesting and easy to ~~code~~ implement, that's where libraries shine; that's what's next.
+
+## loading spinner libraries for React with an example
+
+There is not much to choose from, when it comes to this concern, I'll only list one that I've used just for the sake of this article, and another one that I don't recommend but I just want to list it out there for good measure.
+
+### My favorite
+
+Let me first brag about my favorite: [React-Spinners](https://github.com/davidhu2000/react-spinners), actually the only one I can recommend.
+
+React-Spinners can be used in just 4 lines of code, here is a code example:
+
+```ts
+import * as Spinner from "react-spinners";
+export default function App() {
+  return (<Spinner.DotLoader color="green"/>)
+}
+```
+
+![A loading spinner using React-Spinners library](/media/loading-spinner-using-react-spinners-library.webp)
+
+It's not spinning because it's an image :). But you get the idea. As you can see in the dev tools, it's a simple CSS animation.
+
+Feel free to peek at their [story book](https://www.davidhu.io/react-spinners/storybook/?path=/docs/dotloader--main) and [demo page](https://www.davidhu.io/react-spinners/).
+
+### Not favorite
+
+There is also this one called [React-Spinkit](https://github.com/KyleAMathews/react-spinkit), which doesn't work without Webpack or Browserify, I know, right?
+
+Other than these two, I couldn't find any worth-trying ones. There are some UI libraries that also include loading spinners samples but they're not as cohesive.
+
+And as with any library, try to avoid one-man projects and the ones that don't have many stars (within reason of course).
+
+And if you only need one type of loading spinners, I should say: *avoid libraries* and get your hands dirty.
+
+## Mitigate performance without importing a library: make a loading spinner yourself
+
+You can make it really easy or hard as much as you wish.
+
+The first approach I'll recommend is to steal some samples from libraries on GitHub. But you can always make your own loading spinner and feel proud at the end of the **day**.
+
+Ok, a whole day is a lot, but it depends on your zen mode and the size of your ego.
+
+## Making your own spinner vs. using a library
+
+This question comes up almost in any topic, but as a rule of thumb, as already stated, if it's simple, write it from scratch.
+
+Not that I hate libraries, abstractions are really good, you won't be able to do it all from scratch unless you want to give up before even taking a deep breath.
+
+I also wouldn't use libraries that are maintained by one person.
+
+Unless the person is me, I would rather write my ow... huh!
+
+You get the point.
+
+## Takeaway
+
+Yh, seems like a small topic, but there is a lot to think about when it comes to loading spinners if you really care that much:
+
+1. Situations that require using loading spinners
+2. Misconceptions about loading spinners
+3. Common mistakes
+4. Effective usage
+5. Categorizing types of loading spinners
+6. Libraries to make this matter easier
+7. that vs. coding your own
+
+Take a look at the Table Of Contents above for a bird-eye view.
+
+That was it, bye.
