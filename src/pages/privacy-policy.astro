@@ -1,8 +1,25 @@
 ---
 import Main from '../layouts/main.astro';
+import tools from '../tools';
+
+// set defaults
+const type = "WebSite";
+const title = "Blog Privacy Policy";
+const seo_title = "Blog Privacy Policy";
+const slug = tools.slugify(title);
+const description = "";
+const seo_description = "";
+const date = "";
+const seo_date = "";
+const author = 'Anas Ouardini';
+const lang = "en_US"
 ---
 
-<Main title="Blog Privacy Policy">
+<Main
+    {lang} {title} {seo_title} {slug}
+    {description} {seo_description} {type}
+    {author} {date} {seo_date} >
+
     <h1 class="mb-10 text-2xl text-center">Privacy policy</h1>
     <p>Your privacy is important. This Privacy Policy explains how your information is collected, used, disclosed, and safeguarded when you visit our blog.</p>
 

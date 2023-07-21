@@ -4,7 +4,7 @@ import {getCollection} from "astro:content";
 const posts = await getCollection('posts', ({data})=>{
   return !data.draft;
 });
-console.log(posts[0]);
+
 import tools from '../../tools';
 
 const author = "Anas Ouardini";
