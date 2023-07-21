@@ -1,5 +1,10 @@
 ---
 import Main from '../../layouts/main.astro';
+import Metrics from '../../components/blogPostMetrics.astro'
+import TOC from '../../components/TableOfContent.astro'
+import BlogStyle from '../../components/blogPostStyle.astro'
+import CopyCodeSnippet from '../../components/CopyCodeSnippet.astro'
+
 import { CollectionEntry, getCollection } from 'astro:content';
 // 1. Generate a new path for every collection entry
 export async function getStaticPaths() {
@@ -28,8 +33,6 @@ let {
 const { Content, headings } = await render();
 
 // set defaults
-seo_title += ` - ${author}`;
-// title += ` - ${author}`;
 title ??= seo_title;
 description ??= seo_description;
 date ??= `${seo_date}`;
@@ -37,207 +40,53 @@ author ??= 'Anas Ouardini';
 draft ??= false;
 lang ??= "en_US"
 
+// don't remove: used in Json+ld
+const wordCount = body.split(' ').length;
+const readingSpeed = 300; // words per minute
+const readingTime = Math.round(wordCount/readingSpeed); // minutes
+
 import tools from '../../tools'
 ---
 
 <Main
-    {lang} {title} {seo_title} {slug} {description}
+    {lang} {title} seo_title={`${seo_title} - ${author}`} {slug} {description}
     {seo_description} type="BlogPosting"
-    {author} {date} {seo_date} {category} {draft} >
+    {author} {date} {seo_date} {category} {draft} {readingTime} >
 
     <main class="flex flex-col justify-between w-[90%] mx-auto max-w-[1000px] my-10">
         <!-- dynamically setting copy button for code snippets -->
-        <script>
-            const clipboard = navigator.clipboard;
-            Array.from(document.querySelectorAll('pre')).forEach(block => {
-                const copyCodeBtn = document.createElement('button');
-                copyCodeBtn.innerText = clipboard ? "Copy" : "Clipboard not supported";
-                copyCodeBtn.setAttribute('data-copyCodeBtn', true);
-                copyCodeBtn.setAttribute('style', `position: absolute; top: 0; right: 0;
-                                        color: #4C99EB; background: #222;
-                                        padding: 8px; margin: 5px; border-radius: 6px;`);
-                block.style.position = 'relative';
-                block.prepend(copyCodeBtn);
-                if(clipboard){
-                    copyCodeBtn.addEventListener('click', ({target})=>{
-                        clipboard.writeText(target.nextElementSibling.innerText);
+        <CopyCodeSnippet />
 
-                        copyCodeBtn.innerText = "Code Copied!";
-                        setTimeout(() => {
-                            copyCodeBtn.innerText = "Copy";
-                        }, 700);
-                    });
-                }
-            });
+        {/* Generic blog post styling */}
+        <BlogStyle/>
 
-        </script>
-        <style is:inline>
-            summary::marker{color: transparent;}
-
-            blockquote{
-                padding-left: 3rem;
-                position: relative
-            }
-            blockquote:before{
-                content: '“';
-                z-index: -100;
-                color: rgb(248, 160, 175);
-                position: absolute;
-                top: -30px; left: 0;
-                font-size: 4.5rem
-            }
-
-            p{
-                margin-bottom: 1.2rem;
-                font-size: 1.2rem;
-                line-height: 1.75;
-            }
-            p:first-letter, li:first-letter{
-                text-transform: uppercase
-            }
-            h1, h2, h3, h4, h5, h6{
-                color: #4C99EB;
-                text-transform: capitalize;
-                margin-bottom: 1rem;
-                margin-top: 2rem
-            }
-            h1{
-                font-size: 2.4rem;
-                margin-bottom: .5rem;
-            }
-            h2{
-                font-size: 2rem;
-                margin-bottom: 1.6rem;
-            }
-            h3{
-                font-size: 1.6rem;
-                margin-bottom: 1.2rem;
-            }
-            h4{
-                font-size: 1.2rem;
-                margin-bottom: 1.2rem;
-            }
-            h5{
-                font-size: 0.8rem;
-                margin-bottom: 1.2rem;
-            }
-            h6{
-                font-size: 0.4rem;
-                margin-bottom: 1.2rem;
-            }
-            pre{
-                margin-bottom: 1.2rem;
-                padding: 1.4rem;
-                border-radius: 6px;
-            }
-            *:not(pre) > code{
-                padding: .1rem .3rem;
-                color: rgb(248, 160, 175);
-            }
-            ul, ol{
-                margin: 1rem 0;
-                padding-left: 2rem
-            }
-            li{
-                list-style-type: normal;
-                font-size: 1.1rem;
-                margin-bottom: 0.2rem;
-            }
-            li::marker{color: #4C99EB}
-            a{
-                color: #339CFF;
-                text-decoration: underline;
-            }
-            /* a:visited{
-                color: #339CFF;
-            }
-            a:hover{
-                color: #339CFF;
-            } */
-            figure{margin-bottom: 1.2rem}
-            figure.featured{margin-bottom: 1.5rem}
-        </style>
         <article class="p-3">
             <h1 class="capitalize">{title}</h1>
-            <p class="mb-10 text-gray-500 text-xl">Published at
+            <p class="text-gray-500 text-xl">Published at
                 <time datetime={`${seo_date}`} >{date}</time>
-                by {author}
+                by {author} — [ <span class="text-blue-400">{readingTime}m</span> read ]
             </p>
+            <ul aria-label="categories" class="flex gap-3 p-0 bt-5 mb-10">
+                {category.map((cat)=>
+                    <li class={`list-none py-1 px-3 bg-red-400 text-black
+                        font-bold tracking-wider w-max rounded-2xl`}>
+                        {cat}
+                    </li>)}
+            </ul>
 
-            {import.meta.env.MODE === 'development'
-                ?   <div class={`border-2 border-red-400 p-3 rounded-lg mb-7 flex gap-10`}>
-                        <div>
-                            <p class="m-0">Title Length:  <span class="text-red-400">{seo_title.length}</span></p>
-                            <p class="m-0">Post Length:  <span class="text-red-400">{body.split(' ').length}</span></p>
-                            <ul>
-                                {keywords.map((keyword)=>{
-                                    return <li>{keyword}:
-                                        <span class="text-red-400">
-                                            { tools.strCount(keyword, body)}
-                                        </span>
-                                    </li>
-                                })}
-                            </ul>
-                        </div>
-                        <div>
-                            {/*<p class="m-0">Images:
-                                <span class="text-red-400">
-                                    {tools.strCount('<img ', compiledContent)}
-                                </span>
-                            </p>
-                            <p class="m-0">Tables:
-                                <span class="text-red-400">
-                                    {tools.strCount('<table ', compiledContent)}
-                                </span>
-                            </p>
-                            <p class="m-0">Videos:
-                                <span class="text-red-400">
-                                    {tools.strCount('<video ', compiledContent)}
-                                </span>
-                            </p>
-                            <p class="m-0">Links:
-                                <span class="text-red-400">
-                                    {tools.strCount('<a ', compiledContent)}
-                                </span>
-                            </p>*/}
-                            <p class="m-0">longest p:
-                                <span class="text-red-400">{body.split('\n').reduce((max, p)=>{
-                                    const pLength = p.split(' ').length;
-                                    return pLength > max ? pLength : max;
-                                }, 0)}</span>
-                            </p>
-                        </div>
-                        <div>
-                            Todos:
-                            <ul>
-                                {todos.map((todo)=>{
-                                    return <li>{todo}</li>
-                                })}
-                            </ul>
-                        </div>
-                    </div>
-                :<></>
-            }
+            {/* SEO metrics - only show up in DEV mode */}
+            <Metrics {title} {seo_title} {description} {seo_description} {body}
+                {keywords} {wordCount} {todos} />
 
-            <div class="pb-6 border-2 border-blue-400 rounded-lg p-4 mb-6" aria-label="table of content">
-                <span class="text-blue-400 text-xl">Table Of Content:</span>
-                <ul>
-                {
-                    headings.map((h2)=>(
-                        <li class="list-disc" style={`margin-left: calc(${h2.depth - 2}rem * 1.5)`}>
-                            <a href={`#${h2.slug}`} class="no-underline max-w-min text-white">
-                                {h2.text}
-                            </a>
-                        </li>
-                    ))
-                }
-                </ul>
-            </div>
+            {/* Table Of Content */}
+            <TOC {headings} />
+
             {
                 image
                 ? <figure class="featured"><img src={image.url} alt={image.alt} /></figure>
                 : <></>
             }
+
             <Content/>
         </article>
     </main>

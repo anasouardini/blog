@@ -1,0 +1,24 @@
+---
+const {headings} = Astro.props
+---
+
+<div
+    class="pb-6 border-2 border-blue-400 rounded-lg p-4 mb-6"
+    aria-label="table of content"
+>
+    <span class="text-blue-400 text-xl">Table Of Content:</span>
+    <ul>
+        {
+            headings.map((h2) => (
+                <li
+                    class="list-disc"
+                    style={`margin-left: calc(${h2.depth - 2}rem * 1.5)`}
+                >
+                    <a href={`#${h2.slug}`} class="no-underline max-w-min text-white">
+                        {h2.text}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</div>

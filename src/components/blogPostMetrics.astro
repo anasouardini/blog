@@ -1,0 +1,73 @@
+---
+const {title, seo_title, description, seo_description,
+    keywords, body, wordCount, todos} = Astro.props
+import tools from '../tools'
+---
+
+{import.meta.env.MODE === 'development'
+    ?   <div class={`border-2 border-red-400 p-3 rounded-lg mb-7 flex gap-10`}>
+            <div>
+                <p class="m-0">Title Length:  <span class="text-red-400">{seo_title.length}</span></p>
+                <ul class="m-0 p-0">Keywords in Title: 
+                    {keywords
+                        .filter((keyword)=>seo_title.includes(keyword))
+                        .map((keyword)=><li class="ml-5 list-disc">{keyword}</li>)
+                    }
+                </ul>
+                <ul class="m-0 p-0">Keywords in Descritption: 
+                    {keywords
+                        .filter((keyword)=>seo_description.includes(keyword))
+                        .map((keyword)=><li class="ml-5 list-disc">{keyword}</li>)
+                    }
+                </ul>
+                <p class="m-0">Post Length:  <span class="text-red-400">{wordCount}</span></p>
+                <ul>
+                    {keywords.map((keyword)=>{
+                        return <li>{keyword}:
+                            <span class="text-red-400">
+                                {tools.strCount(keyword, body)}
+                            </span>
+                        </li>
+                    })}
+                </ul>
+            </div>
+            <div>
+                <p class="m-0">Images:
+                    <span class="text-red-400">
+                        {tools.strCount('![', body)}
+                    </span>
+                </p>
+                {/*
+                <p class="m-0">Tables:
+                    <span class="text-red-400">
+                        {tools.strCount('<table ', compiledContent)}
+                    </span>
+                </p>
+                <p class="m-0">Videos:
+                    <span class="text-red-400">
+                        {tools.strCount('<video ', compiledContent)}
+                    </span>
+                </p>
+                <p class="m-0">Links:
+                    <span class="text-red-400">
+                        {tools.strCount('<a ', compiledContent)}
+                    </span>
+                </p>*/}
+                <p class="m-0">longest p:
+                    <span class="text-red-400">{body.split('\n').reduce((max, p)=>{
+                        const pLength = p.split(' ').length;
+                        return pLength > max ? pLength : max;
+                    }, 0)}</span>
+                </p>
+            </div>
+            <div>
+                Todos:
+                <ul>
+                    {todos.map((todo)=>{
+                        return <li>{todo}</li>
+                    })}
+                </ul>
+            </div>
+        </div>
+    :<></>
+}

@@ -1,0 +1,43 @@
+---
+const {type} = Astro.props;
+import tools from '../tools';
+---
+
+{
+type === "note"
+    ?
+        <div class={`border-l-4 border-l-blue-500 pl-5 before:content-['NOTE:']
+                        before:text-blue-500 tracking-widest before:inline`}>
+            <slot>Note wasn't provided, the author was high ;)</slot>
+        </div>
+    :
+type === "warning"
+    ?
+        <div class={`border-l-4 border-l-red-400 pl-5 before:content-['WARNING:']
+                        before:text-red-400 tracking-widest before:inline`}>
+            <slot>Note wasn't provided, the author was high ;)</slot>
+        </div>
+    :
+type === "takeaway"
+    ?
+        <div class={`border-l-4 border-l-yellow-400 pl-5 before:content-['TAKEAWAY:']
+                        before:text-yellow-400 tracking-widest before:inline`}>
+            <slot>Note wasn't provided, the author was high ;)</slot>
+        </div>
+    :
+type === "references"
+    ?
+        <div class={`border-l-4 border-l-orange-400 pl-5 before:content-['REFERENCES:']
+                        before:text-orange-400 tracking-widest before:inline`}>
+            <slot>Note wasn't provided, the author was high ;)</slot>
+        </div>
+    :
+type === "todo" && import.meta.env.DEV
+    ?
+        <div todo id={tools.randID(10)}
+            class={`border-l-4 border-l-yellow-400 pl-5 before:content-['TODO:']
+                        before:text-yellow-400 tracking-widest before:inline`}>
+            <slot>Note wasn't provided, the author was high ;)</slot>
+        </div>
+    :<></>
+}
