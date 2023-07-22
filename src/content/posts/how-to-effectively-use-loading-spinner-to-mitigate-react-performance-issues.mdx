@@ -1,0 +1,168 @@
+---
+title: how to effectively use loading spinner to mitigate react performance issues
+seo_title: use loading spinners effectively to mitigate react performance
+description: loading spinners in React can be easily implemented but effective implementation requires spending time thinking about all edge cases, every app uses loading spinners differently depending on its goal.
+seo_description: loading spinners in React can be easily implemented but effective implementation requires spending time thinking about all edge cases, every app uses loading spinners differently depending on its goal.
+date: Mon, 18 Jul 2023
+seo_date: 2023-07-18
+author: Anas Ouardini
+category: [JavaScript, Reactjs, Performance]
+keywords: [
+    'loading',
+    'effect',
+    'affect',
+    'impact',
+    'spinner',
+    'react',
+    'performance',
+    'progress',
+    'indicator',
+    'wait',
+    'circle',
+    'rotating',
+    'spin',
+    'animation',
+]
+todos: [
+    'check grammar',
+    'proof-read',
+]
+---
+
+import Block from '../../components/blogPostBlocks.astro'
+
+If you're lazy or you simply don't have that complex of an app, like most of us, you can simply set any loading spinner lib and forget it.
+
+But if your user's interactivity is really crucial to your app, you must focus on getting the most out of the loading spinners to cover up for your app's inevitable bad performance.
+
+Here are some tips to keep in mind when implementing an impactful loading spinner on your app.
+
+## Everyone perceives performance differently
+
+Yes, it's all about the perception of your app from the user's end.
+
+You already know that we can't say "performance is good" or otherwise, without an anchor or context, it's not a black-and-white, performance, like a lot of things in life, is relative.
+
+The user can't objectively know which app is faster than the other, our sense of time is not accurate.
+
+Put yourself in the user's shoes, how and why would you conclude that a piece of tech is "really fast"? Or at least what takes your brain away from thinking the opposite?
+
+While you can always use a very simple and typical loading spinner, the effect on the user's perspective might not be that great.
+
+## How to affect user's perception of performance
+
+I'm not a psychologist, but there are some intuitive ideas for gaining some level of control over the user's thoughts while waiting for the spinner to stop.
+
+### progress indicator
+
+I've waited for a progress bar for a whole day, just because I **knew** it'll take such a period, if I didn't know, I would probably think that the software is broken and closed that window after 10 minutes or so.
+
+All within reason of course. While it's not hurting anyone, a progress bar for a 5 seconds task is kind of overkill.
+
+### progressive rendering
+
+It's like the prior one, but instead of a progress bar (as an example), you display the actual data.
+
+It depends on the shape of your data: if it can't be delivered bit by bit, i.e. it has to be displayed all at once, then this method is not for you.
+
+### complex UI
+
+Not to confuse this with making your app complex and harder to maintain, a complex UI for the brain doesn't necessarily have to be complex for the developer as well.
+
+It's simple, a complex UI makes us think more about it, and less about the time we have to wait for the thing behind it to load, a sweet spot between easy-to-write and interesting UI is preferable.
+
+### Share clever quotes
+
+I first saw this when waiting for EnlightenMe to load, they display facts about their app that would grab the user's attention.
+
+Sometimes it loads rather quickly, I feel little bad about not having a slow CPU so that I can finish reading those quotes.
+
+### Provide some informative tips about your app
+
+Reading informative tips about the app each time you load it is a two-birds-with-one-stone move: you educate users about your app and provide a better user experience.
+
+Reading basic information is kind of pointless, so make sure you show some unique content there.
+
+### They're called spinners, but they don't have to be
+
+Be creative, we're not limited to that old typical design anymore, there are dozens of styles you get to pick and choose from.
+
+You can even make your own if you have the time, expertise, and necessity. But most importantly make sure you don't just pick a boring one off the shelf.
+
+Spend 1-2 minutes on Google Images and pick one that is not common and that's uniquely stimulating.
+
+### add a timeout
+
+Unless you want to user to think your app is broken, that loading spinner should give up at a certain point. Making the user wait 10 minutes for nothing is sending a bad signal about your app.
+
+I'm not a UX expert, but from my vast experience as a user, I know that being in the dark always makes me tired of trying.
+
+An app that suggests I try again seems more professional than another one that just takes forever, waiting for the second one seems pointless.
+
+A timeout informs the user of what's going on and maybe helps him fix the problem faster if it's on their end.
+
+## When and where to use a loading spinner for better impact
+
+It might seem like a dumb question, but I've seen a lot of apps using one loading spinner before the first item is printed to the screen, and then you get all these elements popping out of nowhere.
+
+<Block type="notes">
+Although that's a different topic, shifting elements around is a confusing experience for the user.
+</Block>
+
+So basically, a rule of thumb is: **everything** that could take a while to load will eventually need a loading spinner in place, except for when it's out of sight, which can be really tricky to implement.
+
+Take a look at this example of properly implemented loading spinners, in terms of where to implement them.
+
+![proper example of loading spinners - anas ouardini](/media/using-loading-spinners-in-react-properly-example.webp)
+
+You got me, there is no creativity in there, but analyse how you feel about them.
+
+I feel like I **know** what's going on, I'm not lost, I know what you're waiting for.
+
+That's not the ultimate way of letting the user be aware of what he/she is waiting for, but when it comes to loading spinners, that's how you do it.
+
+Thanks to React's components architecture, you don't have to think too much about adding a loading spinner to a component that only shows up after an event.
+
+The component shows up and so it's loading spinner, that was easy.
+
+What about the items at the bottom, that the user won't see unless they **scroll**, you don't want to render loading spinners all over the place.
+
+I won't get into this, since it's a bit out of scope, but you can search for "lazy loading", I will write an article about it, *maybe it's already written*, feel free to do a quick search in the blog.
+
+## Test the loading spinner carefully
+
+As a developer, testing is a really crucial part if you really care that much about the User Experience. And sometimes testing the right part in the right environment can be tricky.
+
+It's the same with loading spinners, you don't want to test your loading speed locally with no simulation of low computing power devices, etc.
+
+You might test your app on your computer with no throttling, and say: "Wow, this loads really fast, let me just get rid of the loading spinner."
+
+It looks like it's only distracting the user and making your app slower until he/she starts browsing your React app on his Samsung Galaxy J1-2016 and all they say is blank for 5 seconds.
+
+Although it's their phone that is hanging by a fragile thread, they start to think that your app is flimsy and not of good quality.
+
+Unless, of course, you know your users well enough.
+
+So, in general, make sure you simulate all edge cases and extreme environments that you suspect your users might run your app in. Make good use of your Chrome dev tools.
+
+Another part of testing loading spinners is: understanding the user behavior, the best way to do that is by implementing an A/B testing schedule.
+
+It can be hard to set up, but if it's something worth implementing, then you know better than me.
+
+## Implement other performance-enhancing techniques
+
+I just want to light-touch on complimentary **performance-enhancing** methods for loading spinners.
+
+So, you already know that loading spinners themselves are not increasing or fixing performance.
+
+That's why it's recommended to, first, try to fix the performance issues as much as you can before you **try** to hide what's left.
+
+Some of the performance optimization techniques are; tree shaking, debouncing/throttling, lazy loading, code splitting, caching, CDNs, compression, minification, and image optimization (Webp and Vif).
+
+Etc, etc, yeah... got me, those are all that I know :)
+
+## takeaway
+
+Implementing a loading spinner can go wrong in many ways, an effective implementation is a must when it comes to user experience on your React app.
+
+Take a look at the table of content above for a summary (use the right arrow) — Happy coding.
