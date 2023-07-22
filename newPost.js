@@ -30,6 +30,8 @@ todos: [
     'proof-read',
 ]
 ---
+
+import Block from '../../components/blogPostBlocks.astro';
 `
 
-fs.writeFileSync('./src/content/posts/'+fileSlug+'.md', frontMatter);
+fs.writeFileSync('./src/content/posts/'+fileSlug+'.mdx', frontMatter);
